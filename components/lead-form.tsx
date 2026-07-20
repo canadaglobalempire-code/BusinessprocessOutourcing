@@ -122,7 +122,7 @@ export function LeadForm({
           <div className="form-grid">
             <label className="field">
               Website / URL
-              <input type="url" name="website" autoComplete="url" />
+              <input type="text" name="website" autoComplete="url" />
             </label>
             <label className="field">
               Phone Number
@@ -151,7 +151,7 @@ export function LeadForm({
             </label>
 
             <label className="field">
-              What type of Solution best describes what you are looking for?*
+              What solution are you looking for?*
               <select name="solution" defaultValue={contactSolution} required>
                 <option value="" disabled>
                   Select an option
