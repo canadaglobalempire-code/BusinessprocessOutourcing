@@ -1,0 +1,717 @@
+{
+  ".codex/hooks.json": {
+    "mtime": 1784049160.60933,
+    "ast_hash": "95d32722ada6d2741b312a56745b519c",
+    "semantic_hash": "95d32722ada6d2741b312a56745b519c"
+  },
+  "app/about/page.tsx": {
+    "mtime": 1784054367.6417022,
+    "ast_hash": "ed4444c1903a3167ce4057b527376aea",
+    "semantic_hash": ""
+  },
+  "app/api/contact/route.ts": {
+    "mtime": 1784054767.9631524,
+    "ast_hash": "3eeaf1db2b6a8d32e947aaf9679a0ef4",
+    "semantic_hash": ""
+  },
+  "app/blog/[slug]/page.tsx": {
+    "mtime": 1784054638.0019598,
+    "ast_hash": "4c548b1013ce9aed513fe064c7e663b4",
+    "semantic_hash": ""
+  },
+  "app/blog/page.tsx": {
+    "mtime": 1783993255.6357932,
+    "ast_hash": "927ffa8dc2bcd9ce3bfabdbf7e4c641f",
+    "semantic_hash": "927ffa8dc2bcd9ce3bfabdbf7e4c641f"
+  },
+  "app/contact/page.tsx": {
+    "mtime": 1784054400.5737443,
+    "ast_hash": "5c8db22a3748c9f66e6a58fe77e303bb",
+    "semantic_hash": ""
+  },
+  "app/layout.tsx": {
+    "mtime": 1784054628.457227,
+    "ast_hash": "8b6ac81e1e85a84ee0fe861ac8fe3cad",
+    "semantic_hash": ""
+  },
+  "app/not-found.tsx": {
+    "mtime": 1783993319.4479647,
+    "ast_hash": "9081cadcc23d226874afb7a8d3e6bccd",
+    "semantic_hash": "9081cadcc23d226874afb7a8d3e6bccd"
+  },
+  "app/page.tsx": {
+    "mtime": 1784054979.0457325,
+    "ast_hash": "d9a3ef35418d6c0b102f6e4844cbdec1",
+    "semantic_hash": ""
+  },
+  "app/pricing/page.tsx": {
+    "mtime": 1784054638.025755,
+    "ast_hash": "db62f57741d3fc8e72a8af991af16cb7",
+    "semantic_hash": ""
+  },
+  "app/privacy/page.tsx": {
+    "mtime": 1784054638.0019693,
+    "ast_hash": "b874584e4bbfecd1726fd5f7d85ec912",
+    "semantic_hash": ""
+  },
+  "app/robots.ts": {
+    "mtime": 1784054537.5304565,
+    "ast_hash": "803f99ccd2115e64cfb1119dae2a6e1f",
+    "semantic_hash": ""
+  },
+  "app/services/[slug]/page.tsx": {
+    "mtime": 1784051005.6691208,
+    "ast_hash": "f89f36e254b93f93caac83b2519bd375",
+    "semantic_hash": ""
+  },
+  "app/services/page.tsx": {
+    "mtime": 1784055199.8551276,
+    "ast_hash": "be8678ae21a312145829590fea06a025",
+    "semantic_hash": ""
+  },
+  "app/sitemap.ts": {
+    "mtime": 1784055159.120715,
+    "ast_hash": "aa5efb82a70b3ee63f7224a2404560bb",
+    "semantic_hash": ""
+  },
+  "app/terms/page.tsx": {
+    "mtime": 1784054638.0059383,
+    "ast_hash": "cc9e6ec4e4752992dec91f2b6b29d5c3",
+    "semantic_hash": ""
+  },
+  "components/faq.tsx": {
+    "mtime": 1783992681.972629,
+    "ast_hash": "36079c78af4af9df9b2e881988a2ed46",
+    "semantic_hash": "36079c78af4af9df9b2e881988a2ed46"
+  },
+  "components/icons.tsx": {
+    "mtime": 1784050896.7253337,
+    "ast_hash": "b3d04afd0def8068a48ca85bce830efa",
+    "semantic_hash": ""
+  },
+  "components/lead-form.tsx": {
+    "mtime": 1784054661.7653444,
+    "ast_hash": "aa832c0f0c2f85af0c9556fc63ce4754",
+    "semantic_hash": ""
+  },
+  "components/modal.tsx": {
+    "mtime": 1783992479.9609797,
+    "ast_hash": "f8f01b8dd51f62fa057c62b8ce0109c5",
+    "semantic_hash": "f8f01b8dd51f62fa057c62b8ce0109c5"
+  },
+  "components/reveal.tsx": {
+    "mtime": 1783993811.0846224,
+    "ast_hash": "febdbcb1b84d5f7c732db585d7cda49e",
+    "semantic_hash": "febdbcb1b84d5f7c732db585d7cda49e"
+  },
+  "components/site-footer.tsx": {
+    "mtime": 1784055138.1978793,
+    "ast_hash": "3c80cd4a55a3ca9221af6825778dcd45",
+    "semantic_hash": ""
+  },
+  "components/site-header.tsx": {
+    "mtime": 1784055138.1141446,
+    "ast_hash": "259023fe4922b1e8c64dfe1906a209b0",
+    "semantic_hash": ""
+  },
+  "lib/posts.tsx": {
+    "mtime": 1783992637.0430954,
+    "ast_hash": "dcf666c3bc69c5f928ee907117e24ef6",
+    "semantic_hash": "dcf666c3bc69c5f928ee907117e24ef6"
+  },
+  "lib/services.tsx": {
+    "mtime": 1784054638.002013,
+    "ast_hash": "640e86cb7dc584f3201f95f02909a246",
+    "semantic_hash": ""
+  },
+  "next-env.d.ts": {
+    "mtime": 1784055207.8432536,
+    "ast_hash": "2a74d3909800ca5467fa83b0ab4a4890",
+    "semantic_hash": ""
+  },
+  "next.config.ts": {
+    "mtime": 1783975310.531365,
+    "ast_hash": "daad32b4de0b92afe04301ebf0a6cc76",
+    "semantic_hash": "daad32b4de0b92afe04301ebf0a6cc76"
+  },
+  "outsourcepro-full-website/assets/js/main.js": {
+    "mtime": 1783979090.0,
+    "ast_hash": "234b0b56425b9f7a81f33b71512fa80b",
+    "semantic_hash": "234b0b56425b9f7a81f33b71512fa80b"
+  },
+  "outsourcepro-full-website/send-contact.php": {
+    "mtime": 1783979090.0,
+    "ast_hash": "dffd04f23dab07cadaa6e245a95533ca",
+    "semantic_hash": "dffd04f23dab07cadaa6e245a95533ca"
+  },
+  "package.json": {
+    "mtime": 1783979571.7064548,
+    "ast_hash": "21ef784b0f450e22eeb20c897c360cc1",
+    "semantic_hash": "21ef784b0f450e22eeb20c897c360cc1"
+  },
+  "postcss.config.mjs": {
+    "mtime": 1783975322.5833716,
+    "ast_hash": "675899342e765a4d16acd75a53389101",
+    "semantic_hash": "675899342e765a4d16acd75a53389101"
+  },
+  "tsconfig.json": {
+    "mtime": 1783975681.828348,
+    "ast_hash": "7831df54b0184c9a88a681bd02b3e9e4",
+    "semantic_hash": "7831df54b0184c9a88a681bd02b3e9e4"
+  },
+  ".impeccable/live/config.json": {
+    "mtime": 1784050010.832849,
+    "ast_hash": "40f52f76b1c6381420e0829605844fcd",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/SKILL.md": {
+    "mtime": 1784049160.6088586,
+    "ast_hash": "eb3f90594c76c2c4a5370ecaf088f461",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/add-watch.md": {
+    "mtime": 1784049154.3662417,
+    "ast_hash": "d59d027fe449f06aa03905a01184e779",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/exports.md": {
+    "mtime": 1784049154.3663213,
+    "ast_hash": "9da2a2152e60a22f07f05fed5158f287",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/extraction-spec.md": {
+    "mtime": 1784049154.3729851,
+    "ast_hash": "bf895ec4d4e40f5f66f7d31c2a9bd4a7",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/github-and-merge.md": {
+    "mtime": 1784049154.3731844,
+    "ast_hash": "cde13df085e4c492aeb7ba298a996d0d",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/hooks.md": {
+    "mtime": 1784049154.373253,
+    "ast_hash": "3f545db6ce646650bb9de588f5512a27",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/query.md": {
+    "mtime": 1784049154.3735127,
+    "ast_hash": "3c46f8ad006874260614ed8657d02307",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/transcribe.md": {
+    "mtime": 1784049154.3735955,
+    "ast_hash": "67b6a5fa6c0974e18f60db9f8932fbd8",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/update.md": {
+    "mtime": 1784049154.3738317,
+    "ast_hash": "c698309979460d0f02ba616417844399",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1784049251.5099006,
+    "ast_hash": "8a215f1334a64e1f0e8f0b7c8275a69c",
+    "semantic_hash": ""
+  },
+  "PRODUCT.md": {
+    "mtime": 1784050010.699733,
+    "ast_hash": "d7c1f8d5a12dfb0b1ec5ca204d87c017",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/404.html": {
+    "mtime": 1783979090.0,
+    "ast_hash": "274c6d50b7cf7cae5263f6af344ec4dc",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/README.md": {
+    "mtime": 1783979092.0,
+    "ast_hash": "698f7166a45e19816ff0c5d6ab788365",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/about.html": {
+    "mtime": 1784053617.6862223,
+    "ast_hash": "a8cdb96707b9421f269dda6ad3fb48c6",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/blog-customer-support.html": {
+    "mtime": 1783979090.0,
+    "ast_hash": "421ff62a5f61738073ae71d84f10d81e",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/blog-data-security.html": {
+    "mtime": 1783979090.0,
+    "ast_hash": "c1e41c7d495e00ccb9b9048f8fa140a8",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/blog-outsourcing-vs-hiring.html": {
+    "mtime": 1783979090.0,
+    "ast_hash": "b5d7e3e47b626e198cb3d1c38115b02a",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/blog-remote-onboarding.html": {
+    "mtime": 1783979090.0,
+    "ast_hash": "6ae4b95ad7454199dbf3173f1c18a590",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/blog-scale-operations.html": {
+    "mtime": 1783979090.0,
+    "ast_hash": "d1edbcf693d3dee8996878f91b1f4f51",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/blog-what-to-outsource.html": {
+    "mtime": 1783979090.0,
+    "ast_hash": "4247c4f6fdda93bc4200cc8edc5eb4c6",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/blog.html": {
+    "mtime": 1783979090.0,
+    "ast_hash": "a1b1967091c014a87ffb0ac303b7a64b",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/contact.html": {
+    "mtime": 1783979090.0,
+    "ast_hash": "f649c37fb21ba60e403356fb500a0135",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/index.html": {
+    "mtime": 1783979090.0,
+    "ast_hash": "9a08b1fbbff894df85d9d58a20f704b1",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/pricing.html": {
+    "mtime": 1783979090.0,
+    "ast_hash": "d8f8dab8581b84f9c382b2087adbc2a0",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/privacy.html": {
+    "mtime": 1783979090.0,
+    "ast_hash": "3a1a0f2d4fe52fba0c86fad90793bda7",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/robots.txt": {
+    "mtime": 1783978946.0,
+    "ast_hash": "721f73e8ecfc7ed8f619df9aad2721c3",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/service-content-creation.html": {
+    "mtime": 1784053611.5535557,
+    "ast_hash": "3f01f78b770ea0456a869681fa7a07d5",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/service-customer-support.html": {
+    "mtime": 1784053611.553276,
+    "ast_hash": "ec91674f9771b2dc53135715463473f2",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/service-data-research.html": {
+    "mtime": 1784053611.5602264,
+    "ast_hash": "ce76e619027d63e29185bcab86a36b5b",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/service-digital-marketing.html": {
+    "mtime": 1784053611.553807,
+    "ast_hash": "f33b69fa524ed07232bb117d70cfb81f",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/service-ecommerce-support.html": {
+    "mtime": 1784053611.5654557,
+    "ast_hash": "66884f5eb7ceba2682b43dad7be4195e",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/service-technical-support.html": {
+    "mtime": 1784053611.5560315,
+    "ast_hash": "87ede7095334bee3cabc5b49e41908ed",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/service-virtual-assistance.html": {
+    "mtime": 1784053611.553795,
+    "ast_hash": "ffe083537ddb74b957bd30bda80bd3a3",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/services.html": {
+    "mtime": 1784053617.6824615,
+    "ast_hash": "cd69025da2044a90b4dab2a2dedc368d",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/terms.html": {
+    "mtime": 1783979090.0,
+    "ast_hash": "df967efb3111f236d5d37cb9febc617f",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/benefits-visual.webp": {
+    "mtime": 1783978436.0,
+    "ast_hash": "6f5270d0fb5bd592b2aa1dbe60ee4e84",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/blog-customer-support.svg": {
+    "mtime": 1783978946.0,
+    "ast_hash": "02ca263226c5d4f4593e03b6d6022b95",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/blog-data-security.svg": {
+    "mtime": 1783978946.0,
+    "ast_hash": "076cb9010bcd84033b521cbb46230841",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/blog-outsourcing-vs-hiring.svg": {
+    "mtime": 1783978946.0,
+    "ast_hash": "7c1c56e8fbdcbdd8fef0212c02c4f2e9",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/blog-remote-team.svg": {
+    "mtime": 1783978946.0,
+    "ast_hash": "2f90363317bf89acfc4d2447ec4c596f",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/blog-scale-operations.svg": {
+    "mtime": 1783978946.0,
+    "ast_hash": "5abcefd946c6a95545e693788a3f3431",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/blog-what-to-outsource.svg": {
+    "mtime": 1783978946.0,
+    "ast_hash": "8877f53003794b211882674c91e229ef",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/delegate-work.webp": {
+    "mtime": 1783978437.0,
+    "ast_hash": "a6fe2c8d36918f12a5aa4e6c9b919466",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/favicon.svg": {
+    "mtime": 1783978946.0,
+    "ast_hash": "c19da818292806d42d78b199cd1c3433",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/support-specialist.webp": {
+    "mtime": 1783978436.0,
+    "ast_hash": "73c08fb636215ec138a6688b335db441",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/team-updates.webp": {
+    "mtime": 1783978437.0,
+    "ast_hash": "2bd498fc469b2b80e723c9f65f73e86c",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/visibility-card.webp": {
+    "mtime": 1783978437.0,
+    "ast_hash": "6c82cf3d3124b43fc3428f92741d2550",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/work-dashboard.webp": {
+    "mtime": 1783978436.0,
+    "ast_hash": "e959444f24b0f358095d79d9496c98cf",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/workflow-1.webp": {
+    "mtime": 1783978436.0,
+    "ast_hash": "5e165d532471372c488ef4b78c0d8b7a",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/workflow-2.webp": {
+    "mtime": 1783978436.0,
+    "ast_hash": "87a3267ee11c1850145b12d321b43a4f",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/workflow-3.webp": {
+    "mtime": 1783978436.0,
+    "ast_hash": "e8bfbbbfb132ab2f8d2976873d4d23ad",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/workflow-4.webp": {
+    "mtime": 1783978436.0,
+    "ast_hash": "8f93e60706b63cdb06f9ad7a01a341e8",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/workflow-5.webp": {
+    "mtime": 1783978436.0,
+    "ast_hash": "df6a8f89342613a3ef4f382fbfab1850",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/mockups/benefits-approved.png": {
+    "mtime": 1783978285.0,
+    "ast_hash": "59d610cc8ed353e0e258345fd338978e",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/mockups/faq-approved.png": {
+    "mtime": 1783978285.0,
+    "ast_hash": "069993b27e5f6005572d01ea88180ef0",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/mockups/footer-approved.png": {
+    "mtime": 1783978285.0,
+    "ast_hash": "b0a443fdb55785fdcb76a9583015b16e",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/mockups/home-hero-approved.png": {
+    "mtime": 1783978285.0,
+    "ast_hash": "64df9677b5972e7c69f95d8909187641",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/mockups/services-approved.png": {
+    "mtime": 1783978285.0,
+    "ast_hash": "b9ad2fa587cc5c72ae32c3d70f26e65f",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/mockups/three-step-approved.png": {
+    "mtime": 1783978285.0,
+    "ast_hash": "ccdcdc2f1466e32f44c94e1b5afea096",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/mockups/workflow-approved.png": {
+    "mtime": 1783978285.0,
+    "ast_hash": "a90ad0e7865436637d3e477d833cf880",
+    "semantic_hash": ""
+  },
+  "public/_orig/always-know.png": {
+    "mtime": 1783977753.1539164,
+    "ast_hash": "753561c4adcf8edc92dc4d723ab0c332",
+    "semantic_hash": ""
+  },
+  "public/_orig/team-updates.png": {
+    "mtime": 1783977753.1545925,
+    "ast_hash": "7e865f35709c7cc49d895ff5b0c99fcf",
+    "semantic_hash": ""
+  },
+  "public/_orig/woman-support.png": {
+    "mtime": 1783977753.1567426,
+    "ast_hash": "6fc8e858bf499de93b10162c4281a04f",
+    "semantic_hash": ""
+  },
+  "public/_orig/work-in-progress.png": {
+    "mtime": 1783977753.1519706,
+    "ast_hash": "c5b866b7b16ab33fa09916c1a210820c",
+    "semantic_hash": ""
+  },
+  "public/always-know.png": {
+    "mtime": 1783977809.153148,
+    "ast_hash": "753561c4adcf8edc92dc4d723ab0c332",
+    "semantic_hash": ""
+  },
+  "public/assets/img/benefits-visual.webp": {
+    "mtime": 1783979566.8061497,
+    "ast_hash": "6f5270d0fb5bd592b2aa1dbe60ee4e84",
+    "semantic_hash": ""
+  },
+  "public/assets/img/blog-customer-support.svg": {
+    "mtime": 1783979566.8134696,
+    "ast_hash": "02ca263226c5d4f4593e03b6d6022b95",
+    "semantic_hash": ""
+  },
+  "public/assets/img/blog-data-security.svg": {
+    "mtime": 1783979566.8138106,
+    "ast_hash": "076cb9010bcd84033b521cbb46230841",
+    "semantic_hash": ""
+  },
+  "public/assets/img/blog-outsourcing-vs-hiring.svg": {
+    "mtime": 1783979566.8141196,
+    "ast_hash": "7c1c56e8fbdcbdd8fef0212c02c4f2e9",
+    "semantic_hash": ""
+  },
+  "public/assets/img/blog-remote-team.svg": {
+    "mtime": 1783979566.814363,
+    "ast_hash": "2f90363317bf89acfc4d2447ec4c596f",
+    "semantic_hash": ""
+  },
+  "public/assets/img/blog-scale-operations.svg": {
+    "mtime": 1783979566.8146322,
+    "ast_hash": "5abcefd946c6a95545e693788a3f3431",
+    "semantic_hash": ""
+  },
+  "public/assets/img/blog-what-to-outsource.svg": {
+    "mtime": 1783979566.8149216,
+    "ast_hash": "8877f53003794b211882674c91e229ef",
+    "semantic_hash": ""
+  },
+  "public/assets/img/delegate-work.webp": {
+    "mtime": 1783979566.806659,
+    "ast_hash": "a6fe2c8d36918f12a5aa4e6c9b919466",
+    "semantic_hash": ""
+  },
+  "public/assets/img/favicon.svg": {
+    "mtime": 1783979566.8152142,
+    "ast_hash": "c19da818292806d42d78b199cd1c3433",
+    "semantic_hash": ""
+  },
+  "public/assets/img/support-specialist.webp": {
+    "mtime": 1783979566.8071384,
+    "ast_hash": "73c08fb636215ec138a6688b335db441",
+    "semantic_hash": ""
+  },
+  "public/assets/img/team-updates.webp": {
+    "mtime": 1783979566.807612,
+    "ast_hash": "2bd498fc469b2b80e723c9f65f73e86c",
+    "semantic_hash": ""
+  },
+  "public/assets/img/visibility-card.webp": {
+    "mtime": 1783979566.8080611,
+    "ast_hash": "6c82cf3d3124b43fc3428f92741d2550",
+    "semantic_hash": ""
+  },
+  "public/assets/img/work-dashboard.webp": {
+    "mtime": 1783979566.8084855,
+    "ast_hash": "e959444f24b0f358095d79d9496c98cf",
+    "semantic_hash": ""
+  },
+  "public/assets/img/workflow-1.webp": {
+    "mtime": 1783979566.808918,
+    "ast_hash": "5e165d532471372c488ef4b78c0d8b7a",
+    "semantic_hash": ""
+  },
+  "public/assets/img/workflow-2.webp": {
+    "mtime": 1783979566.8092983,
+    "ast_hash": "87a3267ee11c1850145b12d321b43a4f",
+    "semantic_hash": ""
+  },
+  "public/assets/img/workflow-3.webp": {
+    "mtime": 1783979566.8096662,
+    "ast_hash": "e8bfbbbfb132ab2f8d2976873d4d23ad",
+    "semantic_hash": ""
+  },
+  "public/assets/img/workflow-4.webp": {
+    "mtime": 1783979566.8100767,
+    "ast_hash": "8f93e60706b63cdb06f9ad7a01a341e8",
+    "semantic_hash": ""
+  },
+  "public/assets/img/workflow-5.webp": {
+    "mtime": 1783979566.8104308,
+    "ast_hash": "df6a8f89342613a3ef4f382fbfab1850",
+    "semantic_hash": ""
+  },
+  "public/favicon.svg": {
+    "mtime": 1783979566.8172882,
+    "ast_hash": "c19da818292806d42d78b199cd1c3433",
+    "semantic_hash": ""
+  },
+  "public/team-updates.png": {
+    "mtime": 1783978038.5945327,
+    "ast_hash": "7e865f35709c7cc49d895ff5b0c99fcf",
+    "semantic_hash": ""
+  },
+  "public/woman-support.png": {
+    "mtime": 1783977924.5298316,
+    "ast_hash": "1502a868e39e70eebc3c5bf02ea125cb",
+    "semantic_hash": ""
+  },
+  "public/work-in-progress.png": {
+    "mtime": 1783977924.1108067,
+    "ast_hash": "5450066cdbd7e35ef49aa0bcbf84ccb8",
+    "semantic_hash": ""
+  },
+  "app/about-us/page.tsx": {
+    "mtime": 1784054537.6270754,
+    "ast_hash": "698679293307b7f86a481783e307eaaa",
+    "semantic_hash": ""
+  },
+  "app/how-it-works/page.tsx": {
+    "mtime": 1784054537.7157052,
+    "ast_hash": "475b074bee080708961c36a4c0bdbc3d",
+    "semantic_hash": ""
+  },
+  "app/industries/page.tsx": {
+    "mtime": 1784054538.0183742,
+    "ast_hash": "141a4bb1adc37b11667c63087b525dd2",
+    "semantic_hash": ""
+  },
+  "app/solutions/page.tsx": {
+    "mtime": 1784054537.931575,
+    "ast_hash": "125a95acf5e30a7a19a5e72ddb80e743",
+    "semantic_hash": ""
+  },
+  "app/why-choose-us/page.tsx": {
+    "mtime": 1784054537.8258512,
+    "ast_hash": "11a52451b4da3061bbc455a05ee45e8d",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/about-team.jpg": {
+    "mtime": 1784053573.8033776,
+    "ast_hash": "5058bf4b28b96993419ee55f8bc65032",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/service-content-creation.jpg": {
+    "mtime": 1784053501.3344462,
+    "ast_hash": "c350af3b02896211b009feecad364e2c",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/service-customer-support.jpg": {
+    "mtime": 1784053501.3635259,
+    "ast_hash": "616cf2e54fb37282e0820c7d7ff1add7",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/service-data-research.jpg": {
+    "mtime": 1784053501.3079453,
+    "ast_hash": "c3c85bae7126b67b375c0b9314d3565f",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/service-digital-marketing.jpg": {
+    "mtime": 1784053501.2988584,
+    "ast_hash": "61bbb136d24951e7778c62272ebed92a",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/service-ecommerce-support.jpg": {
+    "mtime": 1784053501.2759511,
+    "ast_hash": "f757cb4b101e295110198b1b8bad87c7",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/service-technical-support.jpg": {
+    "mtime": 1784053501.351077,
+    "ast_hash": "a8545735ed442e094c95f1d9c4d4ef83",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/service-virtual-assistance.jpg": {
+    "mtime": 1784053501.265958,
+    "ast_hash": "56694b87a1ce9386faf7dd1b537537ad",
+    "semantic_hash": ""
+  },
+  "outsourcepro-full-website/assets/img/services-overview.jpg": {
+    "mtime": 1784053573.8083904,
+    "ast_hash": "885049881324358104f5e5492f630254",
+    "semantic_hash": ""
+  },
+  "public/assets/img/about-team.jpg": {
+    "mtime": 1784053573.7996945,
+    "ast_hash": "5058bf4b28b96993419ee55f8bc65032",
+    "semantic_hash": ""
+  },
+  "public/assets/img/service-content-creation.jpg": {
+    "mtime": 1784053501.3712106,
+    "ast_hash": "c350af3b02896211b009feecad364e2c",
+    "semantic_hash": ""
+  },
+  "public/assets/img/service-customer-support.jpg": {
+    "mtime": 1784053501.2516024,
+    "ast_hash": "616cf2e54fb37282e0820c7d7ff1add7",
+    "semantic_hash": ""
+  },
+  "public/assets/img/service-data-research.jpg": {
+    "mtime": 1784053501.3260412,
+    "ast_hash": "c3c85bae7126b67b375c0b9314d3565f",
+    "semantic_hash": ""
+  },
+  "public/assets/img/service-digital-marketing.jpg": {
+    "mtime": 1784053501.338955,
+    "ast_hash": "61bbb136d24951e7778c62272ebed92a",
+    "semantic_hash": ""
+  },
+  "public/assets/img/service-ecommerce-support.jpg": {
+    "mtime": 1784053501.3170826,
+    "ast_hash": "f757cb4b101e295110198b1b8bad87c7",
+    "semantic_hash": ""
+  },
+  "public/assets/img/service-technical-support.jpg": {
+    "mtime": 1784053501.2819486,
+    "ast_hash": "a8545735ed442e094c95f1d9c4d4ef83",
+    "semantic_hash": ""
+  },
+  "public/assets/img/service-virtual-assistance.jpg": {
+    "mtime": 1784053501.25816,
+    "ast_hash": "56694b87a1ce9386faf7dd1b537537ad",
+    "semantic_hash": ""
+  },
+  "public/assets/img/services-overview.jpg": {
+    "mtime": 1784053573.7936141,
+    "ast_hash": "885049881324358104f5e5492f630254",
+    "semantic_hash": ""
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "communities": {
+    "0": [
+      "app_contact_page",
+      "app_contact_page_contactpage",
+      "app_contact_page_metadata",
+      "app_contact_page_next",
+      "app_services_page",
+      "app_services_page_metadata",
+      "app_services_page_servicespage",
+      "app_services_slug_page",
+      "app_services_slug_page_generatemetadata",
+      "app_services_slug_page_generatestaticparams",
+      "app_services_slug_page_params",
+      "app_services_slug_page_servicedetail",
+      "components_icons",
+      "components_icons_icons",
+      "components_icons_svgicon",
+      "components_lead_form",
+      "components_lead_form_leadform",
+      "components_lead_form_variant",
+      "lib_services",
+      "lib_services_getservice",
+      "lib_services_service",
+      "lib_services_service_names",
+      "lib_services_services",
+      "lib_services_t"
+    ],
+    "1": [
+      "ref",
+      "ref_dom",
+      "ref_dom_iterable",
+      "ref_esnext",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_incremental",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_lib",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_paths",
+      "tsconfig_compileroptions_plugins",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target",
+      "tsconfig_paths"
+    ],
+    "2": [
+      "motion",
+      "next",
+      "package",
+      "package_dependencies",
+      "package_dependencies_motion",
+      "package_dependencies_next",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_lint",
+      "package_scripts_start",
+      "package_version",
+      "react",
+      "react_dom"
+    ],
+    "3": [
+      "app_layout",
+      "app_layout_inter",
+      "app_layout_metadata",
+      "app_layout_rootlayout",
+      "components_modal",
+      "components_modal_modalcontext",
+      "components_modal_modalcontextvalue",
+      "components_modal_modalprovider",
+      "components_modal_openmodalbutton",
+      "components_modal_usemodal",
+      "components_site_footer",
+      "components_site_footer_sitefooter",
+      "components_site_header",
+      "components_site_header_logomark",
+      "components_site_header_nav",
+      "components_site_header_siteheader"
+    ],
+    "4": [
+      "app_about_page",
+      "app_about_page_aboutpage",
+      "app_about_page_metadata",
+      "app_about_page_stats",
+      "app_about_page_values",
+      "app_blog_page",
+      "app_blog_page_blogindex",
+      "app_blog_page_metadata",
+      "app_pricing_page",
+      "app_pricing_page_metadata",
+      "app_pricing_page_plans",
+      "app_pricing_page_pricingpage",
+      "components_reveal",
+      "components_reveal_reveal"
+    ],
+    "5": [
+      "package_devdependencies",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_postcss",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "tailwindcss",
+      "tailwindcss_postcss",
+      "types_node",
+      "types_react",
+      "types_react_dom",
+      "typescript"
+    ],
+    "6": [
+      "app_blog_slug_page",
+      "app_blog_slug_page_article",
+      "app_blog_slug_page_generatemetadata",
+      "app_blog_slug_page_generatestaticparams",
+      "app_blog_slug_page_params",
+      "app_sitemap",
+      "app_sitemap_sitemap",
+      "lib_posts",
+      "lib_posts_getpost",
+      "lib_posts_post",
+      "lib_posts_posts"
+    ],
+    "7": [
+      "app_page",
+      "app_page_benefits",
+      "app_page_hero_tiles",
+      "app_page_home",
+      "app_page_steps",
+      "app_page_workflow",
+      "components_faq",
+      "components_faq_faq",
+      "components_faq_faqcard",
+      "components_faq_item",
+      "components_faq_items"
+    ],
+    "8": [
+      "ref_next_dev_types_ts",
+      "ref_next_env_d_ts",
+      "ref_next_types_ts",
+      "ref_node_modules",
+      "ref_ts",
+      "ref_tsx",
+      "tsconfig",
+      "tsconfig_exclude",
+      "tsconfig_include"
+    ],
+    "9": [
+      "app_privacy_page",
+      "app_privacy_page_metadata",
+      "app_privacy_page_privacypage"
+    ],
+    "10": [
+      "app_terms_page",
+      "app_terms_page_metadata",
+      "app_terms_page_termspage"
+    ],
+    "11": [
+      "app_api_contact_route",
+      "app_api_contact_route_post"
+    ],
+    "12": [
+      "app_not_found",
+      "app_not_found_notfound"
+    ],
+    "13": [
+      "app_robots",
+      "app_robots_robots"
+    ],
+    "14": [
+      "next_config",
+      "next_config_nextconfig"
+    ],
+    "15": [
+      "next_env_d",
+      "next_env_d_rationale_5"
+    ],
+    "16": [
+      "postcss_config",
+      "postcss_config_config"
+    ],
+    "17": [
+      "outsourcepro_full_website_assets_js_main"
+    ],
+    "18": [
+      "outsourcepro_full_website_send_contact"
+    ]
+  },
+  "cohesion": {
+    "0": 0.14130434782608695,
+    "1": 0.09523809523809523,
+    "2": 0.1111111111111111,
+    "3": 0.18333333333333332,
+    "4": 0.17582417582417584,
+    "5": 0.15384615384615385,
+    "6": 0.2909090909090909,
+    "7": 0.21818181818181817,
+    "8": 0.2222222222222222,
+    "9": 0.6666666666666666,
+    "10": 0.6666666666666666,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0
+  },
+  "gods": [
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "components_reveal_reveal",
+      "label": "Reveal()",
+      "degree": 8
+    },
+    {
+      "id": "components_icons_svgicon",
+      "label": "SvgIcon()",
+      "degree": 7
+    },
+    {
+      "id": "lib_services_services",
+      "label": "SERVICES",
+      "degree": 6
+    },
+    {
+      "id": "tsconfig_include",
+      "label": "include",
+      "degree": 6
+    },
+    {
+      "id": "lib_posts_posts",
+      "label": "POSTS",
+      "degree": 5
+    },
+    {
+      "id": "lib_posts_getpost",
+      "label": "getPost()",
+      "degree": 5
+    },
+    {
+      "id": "lib_services_getservice",
+      "label": "getService()",
+      "degree": 5
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 5
+    },
+    {
+      "id": "components_modal_usemodal",
+      "label": "useModal()",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "generateMetadata()",
+      "target": "getPost()",
+      "source_files": [
+        "app/blog/[slug]/page.tsx",
+        "lib/posts.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `generateMetadata()` unexpectedly reaches hub `getPost()`"
+    },
+    {
+      "source": "Article()",
+      "target": "getPost()",
+      "source_files": [
+        "app/blog/[slug]/page.tsx",
+        "lib/posts.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `Article()` unexpectedly reaches hub `getPost()`"
+    },
+    {
+      "source": "generateMetadata()",
+      "target": "getService()",
+      "source_files": [
+        "app/services/[slug]/page.tsx",
+        "lib/services.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `generateMetadata()` unexpectedly reaches hub `getService()`"
+    },
+    {
+      "source": "ServiceDetail()",
+      "target": "getService()",
+      "source_files": [
+        "app/services/[slug]/page.tsx",
+        "lib/services.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `ServiceDetail()` unexpectedly reaches hub `getService()`"
+    },
+    {
+      "source": "ContactPage()",
+      "target": "SERVICE_NAMES",
+      "source_files": [
+        "app/contact/page.tsx",
+        "lib/services.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Reveal()` connect `Community 4` to `Community 0`, `Community 7`?",
+      "why": "High betweenness centrality (0.036) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `compilerOptions` connect `Community 1` to `Community 8`?",
+      "why": "High betweenness centrality (0.030) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `devDependencies` connect `Community 5` to `Community 2`?",
+      "why": "High betweenness centrality (0.023) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `metadata`, `STATS`, `VALUES` to the rest of the system?",
+      "why": "69 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.14130434782608695 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
