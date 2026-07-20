@@ -5,6 +5,8 @@ import { SvgIcon } from "@/components/icons";
 import { Reveal } from "@/components/reveal";
 import { MiniMark } from "@/components/mini-mark";
 import { PAGE_IMAGES } from "@/lib/page-images";
+import { FaqSection } from "@/components/faq";
+import { HOW_IT_WORKS_FAQ } from "@/lib/faq-content";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/how-it-works" },
@@ -145,6 +147,8 @@ export default function HowItWorksPage() {
           </Reveal>
         </div>
       </section>
+
+      <FaqSection items={HOW_IT_WORKS_FAQ} cta={false} />
     </>
   );
 }

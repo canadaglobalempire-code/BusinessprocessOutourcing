@@ -5,6 +5,8 @@ import { SvgIcon } from "@/components/icons";
 import { Reveal } from "@/components/reveal";
 import { MiniMark } from "@/components/mini-mark";
 import { PAGE_IMAGES } from "@/lib/page-images";
+import { FaqSection } from "@/components/faq";
+import { WHY_CHOOSE_US_FAQ } from "@/lib/faq-content";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/why-choose-us" },
@@ -137,6 +139,8 @@ export default function WhyChooseUsPage() {
           </Reveal>
         </div>
       </section>
+
+      <FaqSection items={WHY_CHOOSE_US_FAQ} cta={false} />
     </>
   );
 }

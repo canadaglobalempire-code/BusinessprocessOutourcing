@@ -32,17 +32,6 @@ const CALL_VOLUMES = [
   "20,000-100,000",
   "100,000-500,000",
 ];
-const PROGRAM_DAYS = [
-  "24 / 7",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
-];
-
 /* Shared consultation / contact lead form.
    Posts to /api/contact, which forwards the enquiry to Splitforms. */
 export function LeadForm({
@@ -66,10 +55,6 @@ export function LeadForm({
     }
     const formData = new FormData(form);
     const data = Object.fromEntries(formData) as Record<string, string>;
-    const selectedDays = formData.getAll("program_days");
-    if (selectedDays.length) {
-      data.program_days = selectedDays.join(", ");
-    }
     data.page = typeof window !== "undefined" ? window.location.href : "";
     setSubmitting(true);
     try {
@@ -150,33 +135,35 @@ export function LeadForm({
             <input type="email" name="email" autoComplete="email" required />
           </label>
 
-          <label className="field">
-            What type of call centre services do you need?*
-            <select name="call_centre_service" defaultValue="" required>
-              <option value="" disabled>
-                Select an option
-              </option>
-              {CALL_CENTRE_SERVICES.map((service) => (
-                <option key={service} value={service}>
-                  {service}
+          <div className="form-grid">
+            <label className="field">
+              What type of call centre services do you need?*
+              <select name="call_centre_service" defaultValue="" required>
+                <option value="" disabled>
+                  Select an option
                 </option>
-              ))}
-            </select>
-          </label>
+                {CALL_CENTRE_SERVICES.map((service) => (
+                  <option key={service} value={service}>
+                    {service}
+                  </option>
+                ))}
+              </select>
+            </label>
 
-          <label className="field">
-            What type of Solution best describes what you are looking for?*
-            <select name="solution" defaultValue={contactSolution} required>
-              <option value="" disabled>
-                Select an option
-              </option>
-              {SOLUTIONS.map((solution) => (
-                <option key={solution} value={solution}>
-                  {solution}
+            <label className="field">
+              What type of Solution best describes what you are looking for?*
+              <select name="solution" defaultValue={contactSolution} required>
+                <option value="" disabled>
+                  Select an option
                 </option>
-              ))}
-            </select>
-          </label>
+                {SOLUTIONS.map((solution) => (
+                  <option key={solution} value={solution}>
+                    {solution}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
 
           <div className="form-grid">
             <label className="field">
@@ -193,7 +180,7 @@ export function LeadForm({
               </select>
             </label>
             <label className="field">
-              What is your call volume (Number of Records/month)?
+              Call volume (records/month)?
               <select name="call_volume" defaultValue="">
                 <option value="" disabled>
                   Select an option
@@ -206,28 +193,6 @@ export function LeadForm({
               </select>
             </label>
           </div>
-
-          <fieldset style={{ border: 0, margin: "0 0 18px", padding: 0 }}>
-            <legend style={{ fontSize: 14, fontWeight: 700, marginBottom: 12 }}>
-              What days of the week will the program run?
-            </legend>
-            <div className="form-grid">
-              {PROGRAM_DAYS.map((day) => (
-                <label
-                  key={day}
-                  style={{ alignItems: "center", display: "flex", fontSize: 14, gap: 10 }}
-                >
-                  <input
-                    type="checkbox"
-                    name="program_days"
-                    value={day}
-                    style={{ height: 18, width: 18 }}
-                  />
-                  {day}
-                </label>
-              ))}
-            </div>
-          </fieldset>
 
           <label className="field">
             Please provide us with any additional comments you feel are important

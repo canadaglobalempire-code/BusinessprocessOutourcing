@@ -7,6 +7,8 @@ import { Reveal } from "@/components/reveal";
 import { MiniMark } from "@/components/mini-mark";
 import { SERVICE_IMAGES } from "@/lib/page-images";
 import { SERVICES, getService } from "@/lib/services";
+import { FaqSection } from "@/components/faq";
+import { serviceFaq } from "@/lib/faq-content";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -147,6 +149,17 @@ export default async function ServiceDetail({ params }: Params) {
           </Reveal>
         </div>
       </section>
+
+      <FaqSection
+        items={serviceFaq(service)}
+        heading={
+          <>
+            {service.name} outsourcing, <span className="hl">answered directly</span>.
+          </>
+        }
+        intro={`Common questions about outsourcing ${service.name.toLowerCase()}.`}
+        cta={false}
+      />
 
       <section className="section">
         <div className="container">

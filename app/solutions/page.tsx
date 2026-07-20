@@ -7,6 +7,8 @@ import { SvgIcon } from "@/components/icons";
 import { PAGE_IMAGES, SOLUTION_IMAGES } from "@/lib/page-images";
 import { SOLUTIONS } from "@/lib/solutions";
 import { slugify } from "@/lib/industries";
+import { FaqSection } from "@/components/faq";
+import { SOLUTIONS_INDEX_FAQ } from "@/lib/faq-content";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/solutions" },
@@ -106,6 +108,8 @@ export default function SolutionsPage() {
           </Reveal>
         </div>
       </section>
+
+      <FaqSection items={SOLUTIONS_INDEX_FAQ} cta={false} />
     </>
   );
 }

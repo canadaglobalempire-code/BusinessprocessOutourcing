@@ -5,7 +5,8 @@ import Link from "next/link";
 import { SvgIcon } from "@/components/icons";
 import { Reveal } from "@/components/reveal";
 import { MiniMark } from "@/components/mini-mark";
-import { Faq } from "@/components/faq";
+import { FaqSection } from "@/components/faq";
+import { HOME_FAQ } from "@/lib/faq-content";
 import { SERVICES } from "@/lib/services";
 import { SERVICE_IMAGES } from "@/lib/page-images";
 
@@ -285,34 +286,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="faq">
-        <div className="container">
-          <Reveal className="section-heading">
-            <p className="eyebrow">
-              <MiniMark /> FAQ
-            </p>
-            <h2>
-              Outsourcing questions,
-              <br />
-              <span className="hl">answered clearly</span>.
-            </h2>
-            <p>Everything you need to know before outsourcing with us.</p>
-          </Reveal>
-          <Faq />
-          <Reveal className="inline-cta">
-            <span className="cta-orb">
-              <SvgIcon name="customer-support" />
-            </span>
-            <div>
-              <strong>Still have questions?</strong>
-              <small>Our team is here to help with your specific requirements.</small>
-            </div>
-            <Link className="btn btn-dark" href="/contact">
-              Contact us →
-            </Link>
-          </Reveal>
-        </div>
-      </section>
+      <FaqSection
+        items={HOME_FAQ}
+        heading={
+          <>
+            Outsourcing questions,
+            <br />
+            <span className="hl">answered clearly</span>.
+          </>
+        }
+        intro="Everything you need to know before outsourcing with us."
+      />
     </>
   );
 }

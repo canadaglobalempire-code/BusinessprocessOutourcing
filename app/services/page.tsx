@@ -6,6 +6,8 @@ import { Reveal } from "@/components/reveal";
 import { MiniMark } from "@/components/mini-mark";
 import { PAGE_IMAGES, SERVICE_IMAGES } from "@/lib/page-images";
 import { SERVICES } from "@/lib/services";
+import { FaqSection } from "@/components/faq";
+import { SERVICES_INDEX_FAQ } from "@/lib/faq-content";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/services" },
@@ -133,6 +135,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <FaqSection items={SERVICES_INDEX_FAQ} />
     </>
   );
 }

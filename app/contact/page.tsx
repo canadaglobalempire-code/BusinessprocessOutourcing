@@ -3,6 +3,8 @@ import { Reveal } from "@/components/reveal";
 import { MiniMark } from "@/components/mini-mark";
 import { LeadForm } from "@/components/lead-form";
 import { SERVICE_NAMES } from "@/lib/services";
+import { FaqSection } from "@/components/faq";
+import { CONTACT_FAQ } from "@/lib/faq-content";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
@@ -53,6 +55,8 @@ export default async function ContactPage({
           </div>
         </div>
       </section>
+
+      <FaqSection items={CONTACT_FAQ} />
     </>
   );
 }

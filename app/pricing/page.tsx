@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { MiniMark } from "@/components/mini-mark";
+import { FaqSection } from "@/components/faq";
+import { PRICING_FAQ } from "@/lib/faq-content";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/pricing" },
@@ -111,6 +113,8 @@ export default function PricingPage() {
           </p>
         </div>
       </section>
+
+      <FaqSection items={PRICING_FAQ} />
     </>
   );
 }

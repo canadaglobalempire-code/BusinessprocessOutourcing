@@ -8,6 +8,8 @@ import { SvgIcon } from "@/components/icons";
 import { SOLUTION_IMAGES } from "@/lib/page-images";
 import { slugify } from "@/lib/industries";
 import { SOLUTIONS, getSolution } from "@/lib/solutions";
+import { FaqSection } from "@/components/faq";
+import { solutionFaq } from "@/lib/faq-content";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -48,6 +50,8 @@ export default async function SolutionDetail({ params }: Params) {
     src: "/assets/img/service-customer-support.jpg",
     alt: `${solution.title} outsourcing support team helping customers`,
   };
+  const imagePool = Object.values(SOLUTION_IMAGES);
+  const secondaryImage = imagePool[(index + 1) % imagePool.length];
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -147,6 +151,44 @@ export default async function SolutionDetail({ params }: Params) {
           </Reveal>
         </div>
       </section>
+
+      <section className="section">
+        <div className="container split-section detail-section">
+          <Reveal className="split-copy">
+            <p className="eyebrow">
+              <MiniMark /> Why outsource this
+            </p>
+            <h2>Why companies outsource <span className="hl">{solution.title.toLowerCase()}</span>.</h2>
+            <p>
+              Building this in-house means hiring, training, scheduling, and
+              managing people before you ever answer a customer. Outsourcing{" "}
+              {solution.title.toLowerCase()} gives you a team that is already
+              trained, already staffed, and already accountable to reporting and
+              quality standards from day one.
+            </p>
+            <p>
+              It also removes the cost of idle capacity. Instead of paying for a
+              full-time hire during slow periods, you pay for coverage that flexes
+              with call volume, order volume, or ticket volume as it actually
+              happens.
+            </p>
+          </Reveal>
+          <Reveal className="page-visual media-visual">
+            <Image src={secondaryImage.src} alt={secondaryImage.alt} width={760} height={570} />
+          </Reveal>
+        </div>
+      </section>
+
+      <FaqSection
+        items={solutionFaq(solution)}
+        heading={
+          <>
+            {solution.title} outsourcing, <span className="hl">answered directly</span>.
+          </>
+        }
+        intro={`Common questions about outsourcing ${solution.title.toLowerCase()}.`}
+        cta={false}
+      />
 
       <section className="section">
         <div className="container">

@@ -7,6 +7,8 @@ import { Reveal } from "@/components/reveal";
 import { SvgIcon } from "@/components/icons";
 import { INDUSTRIES, getIndustry, slugify } from "@/lib/industries";
 import { INDUSTRY_IMAGES, PAGE_IMAGES } from "@/lib/page-images";
+import { FaqSection } from "@/components/faq";
+import { industryFaq } from "@/lib/faq-content";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -196,6 +198,17 @@ export default async function IndustryDetail({ params }: Params) {
           </Reveal>
         </div>
       </section>
+
+      <FaqSection
+        items={industryFaq(industry)}
+        heading={
+          <>
+            {industry.name} outsourcing, <span className="hl">answered directly</span>.
+          </>
+        }
+        intro={`Common questions about outsourcing ${industry.name.toLowerCase()} support.`}
+        cta={false}
+      />
 
       <section className="section">
         <div className="container">

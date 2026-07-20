@@ -5,6 +5,8 @@ import { SvgIcon } from "@/components/icons";
 import { Reveal } from "@/components/reveal";
 import { MiniMark } from "@/components/mini-mark";
 import { PAGE_IMAGES } from "@/lib/page-images";
+import { FaqSection } from "@/components/faq";
+import { ABOUT_FAQ } from "@/lib/faq-content";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/about-us" },
@@ -87,18 +89,24 @@ export default function AboutUsPage() {
               operate to succeed when you succeed. Isn’t that what a great business
               relationship is all about?
             </p>
-            <Link className="btn btn-dark" href="/contact">
-              Get started today
-              <SvgIcon name="arrow-right" />
-            </Link>
-          </Reveal>
-          <Reveal className="soft-panel">
             <p>
               We provide business process services to some of the biggest names in
               healthcare, telecommunications and wireless services, computer
               hardware, gaming, entertainment, travel, financial services, retail,
               ecommerce, sports, and beyond.
             </p>
+            <Link className="btn btn-dark" href="/contact">
+              Get started today
+              <SvgIcon name="arrow-right" />
+            </Link>
+          </Reveal>
+          <Reveal className="page-visual media-visual">
+            <Image
+              src={PAGE_IMAGES["why-choose-us"].src}
+              alt={PAGE_IMAGES["why-choose-us"].alt}
+              width={760}
+              height={570}
+            />
           </Reveal>
         </div>
       </section>
@@ -117,8 +125,6 @@ export default function AboutUsPage() {
               creating personalized customer experiences, and you need to trust
               the company speaking with your customers.
             </p>
-          </Reveal>
-          <Reveal className="soft-panel">
             <p>
               We strive to better understand our clients’ competitive and market
               challenges so we can play a more effective role as a trusted partner,
@@ -130,16 +136,24 @@ export default function AboutUsPage() {
               <SvgIcon name="arrow-right" />
             </Link>
           </Reveal>
+          <Reveal className="page-visual media-visual">
+            <Image
+              src={PAGE_IMAGES["how-it-works"].src}
+              alt={PAGE_IMAGES["how-it-works"].alt}
+              width={760}
+              height={570}
+            />
+          </Reveal>
         </div>
       </section>
 
       <section className="section">
-        <div className="container">
-          <Reveal className="section-heading left">
+        <div className="container split-section">
+          <Reveal className="split-copy">
             <p className="eyebrow">
               <MiniMark /> Built around your needs
             </p>
-            <h2>Budget Sensitive – Time Sensitive – Industry Sensitive</h2>
+            <h2 className="h2-tight">Budget Sensitive{" –"} Time Sensitive{" –"} Industry Sensitive</h2>
             <p>
               Outsourcing can save time and money when hiring, recruiting,
               training, and management are slowing your team down. With Business
@@ -150,8 +164,18 @@ export default function AboutUsPage() {
               environments.
             </p>
           </Reveal>
+          <Reveal className="page-visual media-visual">
+            <Image
+              src={PAGE_IMAGES.solutions.src}
+              alt={PAGE_IMAGES.solutions.alt}
+              width={760}
+              height={570}
+            />
+          </Reveal>
         </div>
       </section>
+
+      <FaqSection items={ABOUT_FAQ} />
     </>
   );
 }

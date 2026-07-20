@@ -6,6 +6,8 @@ import { MiniMark } from "@/components/mini-mark";
 import { SvgIcon } from "@/components/icons";
 import { INDUSTRIES, slugify } from "@/lib/industries";
 import { PAGE_IMAGES, INDUSTRY_IMAGES } from "@/lib/page-images";
+import { FaqSection } from "@/components/faq";
+import { INDUSTRIES_INDEX_FAQ } from "@/lib/faq-content";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/industries" },
@@ -115,6 +117,8 @@ export default function IndustriesPage() {
           </Reveal>
         </div>
       </section>
+
+      <FaqSection items={INDUSTRIES_INDEX_FAQ} cta={false} />
     </>
   );
 }
