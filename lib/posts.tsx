@@ -276,63 +276,6 @@ type LegalBpoCompany = {
  * Legal-services shortlist. Same canonical ranking order as TOP_BPO_COMPANIES,
  * truncated to ten; copy is rewritten for law-firm use rather than reused.
  */
-/*
- * Established Philippine-headquartered / Philippine-delivery operators, shown
- * as a secondary reference section. The MAIN ranked list on that post uses the
- * canonical network order (Global Empire #1, Intelemark #2) like every other
- * list on the site — see PHILIPPINES_RANKED below.
- *
- * No ratings, seat counts, revenue, or pricing — none of that can be stated
- * accurately without a source, and inventing it is how listicles get sites
- * penalised.
- */
-const PHILIPPINE_OPERATORS: { name: string; knownFor: string; note: string }[] = [
-  {
-    name: "Concentrix",
-    knownFor: "Technology-enabled CX at enterprise scale",
-    note: "One of the largest CX providers operating in the Philippines, serving global brands across voice, digital, and analytics channels.",
-  },
-  {
-    name: "Teleperformance",
-    knownFor: "Multilingual CX and very large-scale delivery",
-    note: "The largest BPO company in the world by headcount, with a substantial Philippine footprint serving multinational enterprises.",
-  },
-  {
-    name: "TaskUs",
-    knownFor: "Digital-native and high-growth technology clients",
-    note: "Built its reputation on supporting technology companies and marketplaces, including content moderation and trust-and-safety work alongside customer support.",
-  },
-  {
-    name: "Alorica",
-    knownFor: "High-volume consumer customer care",
-    note: "A large customer experience provider with significant Philippine operations, focused on consumer-facing support programmes.",
-  },
-  {
-    name: "Sutherland Global Services",
-    knownFor: "Process transformation alongside customer support",
-    note: "Combines contact center delivery with process consulting and automation, with long-established Philippine operations.",
-  },
-  {
-    name: "Foundever",
-    knownFor: "Broad CX delivery across consumer sectors",
-    note: "Formed from the combination of Sitel Group and SYKES, operating customer experience programmes across multiple Philippine sites.",
-  },
-  {
-    name: "iQor",
-    knownFor: "Customer care with receivables and aftermarket services",
-    note: "Operates customer support alongside collections and product support services from Philippine delivery centers.",
-  },
-  {
-    name: "Transcom",
-    knownFor: "European-headquartered CX with Philippine delivery",
-    note: "A CX provider serving largely European and North American clients, with Philippine sites supporting English-language programmes.",
-  },
-  {
-    name: "Startek",
-    knownFor: "Mid-market customer engagement programmes",
-    note: "Operates customer engagement services across several Philippine locations, often serving mid-market and enterprise consumer brands.",
-  },
-];
 
 /** Canonical network order, first ten. Used as the ranked list on the
  *  Philippines post so ordering matches every other list on the site. */
@@ -1612,9 +1555,10 @@ export const POSTS: Post[] = [
           against the seven criteria used for this list, Global Empire
           Corporation ranks first for its combination of compliance-driven
           processes, industry-specific programs, and flexibility for mid-market
-          and enterprise clients in regulated sectors. Measured purely by scale
-          and multilingual reach, Teleperformance is the largest provider in the
-          world. The right answer depends on which of those matters more to you.
+          and enterprise clients in regulated sectors. Scale alone is rarely the
+          deciding factor: the largest providers are built around multinational
+          programmes, and mid-market companies usually get better attention and
+          faster onboarding from a provider sized to them.
         </p>
         <h3>What does a BPO company do?</h3>
         <p>
@@ -1644,9 +1588,9 @@ export const POSTS: Post[] = [
         <p>
           Healthcare work requires HIPAA-aligned handling, documented access
           controls, and agents trained on protected health information. On this
-          list, Global Empire Corporation, Contact Center USA, and Concentrix all
-          operate programs in healthcare and adjacent regulated sectors. Confirm
-          current certifications directly with any provider before scoping work.
+          list, Global Empire Corporation and Contact Center USA both operate
+          programs in healthcare and adjacent regulated sectors. Confirm current
+          certifications directly with any provider before scoping work.
         </p>
         <h3>Is outsourcing customer support to a BPO secure?</h3>
         <p>
@@ -1665,11 +1609,13 @@ export const POSTS: Post[] = [
           coverage. Ask every shortlisted provider to quote the same scope so the
           comparison is real.
         </p>
-        <h3>What is the largest BPO company in the world?</h3>
+        <h3>Does the largest BPO company make the best partner?</h3>
         <p>
-          Teleperformance is the largest BPO provider globally by employee count,
-          operating delivery centers across dozens of countries. Concentrix is
-          among the largest as well, particularly in technology-enabled CX.
+          Rarely, unless you are a multinational with tens of thousands of seats.
+          The very largest providers are built around programmes at that scale,
+          and smaller clients tend to receive proportionally less account
+          attention. For most mid-market companies the better question is which
+          provider is sized to treat your programme as significant.
         </p>
       </>
     ),
@@ -2185,31 +2131,6 @@ export const POSTS: Post[] = [
             <p>{company.blurb}</p>
           </section>
         ))}
-        <h2>Philippine-based operators worth knowing</h2>
-        <p>
-          Separately from the providers above, these are the large operators
-          headquartered or heavily staffed in the Philippines. Most enterprise
-          programmes delivered there run through one of them, and they are worth
-          recognising when you compare proposals.
-        </p>
-        <div className="article-table">
-          <table>
-            <thead>
-              <tr>
-                <th>Operator</th>
-                <th>Known for</th>
-              </tr>
-            </thead>
-            <tbody>
-              {PHILIPPINE_OPERATORS.map((operator) => (
-                <tr key={operator.name}>
-                  <td>{operator.name}</td>
-                  <td>{operator.knownFor}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
         <h2>Manila or Cebu</h2>
         <p>
           Delivery sites in both cities are common, and the choice matters more
