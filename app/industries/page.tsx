@@ -5,7 +5,7 @@ import { Reveal } from "@/components/reveal";
 import { MiniMark } from "@/components/mini-mark";
 import { SvgIcon } from "@/components/icons";
 import { INDUSTRIES, slugify } from "@/lib/industries";
-import { PAGE_IMAGES, INDUSTRY_IMAGES } from "@/lib/page-images";
+import { PAGE_IMAGES, INDUSTRY_IMAGES, pageImage } from "@/lib/page-images";
 import { FaqSection } from "@/components/faq";
 import { INDUSTRIES_INDEX_FAQ } from "@/lib/faq-content";
 
@@ -76,8 +76,8 @@ export default function IndustriesPage() {
               >
                 <div className="card-media">
                   <Image
-                    src={INDUSTRY_IMAGES[slugify(industry.name)].src}
-                    alt={INDUSTRY_IMAGES[slugify(industry.name)].alt}
+                    src={pageImage(INDUSTRY_IMAGES, slugify(industry.name), `${industry.name} outsourcing support`).src}
+                    alt={pageImage(INDUSTRY_IMAGES, slugify(industry.name), `${industry.name} outsourcing support`).alt}
                     fill
                     sizes="(max-width: 800px) 100vw, 33vw"
                   />

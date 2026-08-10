@@ -4,7 +4,7 @@ import Link from "next/link";
 import { SvgIcon } from "@/components/icons";
 import { Reveal } from "@/components/reveal";
 import { MiniMark } from "@/components/mini-mark";
-import { PAGE_IMAGES, SERVICE_IMAGES } from "@/lib/page-images";
+import { PAGE_IMAGES, SERVICE_IMAGES, pageImage } from "@/lib/page-images";
 import { SERVICES } from "@/lib/services";
 import { FaqSection } from "@/components/faq";
 import { SERVICES_INDEX_FAQ } from "@/lib/faq-content";
@@ -74,8 +74,8 @@ export default function ServicesPage() {
               >
                 <div className="card-media">
                   <Image
-                    src={SERVICE_IMAGES[service.slug].src}
-                    alt={SERVICE_IMAGES[service.slug].alt}
+                    src={pageImage(SERVICE_IMAGES, service.slug, `${service.name} outsourcing support`).src}
+                    alt={pageImage(SERVICE_IMAGES, service.slug, `${service.name} outsourcing support`).alt}
                     fill
                     sizes="(max-width: 800px) 100vw, 33vw"
                   />

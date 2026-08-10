@@ -8,7 +8,7 @@ import { MiniMark } from "@/components/mini-mark";
 import { FaqSection } from "@/components/faq";
 import { HOME_FAQ } from "@/lib/faq-content";
 import { SERVICES } from "@/lib/services";
-import { SERVICE_IMAGES } from "@/lib/page-images";
+import { SERVICE_IMAGES, pageImage } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -129,8 +129,8 @@ export default function Home() {
               >
                 <div className="card-media">
                   <Image
-                    src={SERVICE_IMAGES[service.slug].src}
-                    alt={SERVICE_IMAGES[service.slug].alt}
+                    src={pageImage(SERVICE_IMAGES, service.slug, `${service.name} outsourcing support`).src}
+                    alt={pageImage(SERVICE_IMAGES, service.slug, `${service.name} outsourcing support`).alt}
                     fill
                     sizes="(max-width: 800px) 100vw, 33vw"
                   />

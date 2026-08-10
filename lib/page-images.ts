@@ -6,6 +6,31 @@ export type PageImage = {
   alt: string;
 };
 
+/*
+ * Slug-keyed image lookups are the one place a new page can break the build:
+ * add a service/industry/solution/location without an image entry and the
+ * index pages crash prerendering on `.src` of undefined. Always look up
+ * through pageImage() so a missing entry degrades to the shared fallback
+ * instead of failing the build.
+ */
+const FALLBACK_IMAGE: PageImage = {
+  src: "/assets/img/services-overview.jpg",
+  alt: "Business Process Outsourcing support team reviewing client work",
+};
+
+export function pageImage(
+  map: Record<string, PageImage>,
+  key: string,
+  fallbackAlt?: string,
+): PageImage {
+  return (
+    map[key] ?? {
+      src: FALLBACK_IMAGE.src,
+      alt: fallbackAlt ?? FALLBACK_IMAGE.alt,
+    }
+  );
+}
+
 export const SERVICE_IMAGES: Record<string, PageImage> = {
   "customer-support": {
     src: unsplash("photo-1590650153855-d9e808231d41"),
@@ -42,6 +67,14 @@ export const SERVICE_IMAGES: Record<string, PageImage> = {
   "lead-generation": {
     src: unsplash("photo-1556761175-b413da4baf72"),
     alt: "Sales team reviewing lead generation pipeline opportunities",
+  },
+  "hipaa-medical-answering-service": {
+    src: unsplash("photo-1519494026892-80bbd2d6fd0d"),
+    alt: "Medical reception desk handling patient calls and appointments",
+  },
+  "inside-sales-outsourcing": {
+    src: unsplash("photo-1552581234-26160f608093"),
+    alt: "Inside sales representative on a call reviewing pipeline on screen",
   },
 };
 
@@ -132,6 +165,69 @@ export const INDUSTRY_IMAGES: Record<string, PageImage> = {
   "real-estate": {
     src: unsplash("photo-1560518883-ce09059eeffa"),
     alt: "Real estate property interior for tenant and owner support",
+  },
+  legal: {
+    src: unsplash("photo-1589829545856-d10d557cf95f"),
+    alt: "Law office desk with legal books for law firm client intake support",
+  },
+};
+
+export const LOCATION_IMAGES: Record<string, PageImage> = {
+  "call-center-outsourcing-usa": {
+    src: unsplash("photo-1485738422979-f5c462d49f74"),
+    alt: "United States city skyline representing US market call center coverage",
+  },
+  "call-center-outsourcing-uk": {
+    src: unsplash("photo-1513635269975-59663e0ac1ad"),
+    alt: "London skyline representing UK call centre outsourcing coverage",
+  },
+  "call-center-outsourcing-dubai": {
+    src: unsplash("photo-1512453979798-5ea266f8880c"),
+    alt: "Dubai skyline representing UAE call center outsourcing coverage",
+  },
+  "call-center-outsourcing-europe": {
+    src: unsplash("photo-1467269204594-9661b134dd2b"),
+    alt: "European city view representing multilingual European support coverage",
+  },
+  "call-center-outsourcing-mexico": {
+    src: unsplash("photo-1518105779142-d975f22f1b0a"),
+    alt: "Mexico City view representing nearshore call center delivery",
+  },
+  "call-center-outsourcing-philippines": {
+    src: unsplash("photo-1573790387438-4da905039392"),
+    alt: "Manila cityscape representing Philippine offshore BPO delivery",
+  },
+  "call-center-outsourcing-colombia": {
+    src: unsplash("photo-1568632234157-ce7aecd03d0d"),
+    alt: "Bogota city view representing Colombian nearshore contact center delivery",
+  },
+  "call-center-outsourcing-india": {
+    src: unsplash("photo-1587474260584-136574528ed5"),
+    alt: "India city view representing offshore technical support and back-office delivery",
+  },
+  "nearshore-call-center": {
+    src: unsplash("photo-1521737604893-d14cc237f11d"),
+    alt: "Support team collaborating during shared business hours",
+  },
+  "healthcare-bpo-philippines": {
+    src: unsplash("photo-1516549655169-df83a0774514"),
+    alt: "Healthcare administration team processing medical billing and claims",
+  },
+  "telemarketing-philippines": {
+    src: unsplash("photo-1560264280-88b68371db39"),
+    alt: "Outbound calling team working a telemarketing campaign",
+  },
+  "it-support-outsourcing-usa": {
+    src: unsplash("photo-1551434678-e076c223a692"),
+    alt: "IT service desk team supporting users from a US operations floor",
+  },
+  "bpo-companies-cebu": {
+    src: unsplash("photo-1542931287-023b922fa89b"),
+    alt: "Cebu city view representing Philippine BPO delivery outside Manila",
+  },
+  "offshore-call-center": {
+    src: unsplash("photo-1497215728101-856f4ea42174"),
+    alt: "Contact center floor representing round-the-clock offshore delivery",
   },
 };
 

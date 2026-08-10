@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { MiniMark } from "@/components/mini-mark";
 import { SvgIcon } from "@/components/icons";
-import { PAGE_IMAGES, SOLUTION_IMAGES } from "@/lib/page-images";
+import { PAGE_IMAGES, SOLUTION_IMAGES, pageImage } from "@/lib/page-images";
 import { SOLUTIONS } from "@/lib/solutions";
 import { slugify } from "@/lib/industries";
 import { FaqSection } from "@/components/faq";
@@ -69,8 +69,8 @@ export default function SolutionsPage() {
               >
                 <div className="card-media">
                   <Image
-                    src={SOLUTION_IMAGES[slugify(detail.title)].src}
-                    alt={SOLUTION_IMAGES[slugify(detail.title)].alt}
+                    src={pageImage(SOLUTION_IMAGES, slugify(detail.title), `${detail.title} outsourcing support`).src}
+                    alt={pageImage(SOLUTION_IMAGES, slugify(detail.title), `${detail.title} outsourcing support`).alt}
                     fill
                     sizes="(max-width: 800px) 100vw, 33vw"
                   />
