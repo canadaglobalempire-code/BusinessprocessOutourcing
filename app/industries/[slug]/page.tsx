@@ -6,8 +6,10 @@ import { MiniMark } from "@/components/mini-mark";
 import { Reveal } from "@/components/reveal";
 import { SvgIcon } from "@/components/icons";
 import { INDUSTRIES, getIndustry, slugify } from "@/lib/industries";
-import { INDUSTRY_IMAGES, PAGE_IMAGES } from "@/lib/page-images";
+import { INDUSTRY_IMAGES } from "@/lib/page-images";
 import { FaqSection } from "@/components/faq";
+import { LeadCta } from "@/components/lead-cta";
+import { CrossLinks } from "@/components/cross-links";
 import { industryFaq } from "@/lib/faq-content";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -50,12 +52,6 @@ export default async function IndustryDetail({ params }: Params) {
   const image = INDUSTRY_IMAGES[slugify(industry.name)] ?? {
     src: "/assets/img/services-overview.jpg",
     alt: `${industry.name} outsourcing support team reviewing client work`,
-  };
-  // A second, different photo for the support-needs card so no image repeats on the page.
-  const pagePool = Object.values(PAGE_IMAGES);
-  const secondaryImage = {
-    src: pagePool[index % pagePool.length].src,
-    alt: `${industry.name} outsourcing support team at work`,
   };
   const seoBody = industry.seoBody ?? {
     heading: `${industry.name} BPO support built around customer demand.`,
@@ -140,7 +136,7 @@ export default async function IndustryDetail({ params }: Params) {
         </div>
       </section>
 
-      <section className="section">
+      <section className={`section ${accent}`}>
         <div className="container split-section industry-seo-section detail-section">
           <Reveal className="split-copy">
             <p className="eyebrow">
@@ -152,22 +148,27 @@ export default async function IndustryDetail({ params }: Params) {
             ))}
           </Reveal>
           <Reveal className="soft-panel industry-seo-card">
-            <div className="industry-seo-media">
-                <Image
-                  src={secondaryImage.src}
-                  alt={secondaryImage.alt}
-                  width={720}
-                height={420}
-              />
+            <div className="industry-seo-card-head">
+              <span className="industry-seo-chip">
+                <SvgIcon name="check-circle" />
+              </span>
+              <div>
+                <h3>Where {industry.name.toLowerCase()} teams usually start</h3>
+                <p>The support areas handed over first, in the order most teams add them.</p>
+              </div>
             </div>
-            <div className="industry-seo-card-body">
-              <h3>Common support needs</h3>
-              <ul className="check-list">
-                {supportNeeds.map((need) => (
-                  <li key={need}>{need}</li>
-                ))}
-              </ul>
-            </div>
+            <ul className="industry-need-list">
+              {supportNeeds.map((need, needIndex) => (
+                <li key={need}>
+                  <span>{String(needIndex + 1).padStart(2, "0")}</span>
+                  {need}
+                </li>
+              ))}
+            </ul>
+            <p className="industry-seo-card-note">
+              Scope is confirmed with you before launch. Start with one area and
+              add the rest as coverage settles.
+            </p>
           </Reveal>
         </div>
       </section>
@@ -198,6 +199,33 @@ export default async function IndustryDetail({ params }: Params) {
           </Reveal>
         </div>
       </section>
+
+      {industry.crossLinks && (
+        <CrossLinks
+          items={industry.crossLinks}
+          eyebrow="Go deeper"
+          heading={
+            <>
+              Services, delivery, and <span className="hl">further reading</span>.
+            </>
+          }
+        />
+      )}
+
+      <LeadCta
+        heading={
+          <>
+            Get a {industry.name.toLowerCase()} support plan,{" "}
+            <span className="hl">not a sales call</span>.
+          </>
+        }
+        intro={`Tell us the ${industry.name.toLowerCase()} work that is consuming your team's time and we will map the coverage, team size, and reporting it needs.`}
+        points={[
+          `A scoped ${industry.name.toLowerCase()} coverage plan`,
+          "Team size, hours, and escalation rules confirmed up front",
+          "No obligation and no cost for the consultation",
+        ]}
+      />
 
       <FaqSection
         items={industryFaq(industry)}

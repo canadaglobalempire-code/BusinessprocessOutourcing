@@ -8,6 +8,8 @@ import { MiniMark } from "@/components/mini-mark";
 import { SERVICE_IMAGES } from "@/lib/page-images";
 import { SERVICES, getService } from "@/lib/services";
 import { FaqSection } from "@/components/faq";
+import { LeadCta } from "@/components/lead-cta";
+import { CrossLinks } from "@/components/cross-links";
 import { serviceFaq } from "@/lib/faq-content";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -149,6 +151,144 @@ export default async function ServiceDetail({ params }: Params) {
           </Reveal>
         </div>
       </section>
+
+      {service.deepDive && (
+        <section className="section">
+          <div className="container narrow deep-dive">
+            {service.deepDive.map((block) => (
+              <Reveal as="article" key={block.heading} className="deep-dive-block">
+                <h2>{block.heading}</h2>
+                {block.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {service.models && (
+        <section className={`section ${service.accent}`}>
+          <div className="container">
+            <Reveal className="section-heading">
+              <p className="eyebrow">
+                <MiniMark /> Engagement models
+              </p>
+              <h2>
+                Three ways to <span className="hl">structure the team</span>.
+              </h2>
+              <p>
+                Most programmes use one of these, or a dedicated core with pooled
+                coverage for overflow.
+              </p>
+            </Reveal>
+            <div className="model-grid">
+              {service.models.map((model, modelIndex) => (
+                <Reveal
+                  as="article"
+                  key={model.name}
+                  className="model-card"
+                  delay={(modelIndex % 3) * 0.05}
+                >
+                  <h3>{model.name}</h3>
+                  <p className="model-label">Best for</p>
+                  <p>{model.bestFor}</p>
+                  <p className="model-label">Trade-off</p>
+                  <p className="model-tradeoff">{model.tradeoff}</p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {service.onboarding && (
+        <section className="section">
+          <div className="container">
+            <Reveal className="section-heading">
+              <p className="eyebrow">
+                <MiniMark /> How launch works
+              </p>
+              <h2>
+                From scope to live in <span className="hl">five steps</span>.
+              </h2>
+              <p>
+                Most engagements begin within one to two weeks of confirming
+                scope, tools, coverage hours, and escalation rules.
+              </p>
+            </Reveal>
+            <ol className="onboarding-steps">
+              {service.onboarding.map((step, stepIndex) => (
+                <Reveal as="li" key={step.title} delay={(stepIndex % 3) * 0.05}>
+                  <span className="onboarding-n">
+                    {String(stepIndex + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3>{step.title}</h3>
+                    <p>{step.detail}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </ol>
+          </div>
+        </section>
+      )}
+
+      {service.concerns && (
+        <section className="section">
+          <div className="container narrow">
+            <Reveal className="section-heading">
+              <p className="eyebrow">
+                <MiniMark /> Before you commit
+              </p>
+              <h2>
+                The objections worth <span className="hl">raising early</span>.
+              </h2>
+            </Reveal>
+            <div className="concern-list">
+              {service.concerns.map((concern, concernIndex) => (
+                <Reveal
+                  as="article"
+                  key={concern.q}
+                  className="concern-item"
+                  delay={(concernIndex % 3) * 0.04}
+                >
+                  <h3>{concern.q}</h3>
+                  <p>{concern.a}</p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {service.crossLinks && (
+        <CrossLinks
+          items={service.crossLinks}
+          eyebrow="Where this runs"
+          heading={
+            <>
+              Delivery, sectors, and <span className="hl">further reading</span>.
+            </>
+          }
+        />
+      )}
+
+      <LeadCta
+        defaultService={service.name}
+        heading={
+          <>
+            Start with a {service.name.toLowerCase()} plan,{" "}
+            <span className="hl">not a sales call</span>.
+          </>
+        }
+        intro={`Tell us what your team is spending time on and we will scope the ${service.name.toLowerCase()} coverage, team size, and reporting that fits.`}
+        points={[
+          `A scoped ${service.name.toLowerCase()} plan for your workload`,
+          "Coverage hours, team size, and tools confirmed up front",
+          "No obligation and no cost for the consultation",
+        ]}
+      />
 
       <FaqSection
         items={serviceFaq(service)}
