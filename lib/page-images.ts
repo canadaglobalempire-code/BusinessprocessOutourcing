@@ -76,6 +76,54 @@ export const SERVICE_IMAGES: Record<string, PageImage> = {
     src: unsplash("photo-1552581234-26160f608093"),
     alt: "Inside sales representative on a call reviewing pipeline on screen",
   },
+  "inbound-call-center-services": {
+    src: unsplash("photo-1560264280-88b68371db39"),
+    alt: "Inbound call center agent answering customer calls",
+  },
+  "outbound-call-center-services": {
+    src: unsplash("photo-1552581234-26160f608093"),
+    alt: "Outbound call center agent working a campaign",
+  },
+  "after-hours-answering-service": {
+    src: unsplash("photo-1521737711867-e3b97375f902"),
+    alt: "Agent providing after-hours call coverage",
+  },
+  "omnichannel-contact-center": {
+    src: unsplash("photo-1553877522-43269d4ea984"),
+    alt: "Agent handling multiple customer support channels",
+  },
+  "call-center-analytics": {
+    src: unsplash("photo-1551288049-bebda4e38f71"),
+    alt: "Analyst reviewing contact center performance data",
+  },
+  "speech-analytics": {
+    src: unsplash("photo-1460925895917-afdab827c52f"),
+    alt: "Speech analytics dashboard analysing call conversations",
+  },
+  "pci-compliant-call-center": {
+    src: unsplash("photo-1563013544-824ae1b704d3"),
+    alt: "Secure card payment handling in a contact center",
+  },
+  "back-office-outsourcing": {
+    src: unsplash("photo-1554224155-6726b3ff858f"),
+    alt: "Back office team processing documents and records",
+  },
+  "help-desk-outsourcing": {
+    src: unsplash("photo-1516321497487-e288fb19713f"),
+    alt: "IT help desk agent supporting a user",
+  },
+  "order-taking-services": {
+    src: unsplash("photo-1556742049-0cfed4f6a45d"),
+    alt: "Agent taking a customer order by phone",
+  },
+  "customer-acquisition-outsourcing": {
+    src: unsplash("photo-1556761175-b413da4baf72"),
+    alt: "Acquisition team following up on new enquiries",
+  },
+  "customer-experience-consulting": {
+    src: unsplash("photo-1552664730-d307ca884978"),
+    alt: "Team mapping a customer experience improvement plan",
+  },
 };
 
 export const PAGE_IMAGES: Record<string, PageImage> = {
@@ -220,6 +268,158 @@ export const LOCATION_IMAGES: Record<string, PageImage> = {
   "it-support-outsourcing-usa": {
     src: unsplash("photo-1551434678-e076c223a692"),
     alt: "IT service desk team supporting users from a US operations floor",
+  },
+  "call-center-outsourcing-poland": {
+    src: unsplash("photo-1519197924294-4ba991a11128"),
+    alt: "Warsaw skyline representing Polish nearshore delivery",
+  },
+  "call-center-outsourcing-romania": {
+    src: unsplash("photo-1584646098378-0874589d76b1"),
+    alt: "Bucharest city view representing Romanian nearshore delivery",
+  },
+  "call-center-outsourcing-bulgaria": {
+    src: unsplash("photo-1601581875309-fafbf2d3ed3a"),
+    alt: "Sofia city view representing Bulgarian nearshore delivery",
+  },
+  "call-center-outsourcing-portugal": {
+    src: unsplash("photo-1585208798174-6cedd86e019a"),
+    alt: "Lisbon view representing Portuguese nearshore delivery",
+  },
+  "call-center-outsourcing-spain": {
+    src: unsplash("photo-1539037116277-4db20889f2d4"),
+    alt: "Spanish city view representing European Spanish delivery",
+  },
+  "call-center-outsourcing-ireland": {
+    src: unsplash("photo-1549918864-48ac978761a4"),
+    alt: "Dublin view representing Irish EU English-language delivery",
+  },
+  "call-center-outsourcing-south-africa": {
+    src: unsplash("photo-1580060839134-75a5edca2e99"),
+    alt: "Cape Town view representing South African delivery",
+  },
+  "call-center-outsourcing-egypt": {
+    src: unsplash("photo-1572252009286-268acec5ca0a"),
+    alt: "Cairo view representing Egyptian Arabic-language delivery",
+  },
+  "call-center-outsourcing-morocco": {
+    src: unsplash("photo-1539020140153-e479b8c22e70"),
+    alt: "Casablanca view representing Moroccan French-language delivery",
+  },
+  "call-center-outsourcing-kenya": {
+    src: unsplash("photo-1611348586804-61bf6c080437"),
+    alt: "Nairobi view representing Kenyan East African delivery",
+  },
+  "call-center-outsourcing-vietnam": {
+    src: unsplash("photo-1583417319070-4a69db38a482"),
+    alt: "Vietnam city view representing Asian technical delivery",
+  },
+  "call-center-outsourcing-malaysia": {
+    src: unsplash("photo-1596422846543-75c6fc197f07"),
+    alt: "Kuala Lumpur view representing Malaysian multilingual delivery",
+  },
+  "call-center-outsourcing-costa-rica": {
+    src: unsplash("photo-1518259102261-b40117eabbc9"),
+    alt: "Costa Rica view representing Central American nearshore delivery",
+  },
+  "call-center-outsourcing-guatemala": {
+    src: unsplash("photo-1568632234157-ce7aecd03d0d"),
+    alt: "Guatemala view representing Central American nearshore delivery",
+  },
+  "call-center-outsourcing-dominican-republic": {
+    src: unsplash("photo-1580541631950-7282082b53ce"),
+    alt: "Dominican Republic view representing Caribbean nearshore delivery",
+  },
+  "call-center-outsourcing-panama": {
+    src: unsplash("photo-1558642084-fd07fae5282e"),
+    alt: "Panama City view representing regional hub delivery",
+  },
+  "call-center-outsourcing-argentina": {
+    src: unsplash("photo-1589909202802-8f4aadce1849"),
+    alt: "Buenos Aires view representing Argentine delivery",
+  },
+  "call-center-outsourcing-brazil": {
+    src: unsplash("photo-1483729558449-99ef09a8c325"),
+    alt: "Brazil city view representing Brazilian Portuguese delivery",
+  },
+  "call-center-outsourcing-new-york": {
+    src: unsplash("photo-1496442226666-8d4d0e62e6e9"),
+    alt: "New York skyline representing US East Coast market coverage",
+  },
+  "call-center-outsourcing-chicago": {
+    src: unsplash("photo-1494522855154-9297ac14b55f"),
+    alt: "Chicago skyline representing Midwest market coverage",
+  },
+  "call-center-outsourcing-los-angeles": {
+    src: unsplash("photo-1515896769750-31548aa180ed"),
+    alt: "Los Angeles view representing West Coast market coverage",
+  },
+  "call-center-outsourcing-houston": {
+    src: unsplash("photo-1530089711124-9ca31fb9e863"),
+    alt: "Houston skyline representing Gulf Coast market coverage",
+  },
+  "call-center-outsourcing-dallas": {
+    src: unsplash("photo-1545194445-dddb8f4487c6"),
+    alt: "Dallas skyline representing Texas market coverage",
+  },
+  "call-center-outsourcing-miami": {
+    src: unsplash("photo-1506966953602-c20cc11f75e3"),
+    alt: "Miami skyline representing bilingual market coverage",
+  },
+  "call-center-outsourcing-atlanta": {
+    src: unsplash("photo-1575917649705-5b59aaa12e6b"),
+    alt: "Atlanta skyline representing Southeast market coverage",
+  },
+  "call-center-outsourcing-phoenix": {
+    src: unsplash("photo-1558645836-e44122a743ee"),
+    alt: "Phoenix view representing Southwest market coverage",
+  },
+  "call-center-outsourcing-denver": {
+    src: unsplash("photo-1546156929-a4c0ac411f47"),
+    alt: "Denver skyline representing Mountain region market coverage",
+  },
+  "call-center-outsourcing-seattle": {
+    src: unsplash("photo-1502175353174-a7a70e73b362"),
+    alt: "Seattle skyline representing Pacific Northwest market coverage",
+  },
+  "call-centre-outsourcing-london": {
+    src: unsplash("photo-1513635269975-59663e0ac1ad"),
+    alt: "London skyline representing UK market coverage",
+  },
+  "call-centre-outsourcing-manchester": {
+    src: unsplash("photo-1588668214407-6ea9a6d8c272"),
+    alt: "Manchester view representing northern UK market coverage",
+  },
+  "call-centre-outsourcing-birmingham": {
+    src: unsplash("photo-1589578527966-fdac0f44566c"),
+    alt: "Birmingham view representing Midlands market coverage",
+  },
+  "call-centre-outsourcing-glasgow": {
+    src: unsplash("photo-1595867818082-083862f3d630"),
+    alt: "Glasgow view representing Scottish market coverage",
+  },
+  "call-centre-outsourcing-berlin": {
+    src: unsplash("photo-1560969184-10fe8719e047"),
+    alt: "Berlin view representing German market coverage",
+  },
+  "call-centre-outsourcing-paris": {
+    src: unsplash("photo-1502602898657-3e91760cbb34"),
+    alt: "Paris view representing French market coverage",
+  },
+  "call-centre-outsourcing-amsterdam": {
+    src: unsplash("photo-1534351590666-13e3e96b5017"),
+    alt: "Amsterdam view representing Dutch market coverage",
+  },
+  "call-centre-outsourcing-madrid": {
+    src: unsplash("photo-1539037116277-4db20889f2d4"),
+    alt: "Madrid view representing Spanish market coverage",
+  },
+  "call-center-outsourcing-abu-dhabi": {
+    src: unsplash("photo-1512632578888-169bbbc64f33"),
+    alt: "Abu Dhabi skyline representing UAE capital market coverage",
+  },
+  "call-center-outsourcing-sharjah": {
+    src: unsplash("photo-1518684079-3c830dcef090"),
+    alt: "Sharjah view representing UAE industrial market coverage",
   },
   "bpo-companies-cebu": {
     src: unsplash("photo-1542931287-023b922fa89b"),

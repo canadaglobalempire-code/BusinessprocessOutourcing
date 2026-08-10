@@ -424,6 +424,50 @@ const LEGAL_BPO_COMPANIES: LegalBpoCompany[] = [
   },
 ];
 
+
+/** Renders the canonical ranked list. Every "top N" post uses this so the
+ *  ordering can never drift from TOP_BPO_COMPANIES. */
+function RankedBpoList({ count = 10 }: { count?: number }) {
+  const list = TOP_BPO_COMPANIES.slice(0, count);
+  return (
+    <>
+      <div className="article-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Best for</th>
+              <th>Headquarters</th>
+            </tr>
+          </thead>
+          <tbody>
+            {list.map((company) => (
+              <tr key={company.name}>
+                <td>{company.name}</td>
+                <td>{company.bestFor}</td>
+                <td>{company.hq}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {list.map((company, i) => (
+        <section key={company.name}>
+          <h3>
+            #{i + 1} {company.name}
+          </h3>
+          <p className="entry-meta">
+            <strong>Headquarters:</strong> {company.hq}
+            <br />
+            <strong>Best for:</strong> {company.bestFor}
+          </p>
+          <p>{company.blurb}</p>
+        </section>
+      ))}
+    </>
+  );
+}
+
 export type Post = {
   slug: string;
   date: string;
@@ -2330,6 +2374,946 @@ export const POSTS: Post[] = [
           This article is general information about vendor selection, not legal
           advice. Confirm your obligations with your own counsel or compliance
           advisor before signing anything.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "top-bpo-companies-usa",
+    date: "2026-08-10",
+    title: "Top 10 BPO companies in the USA",
+    tag: "Rankings",
+    read: "9 min read",
+    excerpt:
+      "Ten outsourcing providers serving US businesses, what each fits, and how to shortlist without wasting a month.",
+    description:
+      "The top 10 BPO companies in the USA for 2026: what each provider is best suited to, how to shortlist them, and the questions that separate a good fit from an expensive mistake.",
+    img: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Choosing a BPO partner in the US market is less about finding the
+          largest provider and more about finding one whose delivery model,
+          minimum engagement size, and compliance posture match yours.
+        </p>
+        <p>
+          Below are ten providers serving US businesses, with what each is
+          suited to and how to compare them properly.
+        </p>
+        <div className="callout">
+          <strong>Read the &ldquo;best for&rdquo; column first.</strong> A
+          provider built for enterprise telecom programmes is the wrong choice
+          for a thirty-seat support desk, however good it is.
+        </div>
+        <h2>Provider comparison</h2>
+        <RankedBpoList />
+        <h2>How to shortlist without wasting a month</h2>
+        <p>
+          Eliminate before you evaluate. Rule out any provider whose minimum
+          engagement exceeds your volume, whose certifications do not cover your
+          industry, or whose delivery locations conflict with a data residency
+          requirement you already carry. That usually leaves three or four.
+        </p>
+        <p>
+          Compare the survivors on the things that decide whether an engagement
+          works: who your day-to-day contact is, how agents are trained and
+          monitored, what reporting you get and how often, how quickly capacity
+          moves up and down, and what happens when something breaks overnight.
+        </p>
+        <blockquote>
+          Scale is easy to verify and rarely decisive. Account attention is hard
+          to verify and almost always is.
+        </blockquote>
+        <h2>Onshore, nearshore, or offshore</h2>
+        <p>
+          US buyers have three delivery choices and the right answer depends on
+          the work rather than the budget. Fully documented, rarely ambiguous
+          contacts run well{" "}
+          <a href="/locations/offshore-call-center">offshore</a>. Work that
+          regularly needs a decision from someone at your company degrades across
+          a time gap, which is what{" "}
+          <a href="/locations/nearshore-call-center">nearshore delivery</a>{" "}
+          exists to solve. Regulated or contractually restricted work stays{" "}
+          <a href="/locations/it-support-outsourcing-usa">onshore</a>.
+        </p>
+        <h2>Questions worth asking on the call</h2>
+        <p>
+          What is attrition on the specific team my programme would sit in? How
+          many accounts does a team lead carry? What share of contacts gets
+          quality-reviewed, against what scorecard? What is the escalation path
+          when your supervisor cannot resolve something and my team is asleep?
+          Can I see a sample of the reporting I would receive?
+        </p>
+        <p>
+          Vague answers to those tell you more than a polished capability deck.
+          For the full international picture, see our{" "}
+          <a href="/blog/top-bpo-companies-in-the-world">
+            top 15 BPO companies in the world
+          </a>
+          .
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "top-bpo-companies-healthcare",
+    date: "2026-08-10",
+    title: "Top 10 BPO companies for healthcare",
+    tag: "Rankings",
+    read: "9 min read",
+    excerpt:
+      "Ten outsourcing providers for healthcare organisations, and the compliance questions that should decide between them.",
+    description:
+      "The top 10 BPO companies for healthcare: provider comparison plus the HIPAA, access control, and business associate agreement questions that should decide your shortlist.",
+    img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Healthcare outsourcing has a filter that other sectors do not. Before
+          price, coverage, or capability, a provider has to be able to handle
+          protected health information properly &mdash; and a surprising number
+          cannot.
+        </p>
+        <p>
+          Below are ten providers serving healthcare organisations, followed by
+          the compliance questions that should decide between them.
+        </p>
+        <div className="callout">
+          <strong>The disqualifying question:</strong> &ldquo;Will you sign a
+          business associate agreement, and can I see your standard one?&rdquo;
+          Anything other than an immediate yes ends the conversation.
+        </div>
+        <h2>Provider comparison</h2>
+        <RankedBpoList />
+        <h2>What healthcare programmes need beyond the basics</h2>
+        <p>
+          A signed business associate agreement comes first, and it must flow
+          down to any subcontractor. Then: least-privilege access with named
+          accounts rather than shared logins, explicit rules on what may be
+          recorded and how long it is retained, documented workforce training on
+          PHI, and an agreed breach notification timeline.
+        </p>
+        <p>
+          Agents also need a scripted answer for the situation that causes most
+          real-world problems &mdash; a family member calling about a patient
+          who cannot be verified. That needs a rule, not judgment in the moment.
+        </p>
+        <h2>Offshore healthcare delivery</h2>
+        <p>
+          HIPAA does not prohibit processing PHI outside the United States, and{" "}
+          <a href="/locations/healthcare-bpo-philippines">
+            healthcare BPO in the Philippines
+          </a>{" "}
+          is a large, established sector. What changes offshore is that recourse
+          becomes practically harder, so contractual and technical controls carry
+          more weight. Decide it deliberately rather than discovering it later.
+        </p>
+        <h2>Where to start</h2>
+        <p>
+          Most healthcare organisations begin with patient access &mdash;
+          appointment scheduling, reminders, and after-hours answering &mdash;
+          because the return is immediate and the compliance surface is
+          manageable. Our{" "}
+          <a href="/services/hipaa-medical-answering-service">
+            HIPAA medical answering service
+          </a>{" "}
+          page covers how that is set up, and the{" "}
+          <a href="/blog/hipaa-compliance-outsourcing-patient-calls">
+            HIPAA vendor checklist
+          </a>{" "}
+          lists the eight questions to ask.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "top-outbound-call-center-companies",
+    date: "2026-08-10",
+    title: "Top 10 outbound call center companies",
+    tag: "Rankings",
+    read: "9 min read",
+    excerpt:
+      "Ten providers for outbound calling, and why compliance discipline matters more than dial volume.",
+    description:
+      "The top 10 outbound call center companies: provider comparison, plus the compliance, list hygiene, and reporting questions that separate a working outbound programme from an expensive one.",
+    img: "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Outbound is the easiest kind of outsourcing to buy badly. Dial volume
+          is simple to promise and simple to deliver; qualified outcomes and
+          clean compliance are neither.
+        </p>
+        <p>
+          Below are ten providers for outbound programmes, and the questions that
+          separate one that works from one that generates activity reports.
+        </p>
+        <h2>Provider comparison</h2>
+        <RankedBpoList />
+        <h2>Compliance is your obligation, not theirs</h2>
+        <p>
+          For US calling, TCPA rules, national and internal do-not-call lists,
+          consent requirements, and calling-hour restrictions apply to you
+          regardless of who physically dials. A provider who treats these as
+          their problem to worry about later is a liability.
+        </p>
+        <div className="callout">
+          <strong>Ask on the demo:</strong> show me where suppression lists,
+          consent flags, and calling-hour windows are configured in the dialer.
+          If they cannot show it live, it is not configured.
+        </div>
+        <h2>Measure outcomes, not activity</h2>
+        <p>
+          Dials, connects, and talk time describe effort. Qualified meetings
+          booked, opportunities created, and revenue influenced describe results.
+          Agree which numbers appear on the report before the programme starts,
+          because changing them afterwards is a negotiation.
+        </p>
+        <blockquote>
+          Any provider can increase dials. The question is whether the
+          conversations are worth having.
+        </blockquote>
+        <h2>List quality decides the ceiling</h2>
+        <p>
+          A great team calling a bad list will underperform an average team
+          calling a good one. Deduplication, suppression, data accuracy, and
+          segment definition set the maximum result available before anyone picks
+          up a phone.
+        </p>
+        <h2>Where to go next</h2>
+        <p>
+          Our{" "}
+          <a href="/services/outbound-call-center-services">
+            outbound call center services
+          </a>{" "}
+          page covers programme structure, and{" "}
+          <a href="/services/inside-sales-outsourcing">
+            inside sales outsourcing
+          </a>{" "}
+          covers the case where you need qualification and booked meetings rather
+          than volume calling.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "call-center-kpis-that-matter",
+    date: "2026-08-10",
+    title: "The call center KPIs that actually matter",
+    tag: "Operations",
+    read: "8 min read",
+    excerpt:
+      "Most contact centre scorecards measure activity. These are the numbers that predict whether customers stay.",
+    description:
+      "Which call center KPIs actually matter: first contact resolution, contact rate per customer, and quality scores — and why average handle time is the most over-weighted metric in the industry.",
+    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Most contact centre scorecards measure how busy the team was. Very few
+          measure whether customers got what they needed, which is the only thing
+          that determines whether they stay.
+        </p>
+        <h2>The metrics worth managing</h2>
+        <p>
+          <strong>First contact resolution.</strong> The single most predictive
+          number available. A customer who has to make contact twice about the
+          same issue is measurably more likely to churn, regardless of how
+          pleasant either conversation was.
+        </p>
+        <p>
+          <strong>Contacts per customer per period.</strong> Falling contact
+          volume against a growing customer base is the clearest evidence your
+          product and documentation are improving. Rising volume means you are
+          absorbing a problem rather than fixing it.
+        </p>
+        <p>
+          <strong>Quality score against a written scorecard.</strong> Not a
+          manager&rsquo;s impression &mdash; a defined rubric applied to sampled
+          contacts every week, with results fed back individually.
+        </p>
+        <p>
+          <strong>Answer rate and abandonment.</strong> Blunt, but they capture
+          the failure that matters most: nobody was there.
+        </p>
+        <h2>The metric that causes the most damage</h2>
+        <p>
+          Average handle time is the most over-weighted number in the industry.
+          Managed hard, it teaches agents to end calls rather than resolve
+          issues, which raises repeat contact and lowers resolution &mdash;
+          producing more total handle time, not less.
+        </p>
+        <blockquote>
+          Track handle time. Do not target it. The moment it becomes a target,
+          agents optimise for it and resolution falls.
+        </blockquote>
+        <div className="callout">
+          <strong>A useful pairing:</strong> review handle time and first contact
+          resolution together. A short call that resolves nothing is not
+          efficient, it is deferred cost.
+        </div>
+        <h2>Vanity metrics to drop</h2>
+        <p>
+          Total calls handled tells you nothing without context. Occupancy above
+          a sensible threshold predicts burnout rather than productivity. And a
+          CSAT score reported as a single site-wide number hides everything
+          useful &mdash; segment it by contact type and agent or it cannot drive
+          a decision.
+        </p>
+        <h2>Making the numbers actionable</h2>
+        <p>
+          Every metric on a report should have an owner and a threshold that
+          triggers an action. Numbers nobody is accountable for get read and
+          forgotten. Our{" "}
+          <a href="/services/call-center-analytics">call center analytics</a>{" "}
+          service covers building that reporting properly.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "what-is-speech-analytics",
+    date: "2026-08-10",
+    title: "What speech analytics is, and when it is worth buying",
+    tag: "Operations",
+    read: "8 min read",
+    excerpt:
+      "It analyses every call instead of one in fifty. That changes what you can detect — and it is not right for everyone.",
+    description:
+      "What speech analytics does, what it detects that manual QA cannot, when it is worth the investment, and the volume threshold below which it rarely pays for itself.",
+    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Manual quality review samples a tiny fraction of contacts &mdash;
+          often one or two per agent per week. Speech analytics analyses the
+          whole population. That difference in coverage is the entire value
+          proposition.
+        </p>
+        <h2>What it detects that sampling cannot</h2>
+        <p>
+          <strong>Compliance gaps.</strong> Required disclosures that were
+          skipped and prohibited statements that were made, across every call
+          rather than the handful someone happened to listen to.
+        </p>
+        <p>
+          <strong>Emerging problems.</strong> A sudden rise in a phrase &mdash;
+          a product name, an error message, a competitor &mdash; surfaces a new
+          issue in its first week rather than in next month&rsquo;s report.
+        </p>
+        <p>
+          <strong>Escalation predictors.</strong> The language patterns that
+          reliably precede a complaint or cancellation, which lets you intervene
+          on the call rather than after it.
+        </p>
+        <h2>When it is worth it</h2>
+        <p>
+          Speech analytics earns its cost at volume, in regulated environments,
+          or where the cost of a missed compliance failure is high. A programme
+          handling several thousand calls a month with disclosure requirements
+          will usually justify it quickly.
+        </p>
+        <div className="callout">
+          <strong>The rough threshold:</strong> below a few hundred calls a month,
+          a disciplined manual sampling process usually gives you more useful
+          insight per pound spent than a platform will.
+        </div>
+        <h2>Where it disappoints</h2>
+        <p>
+          It tells you what was said, not why. Sentiment scoring is
+          approximate and should be treated as a signal to investigate rather
+          than a fact. And it produces findings, not fixes &mdash; without
+          someone owning the follow-up, it becomes another dashboard nobody acts
+          on.
+        </p>
+        <blockquote>
+          Analytics that nobody is accountable for acting on is a subscription,
+          not a capability.
+        </blockquote>
+        <h2>Getting value from it</h2>
+        <p>
+          Start with two or three specific questions rather than switching
+          everything on. Assign an owner for each finding. Review monthly.
+          See our{" "}
+          <a href="/services/speech-analytics">speech analytics</a> service and{" "}
+          <a href="/services/call-center-analytics">call center analytics</a>{" "}
+          for how this fits a wider reporting programme.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "pci-compliance-phone-payments",
+    date: "2026-08-10",
+    title: "PCI compliance for phone payments: what you actually have to do",
+    tag: "Compliance",
+    read: "9 min read",
+    excerpt:
+      "Taking card details on a call can pull your whole operation into scope. Here is how to avoid that.",
+    description:
+      "PCI DSS compliance for phone payments: how card data expands your scope, what DTMF masking and pause-and-resume recording do, and the controls to agree before launch.",
+    img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          The moment an agent hears, writes, or types a customer&rsquo;s card
+          number, the systems around that agent fall inside PCI DSS scope
+          &mdash; the phone platform, the recording store, the desktop, and
+          often the network they sit on.
+        </p>
+        <p>
+          Most of the work in PCI-compliant phone payments is not securing card
+          data. It is arranging things so you never hold it.
+        </p>
+        <h2>Scope is the whole game</h2>
+        <p>
+          Assessment cost, control burden, and ongoing evidence requirements all
+          scale with scope. A design that keeps card data out of your environment
+          entirely turns a large annual exercise into a small one.
+        </p>
+        <div className="callout">
+          <strong>The question to ask any provider:</strong> &ldquo;At what point
+          does card data touch a system you or I control?&rdquo; The best answer
+          is &ldquo;it does not.&rdquo;
+        </div>
+        <h2>The controls that do the work</h2>
+        <p>
+          <strong>DTMF masking.</strong> The customer keys their card number on
+          the phone keypad. Tones are suppressed or masked so the agent stays on
+          the line but never hears or sees the digits.
+        </p>
+        <p>
+          <strong>Pause-and-resume recording.</strong> Recording suspends around
+          payment capture so card data never enters the recording store. Automatic
+          triggering is far safer than relying on an agent to remember.
+        </p>
+        <p>
+          <strong>Agent environment controls.</strong> Clean-desk rules, no
+          writing implements, restricted devices, and access limited to what the
+          role requires.
+        </p>
+        <h2>Recordings are where organisations get caught</h2>
+        <p>
+          A recording containing a spoken card number is stored card data, subject
+          to the same requirements as any other. Historic recordings are the
+          common trap &mdash; organisations fix the process going forward and
+          leave years of recorded card numbers sitting in storage.
+        </p>
+        <blockquote>
+          Fixing the process forward is half the job. The archive is the other
+          half.
+        </blockquote>
+        <h2>Agree it before launch</h2>
+        <p>
+          Settle the payment flow, recording behaviour, agent controls, and
+          evidence requirements before the first call rather than during an
+          assessment. Our{" "}
+          <a href="/services/pci-compliant-call-center">
+            PCI-compliant call center
+          </a>{" "}
+          page covers how that is structured.
+        </p>
+        <p>
+          This is general information rather than compliance advice. Confirm your
+          obligations with a qualified assessor.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "inbound-vs-outbound-call-centers",
+    date: "2026-08-10",
+    title: "Inbound vs outbound call centers: which does your business need",
+    tag: "Strategy",
+    read: "8 min read",
+    excerpt:
+      "They look similar and require almost opposite things from agents, metrics, and management.",
+    description:
+      "Inbound vs outbound call centers compared: different agent profiles, metrics, staffing models, and compliance requirements — and why running both on one team usually fails.",
+    img: "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Inbound and outbound look like the same business from outside. They are
+          not. They need different agents, different metrics, different staffing
+          models, and different compliance controls.
+        </p>
+        <h2>The fundamental difference</h2>
+        <p>
+          On an inbound call the customer wants something from you. On an outbound
+          call you want something from them. That reverses the emotional dynamic
+          entirely, and almost everything else follows from it.
+        </p>
+        <h2>Different people</h2>
+        <p>
+          Inbound rewards patience, product knowledge, and the ability to calm
+          someone who is already annoyed. Outbound rewards resilience, momentum,
+          and comfort with rejection at volume. Genuinely strong performers at
+          both exist and are rare.
+        </p>
+        <div className="callout">
+          <strong>Common mistake:</strong> filling outbound downtime with inbound
+          calls. It looks efficient on a capacity plan and usually degrades both.
+        </div>
+        <h2>Different metrics</h2>
+        <p>
+          Inbound is measured on answer rate, resolution, handle time, and
+          satisfaction. Outbound is measured on connects, qualified conversations,
+          conversions, and cost per outcome. A scorecard designed for one produces
+          nonsense applied to the other.
+        </p>
+        <h2>Different staffing shape</h2>
+        <p>
+          Inbound demand arrives when customers decide, so staffing follows an
+          arrival curve you forecast but do not control. Outbound capacity is
+          something you choose, which makes it far easier to plan &mdash; and far
+          easier to over-invest in.
+        </p>
+        <h2>Different compliance exposure</h2>
+        <p>
+          Outbound carries consent rules, do-not-call obligations, and calling-hour
+          restrictions that simply do not apply when the customer dialled you.
+          That difference alone justifies separate process design.
+        </p>
+        <h2>Which you need</h2>
+        <p>
+          If customers are reaching voicemail, start with{" "}
+          <a href="/services/inbound-call-center-services">inbound</a>. If
+          enquiries go unworked and pipeline is the constraint, start with{" "}
+          <a href="/services/outbound-call-center-services">outbound</a>. If both
+          are true, run them as two programmes with separate teams and separate
+          scorecards, not one blended queue.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "reduce-customer-support-costs",
+    date: "2026-08-10",
+    title: "How to reduce customer support costs without wrecking quality",
+    tag: "Strategy",
+    read: "9 min read",
+    excerpt:
+      "The largest savings come from removing contacts, not from paying less per contact.",
+    description:
+      "How to reduce customer support costs: eliminate contact drivers at source, tier your contacts, choose delivery location by contact type, and the false economies to avoid.",
+    img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Most support cost reduction starts with the rate per hour. That is the
+          smallest lever available and the one most likely to damage the service.
+          The bigger savings are structural.
+        </p>
+        <h2>Remove contacts at source</h2>
+        <p>
+          A contact that never happens costs nothing. Categorise why customers
+          actually contact you, rank the drivers by volume, and fix the top three
+          &mdash; a confusing checkout step, an unclear delivery notification, a
+          billing description nobody understands.
+        </p>
+        <blockquote>
+          The cheapest contact is the one your product made unnecessary.
+        </blockquote>
+        <h2>Tier your contacts</h2>
+        <p>
+          Paying a technically skilled rate for password resets is the most common
+          way to overspend. Split routine from complex, staff each at the
+          appropriate skill level, and route accordingly.
+        </p>
+        <h2>Choose delivery location by contact type</h2>
+        <p>
+          Fully documented, rarely ambiguous work runs well{" "}
+          <a href="/locations/offshore-call-center">offshore</a> at the lowest
+          cost per seat. Work that needs a decision from your team degrades across
+          a time gap and belongs{" "}
+          <a href="/locations/nearshore-call-center">nearshore</a>. Splitting by
+          contact type usually beats choosing one location for everything.
+        </p>
+        <h2>Shift channel where customers accept it</h2>
+        <p>
+          Chat and email cost meaningfully less per contact than voice and allow
+          concurrency. Move the contact types customers are happy to handle that
+          way, and leave voice for what genuinely needs it.
+        </p>
+        <div className="callout">
+          <strong>Do not remove the phone number.</strong> Hiding it reduces
+          contacts and increases churn. The customers who most need to call are
+          the ones you can least afford to lose.
+        </div>
+        <h2>The false economies</h2>
+        <p>
+          Cutting quality assurance saves a little and costs a lot within a
+          quarter. Understaffing to hit a cost target produces queues, abandonment,
+          and repeat contacts that consume the saving. And targeting handle time
+          directly teaches agents to end calls rather than resolve issues.
+        </p>
+        <h2>Where to start</h2>
+        <p>
+          Get the contact driver data first. Our{" "}
+          <a href="/services/call-center-analytics">call center analytics</a>{" "}
+          service covers that, and{" "}
+          <a href="/blog/outsourced-customer-service-cost">
+            what outsourced customer service costs
+          </a>{" "}
+          explains the pricing models you will be quoted.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "what-24-7-support-really-takes",
+    date: "2026-08-10",
+    title: "What 24/7 customer support really takes",
+    tag: "Operations",
+    read: "8 min read",
+    excerpt:
+      "The overnight hours are cheap to promise and expensive to staff badly. Here is the arithmetic.",
+    description:
+      "What 24/7 customer support actually requires: minimum staffing floors, why domestic night shifts cost a premium, follow-the-sun models, and when round-the-clock is not worth it.",
+    img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Round-the-clock coverage sounds like an extension of what you already
+          do. It is closer to running a second, smaller operation with different
+          economics.
+        </p>
+        <h2>The staffing floor problem</h2>
+        <p>
+          Overnight volume is usually low, but you cannot staff a fraction of a
+          person. Even a quiet queue needs a minimum floor &mdash; and one agent
+          alone is fragile, because a single long call blocks everything behind
+          it and illness leaves the hours uncovered entirely.
+        </p>
+        <div className="callout">
+          <strong>The arithmetic people miss:</strong> covering the overnight
+          third of the day rarely costs a third of your daytime operation. It
+          often costs more than the volume alone would suggest.
+        </div>
+        <h2>Why domestic night shifts are expensive</h2>
+        <p>
+          Night work carries a wage premium, higher attrition, and greater
+          absence. It also needs supervision, because the shift with the least
+          support and the most autonomy is exactly the one where quality drifts
+          unnoticed.
+        </p>
+        <h2>Follow-the-sun is usually the answer</h2>
+        <p>
+          Overnight in your market is daytime somewhere else. Staffing those hours
+          from a location where they are ordinary working hours removes the wage
+          premium and the attrition problem simultaneously &mdash; which is the
+          main commercial argument for{" "}
+          <a href="/locations/offshore-call-center">offshore delivery</a>.
+        </p>
+        <h2>What overnight actually needs</h2>
+        <p>
+          Documentation has to be better than daytime, because there is nobody to
+          ask. Escalation rules must define precisely what wakes someone. And the
+          handover into the morning shift needs structure, or the day team starts
+          by reconstructing what happened.
+        </p>
+        <blockquote>
+          The overnight shift is where thin documentation stops being an
+          inconvenience and starts being a failure.
+        </blockquote>
+        <h2>When you do not need it</h2>
+        <p>
+          If overnight contacts are genuinely low and none are urgent, extended
+          hours with a documented emergency path often serve customers just as
+          well at a fraction of the cost. Our{" "}
+          <a href="/services/after-hours-answering-service">
+            after-hours answering service
+          </a>{" "}
+          covers that middle option.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "omnichannel-vs-multichannel-support",
+    date: "2026-08-10",
+    title: "Omnichannel vs multichannel support: the difference that matters",
+    tag: "Strategy",
+    read: "7 min read",
+    excerpt:
+      "Multichannel means you are on several channels. Omnichannel means they know each other.",
+    description:
+      "Omnichannel vs multichannel customer support: what actually separates them, why context continuity matters, and whether the upgrade is worth it for your business.",
+    img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          The terms get used interchangeably in vendor material, which is
+          convenient for vendors. The distinction is real and it costs money.
+        </p>
+        <h2>Multichannel</h2>
+        <p>
+          You offer phone, email, chat, and social. Each runs on its own tooling,
+          often with its own team and its own standards. A customer moving between
+          them starts again each time.
+        </p>
+        <h2>Omnichannel</h2>
+        <p>
+          The same channels, but context travels. A customer who raised an issue
+          on chat and then calls does not repeat themselves, and the agent can see
+          what was already said and promised.
+        </p>
+        <blockquote>
+          The test is simple: can the person answering the phone see the chat the
+          customer had yesterday?
+        </blockquote>
+        <h2>Why it matters more than it sounds</h2>
+        <p>
+          Repeating yourself is one of the most reliably infuriating experiences
+          in customer service, and it is entirely self-inflicted. It also wastes
+          real handle time on every transferred or repeated contact.
+        </p>
+        <p>
+          Consistency is the second benefit. Separate channel teams drift into
+          different answers to the same question, and customers who get different
+          answers stop trusting all of them.
+        </p>
+        <div className="callout">
+          <strong>Before you buy a platform:</strong> most channel inconsistency
+          comes from separate teams and separate documentation, not separate
+          tools. Fix the standard first.
+        </div>
+        <h2>When multichannel is enough</h2>
+        <p>
+          If customers rarely switch channels mid-issue, and each channel handles
+          distinct contact types, the integration cost may not pay back. Measure
+          how often customers actually cross channels before assuming they do.
+        </p>
+        <h2>Doing it properly</h2>
+        <p>
+          One team, one documented standard, and one view of the customer matters
+          more than any specific platform. Our{" "}
+          <a href="/services/omnichannel-contact-center">
+            omnichannel contact center
+          </a>{" "}
+          page covers how that is structured.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "outsourcing-rfp-guide",
+    date: "2026-08-10",
+    title: "How to write a call center RFP that gets useful answers",
+    tag: "Strategy",
+    read: "9 min read",
+    excerpt:
+      "Most RFPs produce comparable-looking proposals that hide the differences that matter.",
+    description:
+      "How to write a call center or BPO RFP: the volume and scope detail providers need, the questions that reveal real differences, and the requirements that quietly inflate every quote.",
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          A bad RFP produces five proposals that look similar, quote similar
+          numbers, and reveal nothing about which provider will actually work. The
+          fix is asking questions that are hard to answer generically.
+        </p>
+        <h2>Give them enough to quote accurately</h2>
+        <p>
+          Providers cannot price what you have not described. Include contact
+          volume by channel and by hour, contact type breakdown, required coverage
+          hours, languages, systems agents must use, and any compliance
+          requirements. Vagueness produces padded quotes, and padding is
+          invisible.
+        </p>
+        <div className="callout">
+          <strong>Include your bad month.</strong> Quote against peak as well as
+          average, or your first busy period becomes a change request.
+        </div>
+        <h2>Ask questions that resist boilerplate</h2>
+        <p>
+          &ldquo;Describe your quality process&rdquo; produces a paragraph anyone
+          can write. &ldquo;Send us a redacted quality scorecard and a coaching
+          record from a real account&rdquo; does not.
+        </p>
+        <p>
+          Similarly: what is attrition on the specific team we would sit in? How
+          many accounts does a team lead carry? What happened the last time a
+          client escalated a service failure, and what changed afterwards?
+        </p>
+        <h2>The commercial questions people forget</h2>
+        <p>
+          What is included and what is billed separately &mdash; supervision, QA,
+          reporting, tooling, training? What happens when volume rises 40% for a
+          month, and when it falls? What are the minimum commitment and notice
+          periods? What are the exit terms and who owns the data and recordings?
+        </p>
+        <h2>Requirements that quietly inflate every quote</h2>
+        <p>
+          Insisting on a specific location, dedicated agents where pooled would
+          do, or 24/7 coverage you do not need will raise every bid you receive.
+          Mark requirements as essential or preferred so providers can show you
+          the cost of each.
+        </p>
+        <blockquote>
+          Every &ldquo;must have&rdquo; you cannot justify is a discount you chose
+          not to take.
+        </blockquote>
+        <h2>Compare on the same scope</h2>
+        <p>
+          Ask everyone to quote the identical scope in their own pricing model,
+          then convert to cost per resolved contact. It is the only comparison
+          that survives contact with reality. See{" "}
+          <a href="/blog/outsourced-customer-service-cost">
+            what outsourced customer service costs
+          </a>{" "}
+          for the models you will encounter.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "outsourced-support-first-90-days",
+    date: "2026-08-10",
+    title: "Launching an outsourced support team: the first 90 days",
+    tag: "Operations",
+    read: "9 min read",
+    excerpt:
+      "Most outsourcing engagements are decided in the first three months, usually by how much attention the client gave.",
+    description:
+      "A 90-day plan for launching outsourced customer support: what to document before launch, how to pilot narrowly, what to review weekly, and the failure signs to act on early.",
+    img: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Outsourcing engagements rarely fail because the provider was incapable.
+          They fail because nobody on the client side invested the attention the
+          first quarter required.
+        </p>
+        <h2>Before launch: write it down</h2>
+        <p>
+          Everything the team needs to know has to exist in writing: contact types
+          in scope, what a good answer looks like, when to refund, what escalates
+          and to whom, tone examples, and the systems agents will work in with the
+          permissions each role needs.
+        </p>
+        <div className="callout">
+          <strong>The exercise pays for itself.</strong> Most teams discover their
+          own process is inconsistent while documenting it. That fix arrives
+          before a single call is outsourced.
+        </div>
+        <h2>Days 1&ndash;14: pilot narrowly</h2>
+        <p>
+          Go live on one contact type or one channel. Review every contact in the
+          first week &mdash; all of them. It is tedious and it is where the
+          expensive misunderstandings surface while they are still cheap.
+        </p>
+        <h2>Days 15&ndash;45: correct drift, then widen</h2>
+        <p>
+          Move from full review to sampling. Feed corrections back individually
+          rather than as general guidance. Only widen scope once quality holds
+          steady for a fortnight at the current scope.
+        </p>
+        <h2>Days 46&ndash;90: set the rhythm</h2>
+        <p>
+          Lock a reporting cadence and a standing review. By day 90 you should be
+          able to state volume, answer rate, resolution rate, quality score, and
+          the top three contact drivers without asking anyone.
+        </p>
+        <blockquote>
+          If you cannot see those five numbers at ninety days, the programme is
+          not being managed, it is being hoped for.
+        </blockquote>
+        <h2>Failure signs worth acting on early</h2>
+        <p>
+          Escalations arriving without context. The same correction given three
+          times. Reporting that changes shape each month. A named contact who
+          changes repeatedly. Each is fixable at week four and entrenched by month
+          six.
+        </p>
+        <h2>Setting up well</h2>
+        <p>
+          Our{" "}
+          <a href="/services/customer-support">customer support outsourcing</a>{" "}
+          page covers the five-step launch sequence in more detail, including what
+          to agree before scope is confirmed.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "gdpr-outsourcing-customer-support",
+    date: "2026-08-10",
+    title: "GDPR and outsourcing customer support in Europe",
+    tag: "Compliance",
+    read: "9 min read",
+    excerpt:
+      "The questions to settle before a European customer's data reaches an outsourced team.",
+    description:
+      "GDPR and outsourced customer support: controller and processor roles, data processing agreements, international transfers, call recording, and the questions to settle before launch.",
+    img: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Outsourcing European customer support is routine and entirely
+          permissible. What is not permissible is discovering the data questions
+          after go-live, because the obligations sit with you rather than your
+          provider.
+        </p>
+        <h2>You remain the controller</h2>
+        <p>
+          In almost every support arrangement you are the data controller and the
+          provider is a processor acting on your instructions. That means the
+          accountability stays with you. A provider&rsquo;s assurances do not
+          transfer the obligation.
+        </p>
+        <h2>The data processing agreement is not a formality</h2>
+        <p>
+          It must set out the subject matter and duration of processing, the
+          nature and purpose, the categories of data and data subjects, and the
+          security measures applied. It should also address sub-processors: who
+          they are, and whether you are notified before new ones are engaged.
+        </p>
+        <div className="callout">
+          <strong>Ask directly:</strong> which sub-processors touch this data, in
+          which countries, and how am I told when that changes?
+        </div>
+        <h2>Where the data physically sits</h2>
+        <p>
+          Processing inside the EU keeps the transfer question simple, which is
+          much of why{" "}
+          <a href="/locations/call-center-outsourcing-poland">Poland</a>,{" "}
+          <a href="/locations/call-center-outsourcing-romania">Romania</a>, and{" "}
+          <a href="/locations/call-center-outsourcing-bulgaria">Bulgaria</a>{" "}
+          feature heavily in European support strategies.
+        </p>
+        <p>
+          Transfers outside the EU are lawful with an appropriate mechanism in
+          place, but they need a documented basis and a transfer risk assessment
+          rather than an assumption.
+        </p>
+        <h2>Call recording deserves its own decision</h2>
+        <p>
+          Recording is processing. Establish your lawful basis, how callers are
+          informed, how long recordings are kept, who can access them, and how
+          they are deleted. Indefinite retention because nobody chose a period is
+          a common and avoidable finding.
+        </p>
+        <h2>Data subject rights in practice</h2>
+        <p>
+          Access, erasure, and rectification requests must be answerable within
+          the statutory window, and that includes data held by your provider. Test
+          the process before you need it &mdash; agree how a request reaches them
+          and how quickly they must respond.
+        </p>
+        <blockquote>
+          Rehearse a data subject request during onboarding. Discovering the gap
+          during a live one is a bad time to find out.
+        </blockquote>
+        <p>
+          This is general information rather than legal advice. Confirm your
+          obligations with your data protection officer or counsel. Our{" "}
+          <a href="/locations/call-center-outsourcing-europe">
+            European market coverage
+          </a>{" "}
+          page covers delivery options.
         </p>
       </>
     ),

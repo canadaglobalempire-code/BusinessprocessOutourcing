@@ -14,6 +14,9 @@
  * does NOT assert owned facilities, seat counts, or certifications — add those
  * per location once they can be stated accurately.
  */
+import { COUNTRY_LOCATIONS } from "./locations-countries";
+import { CITY_LOCATIONS } from "./locations-cities";
+
 export type Location = {
   slug: string;
   name: string;
@@ -29,7 +32,7 @@ export type Location = {
   crossLinks?: { href: string; label: string }[];
 };
 
-export const LOCATIONS: Location[] = [
+const CORE_LOCATIONS: Location[] = [
   /* ---------- Buyer markets ---------- */
   {
     slug: "call-center-outsourcing-usa",
@@ -654,6 +657,12 @@ export const DEFAULT_LOCATION_LINKS = [
   { href: "/services/customer-support", label: "Customer support outsourcing" },
   { href: "/services/technical-support", label: "Technical support" },
   { href: "/services/lead-generation", label: "Lead generation" },
+];
+
+export const LOCATIONS: Location[] = [
+  ...CORE_LOCATIONS,
+  ...COUNTRY_LOCATIONS,
+  ...CITY_LOCATIONS,
 ];
 
 export function getLocation(slug: string) {

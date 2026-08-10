@@ -596,6 +596,9 @@ SERVICES.push(
   },
 );
 
+import { EXTRA_SERVICES } from "./services-extra";
+SERVICES.push(...EXTRA_SERVICES);
+
 export const SERVICE_NAMES = SERVICES.map((s) => s.name);
 
 export function getService(slug: string) {
