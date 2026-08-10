@@ -65,7 +65,7 @@ export function ModalProvider({ children }: { children: ReactNode }) {
             support.
           </p>
           {/* Remount on open so the service preselect + reset behave predictably */}
-          {active && <LeadForm key={service} variant="modal" defaultService={service} />}
+          {active && <LeadForm key={service} variant="contact" defaultService={service} />}
         </div>
       </div>
     </ModalContext.Provider>

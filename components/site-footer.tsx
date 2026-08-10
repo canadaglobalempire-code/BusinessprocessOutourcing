@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SvgIcon } from "./icons";
+import { PUBLISHED_PHONES, telHref } from "@/lib/contact-details";
 
 export function SiteFooter() {
   return (
@@ -37,6 +38,16 @@ export function SiteFooter() {
               Since 2000, we have made outsourcing easier, more economical, and
               less stressful for growing companies.
             </p>
+            {PUBLISHED_PHONES.length > 0 && (
+              <ul className="footer-phones">
+                {PUBLISHED_PHONES.map((line) => (
+                  <li key={line.display}>
+                    {line.label && <span>{line.label}</span>}
+                    <a href={telHref(line.display)}>{line.display}</a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
           <div>
             <h3>About Us</h3>
@@ -53,6 +64,7 @@ export function SiteFooter() {
           <div>
             <h3>Explore</h3>
             <Link href="/industries">Industries</Link>
+            <Link href="/locations">Locations</Link>
             <Link href="/solutions">Solutions</Link>
             <Link href="/blog">Blogs</Link>
           </div>

@@ -7,6 +7,9 @@ import { useEffect, useState } from "react";
 import { INDUSTRIES, slugify } from "@/lib/industries";
 import { SERVICES } from "@/lib/services";
 import { SOLUTIONS } from "@/lib/solutions";
+import { LOCATIONS } from "@/lib/locations";
+import { PUBLISHED_PHONES, telHref } from "@/lib/contact-details";
+import { SvgIcon } from "./icons";
 
 const NAV = [{ label: "Blogs", href: "/blog" }];
 
@@ -38,6 +41,14 @@ const MEGA_NAV = [
     links: SERVICES.map((service) => ({
       label: service.name,
       href: `/services/${service.slug}`,
+    })),
+  },
+  {
+    label: "Locations",
+    href: "/locations",
+    links: LOCATIONS.map((location) => ({
+      label: location.name,
+      href: `/locations/${location.slug}`,
     })),
   },
 ];
@@ -159,6 +170,15 @@ export function SiteHeader() {
         </nav>
 
         <div className="nav-actions">
+          {PUBLISHED_PHONES[0] && (
+            <a
+              className="header-phone"
+              href={telHref(PUBLISHED_PHONES[0].display)}
+            >
+              <SvgIcon name="customer-support" />
+              {PUBLISHED_PHONES[0].display}
+            </a>
+          )}
           <Link className="btn btn-outline" href="/contact">
             Get In Touch
           </Link>

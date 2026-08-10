@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MiniMark } from "@/components/mini-mark";
 import { POSTS, getPost } from "@/lib/posts";
+import { LeadCta } from "@/components/lead-cta";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -94,20 +95,17 @@ export default async function Article({ params }: Params) {
           <img src={post.img} alt={post.title} />
         </div>
 
-        <div className="article-body">
-          {post.body}
-          <div className="callout">
-            <h3>Ready to delegate with clarity?</h3>
-            <p>
-              Tell us which workflow is consuming your team’s time. We’ll help you
-              define a practical support plan.
-            </p>
-            <Link className="btn btn-dark" href="/contact">
-              Book a free consultation
-            </Link>
-          </div>
-        </div>
+        <div className="article-body">{post.body}</div>
       </article>
+
+      <LeadCta
+        heading={
+          <>
+            Ready to delegate with <span className="hl">clarity</span>?
+          </>
+        }
+        intro="Tell us which workflow is consuming your team's time and we will map a practical support plan around it."
+      />
 
       <section className="section">
         <div className="container">
