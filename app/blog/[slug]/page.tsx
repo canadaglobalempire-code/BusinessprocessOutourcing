@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MiniMark } from "@/components/mini-mark";
@@ -91,8 +92,15 @@ export default async function Article({ params }: Params) {
         </header>
 
         <div className="article-cover">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={post.img} alt={post.title} />
+          {/* LCP element on every article page — optimized and preloaded. */}
+          <Image
+            src={post.img}
+            alt={post.title}
+            width={1100}
+            height={500}
+            sizes="(max-width: 1140px) 100vw, 1100px"
+            priority
+          />
         </div>
 
         <div className="article-body">{post.body}</div>

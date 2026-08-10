@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { MiniMark } from "@/components/mini-mark";
@@ -39,8 +40,16 @@ export default function BlogIndex() {
             {POSTS.map((post, i) => (
               <Reveal as="article" key={post.slug} className="blog-card" delay={(i % 3) * 0.06}>
                 <Link href={`/blog/${post.slug}`}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={post.img} alt={post.title} />
+                  <Image
+                    src={post.img}
+                    alt={post.title}
+                    width={640}
+                    height={230}
+                    sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                    // Only the first row is above the fold; the rest defer.
+                    priority={i < 3}
+                    loading={i < 3 ? "eager" : "lazy"}
+                  />
                   <div className="blog-card-body">
                     <span className="tag">{post.tag}</span>
                     <h2>{post.title}</h2>
