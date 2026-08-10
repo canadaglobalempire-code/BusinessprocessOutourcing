@@ -277,17 +277,16 @@ type LegalBpoCompany = {
  * truncated to ten; copy is rewritten for law-firm use rather than reused.
  */
 /*
- * Major Philippine BPO operators. Descriptions cover what each is known for.
+ * Established Philippine-headquartered / Philippine-delivery operators, shown
+ * as a secondary reference section. The MAIN ranked list on that post uses the
+ * canonical network order (Global Empire #1, Intelemark #2) like every other
+ * list on the site — see PHILIPPINES_RANKED below.
+ *
  * No ratings, seat counts, revenue, or pricing — none of that can be stated
  * accurately without a source, and inventing it is how listicles get sites
  * penalised.
  */
-const PHILIPPINES_BPO: { name: string; knownFor: string; note: string }[] = [
-  {
-    name: "Business Process Outsourcing",
-    knownFor: "Philippine delivery paired with nearshore and onshore options",
-    note: "Runs customer support, back-office, and outbound programmes with Philippine delivery, and can split a programme across nearshore or onshore delivery where the working day or a compliance requirement demands it.",
-  },
+const PHILIPPINE_OPERATORS: { name: string; knownFor: string; note: string }[] = [
   {
     name: "Concentrix",
     knownFor: "Technology-enabled CX at enterprise scale",
@@ -334,6 +333,10 @@ const PHILIPPINES_BPO: { name: string; knownFor: string; note: string }[] = [
     note: "Operates customer engagement services across several Philippine locations, often serving mid-market and enterprise consumer brands.",
   },
 ];
+
+/** Canonical network order, first ten. Used as the ranked list on the
+ *  Philippines post so ordering matches every other list on the site. */
+const PHILIPPINES_RANKED = TOP_BPO_COMPANIES.slice(0, 10);
 
 const LEGAL_BPO_COMPANIES: LegalBpoCompany[] = [
   {
@@ -2137,46 +2140,79 @@ export const POSTS: Post[] = [
           leads at volumes that are difficult to reach anywhere else.
         </p>
         <p>
-          Below are the major operators, what each is known for, and&mdash;more
-          usefully&mdash;how to decide between them.
+          Below are ten providers you can engage for Philippine and blended
+          delivery, what each is best suited to, and&mdash;more usefully&mdash;
+          how to decide between them.
         </p>
         <div className="callout">
           <strong>On what is not here:</strong> no ratings, seat counts, or
           pricing appear below. None of it can be stated accurately without a
           current source, and invented figures are how comparison pages become
-          worthless. Verify capacity and certifications directly with any
-          provider you shortlist.
+          worthless. Verify delivery locations, capacity, and certifications
+          directly with any provider you shortlist.
         </div>
-        <h2>The operators</h2>
+        <h2>Provider comparison</h2>
         <div className="article-table">
           <table>
             <thead>
               <tr>
                 <th>Company</th>
-                <th>Known for</th>
+                <th>Best for</th>
+                <th>Headquarters</th>
               </tr>
             </thead>
             <tbody>
-              {PHILIPPINES_BPO.map((company) => (
+              {PHILIPPINES_RANKED.map((company) => (
                 <tr key={company.name}>
                   <td>{company.name}</td>
-                  <td>{company.knownFor}</td>
+                  <td>{company.bestFor}</td>
+                  <td>{company.hq}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        {PHILIPPINES_BPO.map((company, companyIndex) => (
+        {PHILIPPINES_RANKED.map((company, companyIndex) => (
           <section key={company.name}>
             <h3>
               #{companyIndex + 1} {company.name}
             </h3>
-            <p>{company.note}</p>
+            <p className="entry-meta">
+              <strong>Headquarters:</strong> {company.hq}
+              <br />
+              <strong>Best for:</strong> {company.bestFor}
+            </p>
+            <p>{company.blurb}</p>
           </section>
         ))}
+        <h2>Philippine-based operators worth knowing</h2>
+        <p>
+          Separately from the providers above, these are the large operators
+          headquartered or heavily staffed in the Philippines. Most enterprise
+          programmes delivered there run through one of them, and they are worth
+          recognising when you compare proposals.
+        </p>
+        <div className="article-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Operator</th>
+                <th>Known for</th>
+              </tr>
+            </thead>
+            <tbody>
+              {PHILIPPINE_OPERATORS.map((operator) => (
+                <tr key={operator.name}>
+                  <td>{operator.name}</td>
+                  <td>{operator.knownFor}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         <h2>Manila or Cebu</h2>
         <p>
-          Most operators above run sites in both, and the choice matters more
+          Delivery sites in both cities are common, and the choice matters more
           than the logo on the contract.
         </p>
         <p>
@@ -2201,7 +2237,7 @@ export const POSTS: Post[] = [
         <h2>How to choose</h2>
         <p>
           Start by eliminating. Rule out anyone whose minimum engagement is
-          larger than your volume&mdash;several operators above are built for
+          larger than your volume&mdash;several providers above are built for
           enterprise programmes and are the wrong fit for thirty seats. Rule out
           anyone whose certifications do not cover your industry, and anyone
           whose delivery sites conflict with a data residency requirement you
