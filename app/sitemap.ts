@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { INDUSTRIES, slugify } from "@/lib/industries";
+import { LOCATIONS } from "@/lib/locations";
 import { POSTS } from "@/lib/posts";
 import { SERVICES } from "@/lib/services";
 import { SOLUTIONS } from "@/lib/solutions";
@@ -18,6 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services",
     "/pricing",
     "/blog",
+    "/locations",
+    ...LOCATIONS.map(({ slug }) => `/locations/${slug}`),
     ...SERVICES.map(({ slug }) => `/services/${slug}`),
     ...INDUSTRIES.map(({ name }) => `/industries/${slugify(name)}`),
     ...SOLUTIONS.map(({ title }) => `/solutions/${slugify(title)}`),
