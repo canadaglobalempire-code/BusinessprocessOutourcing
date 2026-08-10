@@ -9,6 +9,7 @@ import { SOLUTION_IMAGES } from "@/lib/page-images";
 import { slugify } from "@/lib/industries";
 import { SOLUTIONS, getSolution } from "@/lib/solutions";
 import { FaqSection } from "@/components/faq";
+import { LeadCta } from "@/components/lead-cta";
 import { solutionFaq } from "@/lib/faq-content";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -31,7 +32,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const solution = getSolution(slug);
   if (!solution) return {};
   return {
-    title: { absolute: `${solution.title} Outsourcing | Business Process Outsourcing` },
+    title: {
+      absolute: solution.seoTitle
+        ? `${solution.seoTitle} | Business Process Outsourcing`
+        : `${solution.title} Outsourcing | Business Process Outsourcing`,
+    },
     description: solution.metaDescription,
     alternates: { canonical: `/solutions/${slug}` },
   };
@@ -178,6 +183,21 @@ export default async function SolutionDetail({ params }: Params) {
           </Reveal>
         </div>
       </section>
+
+      <LeadCta
+        heading={
+          <>
+            Get a {solution.title.toLowerCase()} plan,{" "}
+            <span className="hl">not a sales call</span>.
+          </>
+        }
+        intro={`Tell us how ${solution.title.toLowerCase()} needs to work for your customers and we will scope the coverage, team size, and reporting around it.`}
+        points={[
+          `A scoped ${solution.title.toLowerCase()} setup`,
+          "Channels, hours, and escalation rules confirmed up front",
+          "No obligation and no cost for the consultation",
+        ]}
+      />
 
       <FaqSection
         items={solutionFaq(solution)}

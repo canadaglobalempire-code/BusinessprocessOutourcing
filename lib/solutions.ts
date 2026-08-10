@@ -2,6 +2,8 @@ import { slugify } from "./industries";
 
 export type Solution = {
   title: string;
+  /** Overrides the <title> tag without changing the URL slug or display name. */
+  seoTitle?: string;
   summary: string;
   metaDescription: string;
   services: string[];
@@ -11,14 +13,17 @@ export type Solution = {
 export const SOLUTIONS: Solution[] = [
   {
     title: "Multilingual Support",
+    seoTitle: "Multilingual Call Center Outsourcing Services",
     summary:
-      "Customer support in multiple languages for companies serving callers, shoppers, patients, and users across regions.",
+      "Multilingual call center outsourcing for companies serving callers, shoppers, patients, and users across several language markets.",
     metaDescription:
-      "Outsource multilingual customer support for global callers, multilingual help desk coverage, and friendly customer conversations across regions.",
+      "Multilingual call center outsourcing: live agents across several languages on one queue, multilingual customer support and help desk coverage, and one service standard in every market.",
     services: [
-      "Support in several languages",
-      "Friendly customer conversations",
-      "Comfortable support for global callers",
+      "Live coverage across several languages",
+      "Multilingual customer support and help desk",
+      "Bilingual agents on the same queue",
+      "One service standard in every language",
+      "Coverage that flexes by market",
     ],
     icon: "globe",
   },
