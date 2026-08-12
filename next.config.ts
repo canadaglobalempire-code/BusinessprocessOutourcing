@@ -4,6 +4,15 @@ const HOST = "businessprocessoutsourcing.info";
 
 const nextConfig: NextConfig = {
   images: {
+    // Unsplash URLs are rewritten to hit Unsplash's own CDN rather than being
+    // proxied and re-encoded by this server. See lib/image-loader.ts.
+    loaderFile: "./lib/image-loader.ts",
+    // AVIF first for the local files that still go through the optimizer;
+    // Lighthouse measured ~85 KiB of next-gen format savings on the homepage.
+    formats: ["image/avif", "image/webp"],
+    // Optimized local variants are expensive to generate and never change, so
+    // keep them on disk rather than regenerating every few hours.
+    minimumCacheTTL: 2678400,
     remotePatterns: [
       {
         protocol: "https",

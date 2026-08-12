@@ -109,6 +109,21 @@ ${urls}
 `;
 }
 
+/** The sitemap index body, shared by /sitemapindex.xml and the legacy path. */
+export function renderSitemapIndex(): string {
+  const children = SECTION_NAMES.map((name) => {
+    const loc = `${BASE}/sitemaps/${name}.xml`;
+    const lastmod = sectionLastmod(name).toISOString();
+    return `  <sitemap>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </sitemap>`;
+  }).join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${children}
+</sitemapindex>
+`;
+}
+
 export function xmlResponse(body: string): Response {
   return new Response(body, {
     headers: {

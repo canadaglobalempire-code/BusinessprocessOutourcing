@@ -481,6 +481,442 @@ export type Post = {
 };
 
 export const POSTS: Post[] = [
+  /* ------------------------------------------------------------------
+   * Industry vertical guides. The blog previously had depth on process
+   * (cost, KPIs, compliance) but almost nothing on sector, so the industry
+   * pages had no supporting content pointing at them. Each of these targets
+   * "BPO / call center outsourcing for <industry>" and links into the
+   * matching /industries page.
+   * ------------------------------------------------------------------ */
+  {
+    slug: "bpo-for-airlines",
+    date: "2026-08-11",
+    title: "How airlines outsource disruption and rebooking calls",
+    tag: "Airlines",
+    read: "9 min read",
+    excerpt:
+      "Airline contact volume does not arrive gradually. It arrives all at once, and staffing to the average guarantees failure on the day it matters.",
+    description:
+      "Why airline contact volume spikes without warning, what an outsourced team can safely handle during a disruption, and where the limits have to sit.",
+    img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Most industries have busy periods. Airlines have irregular operations,
+          and the difference matters. A weather event, a technical fault, or an
+          air traffic restriction can multiply contact volume tenfold within an
+          hour, and every one of those callers has the same urgent question about
+          a plan that has just stopped working.
+        </p>
+        <h2>The volume problem is structural, not seasonal</h2>
+        <p>
+          Retail peaks are forecastable months ahead. Disruption is not. An
+          airline cannot hire against a snowstorm, and staffing permanently to
+          the worst day of the year would mean carrying idle capacity for the
+          other three hundred and sixty. That gap between normal load and
+          disruption load is precisely the gap outsourced capacity exists to
+          cover.
+        </p>
+        <blockquote>
+          Staff to the surge floor you are willing to survive, not to the
+          average you usually see.
+        </blockquote>
+        <h2>What an outsourced team can genuinely handle</h2>
+        <p>
+          Rebooking within defined rules, confirming rebooked itineraries,
+          answering baggage status questions, explaining what a delay means for a
+          connection, capturing contact details for follow-up, and handling
+          duty-of-care questions about accommodation and meals where the policy
+          is written down. All of this is documentable, and documentable work
+          transfers well.
+        </p>
+        <h2>Where the limits have to sit</h2>
+        <p>
+          Anything discretionary should not be improvised by an agent under
+          pressure. Compensation decisions, exceptions to fare rules, medical or
+          special-assistance judgement calls, and anything touching safety belong
+          with staff who own those decisions. The useful design question is not
+          whether agents are capable but whether the boundary is written down
+          clearly enough to hold at three in the morning during a mass
+          re-accommodation.
+        </p>
+        <div className="callout">
+          <strong>Test your boundary:</strong> if an agent cannot tell within
+          five seconds whether a request is inside their authority, the boundary
+          is not documented well enough to survive a disruption.
+        </div>
+        <h2>Systems access decides everything</h2>
+        <p>
+          An agent who can see a passenger record but cannot change it produces a
+          slower version of the original problem. Rebooking authority inside the
+          reservation system, with rules constraining what may be offered, is
+          what separates a programme that reduces load from one that simply adds
+          a queue in front of your own. Provisioning this is usually the longest
+          item at launch and the one most worth pushing on.
+        </p>
+        <h2>Train before the season, not during it</h2>
+        <p>
+          Agents cannot be trained into irregular operations while irregular
+          operations are happening. Airlines that run this well keep a trained
+          bench that handles routine volume in normal conditions and expands into
+          disruption when it arrives, so the people answering during the event
+          already know the fare rules, the systems, and the escalation path.
+        </p>
+        <h2>Measure recovery, not handle time</h2>
+        <p>
+          Average handle time during a disruption is a misleading number — the
+          calls that matter most are the longest ones. More useful measures are
+          the share of passengers rebooked on first contact, the share who called
+          back within twenty-four hours, and how long the queue took to return to
+          normal after the event closed.
+        </p>
+        <p>
+          If you are scoping this, the{" "}
+          <a href="/industries/airlines">airline outsourcing overview</a> covers
+          the service mix, and{" "}
+          <a href="/services/inbound-call-center-services">
+            inbound call center services
+          </a>{" "}
+          explains how surge capacity is structured.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "hotel-and-hospitality-outsourcing",
+    date: "2026-08-10",
+    title: "Outsourcing hotel reservations and guest support",
+    tag: "Hospitality",
+    read: "8 min read",
+    excerpt:
+      "In hospitality the cancellation call is the highest-leverage contact you receive, and most operators handle it as pure administration.",
+    description:
+      "How hotels outsource reservations, cancellations, and guest support, and why the cancellation call is the contact most worth training agents on.",
+    img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Hotel contact volume is unevenly valuable. A room-rate question and a
+          cancellation call take similar time to handle, but one of them is a
+          revenue event and the other is not. Programmes that treat all contact
+          as equivalent administration leave most of the available value on the
+          table.
+        </p>
+        <h2>Cancellations are retention moments</h2>
+        <p>
+          A guest calling to cancel has already decided something, but frequently
+          not everything. Date flexibility, a different room type, or a credit
+          toward a future stay resolves a meaningful share of cancellations when
+          the agent is trained and authorised to offer it. Handled as pure
+          administration, the same call is a straight loss.
+        </p>
+        <blockquote>
+          Decide what an agent may offer to save a booking before they take the
+          first cancellation call, not after.
+        </blockquote>
+        <h2>The booking channel changes the conversation</h2>
+        <p>
+          A guest who booked direct, a guest who booked through an online travel
+          agency, and a guest on a corporate rate all have different modification
+          rights, and the agent needs to know which applies before offering
+          anything. Getting this wrong creates a promise the property cannot
+          honour, which is worse than declining cleanly.
+        </p>
+        <h2>Coverage has to match when guests actually call</h2>
+        <p>
+          Travel does not keep business hours. Arrival problems, late check-ins,
+          missed connections, and next-day booking changes concentrate in the
+          evening and overnight, which is exactly when most properties are least
+          staffed. Extending coverage into those hours usually recovers more
+          contacts than adding daytime capacity.
+        </p>
+        <div className="callout">
+          <strong>Check your own data:</strong> pull the last ninety days of
+          missed and abandoned calls by hour. In most properties the answer is
+          not what the front desk expects.
+        </div>
+        <h2>Tone is judged as heavily as outcome</h2>
+        <p>
+          Hospitality contact is reviewed publicly. A technically correct answer
+          delivered impatiently costs a return stay and frequently a rating, so
+          quality standards written around how the interaction felt matter as
+          much as whether it resolved. That is a documentation and monitoring
+          problem rather than a hiring one.
+        </p>
+        <h2>Seasonality suits flexed capacity</h2>
+        <p>
+          Resort and destination properties see volume differ severalfold between
+          peak and off-season, and the swing is forecastable. That combination —
+          severe but predictable — is what makes outsourced capacity work cleanly
+          rather than chaotically, because you can scale in and out without
+          carrying the peak through the quiet months.
+        </p>
+        <h2>Multilingual coverage follows arrivals data</h2>
+        <p>
+          Staffing languages by assumption rather than by actual guest mix
+          produces the same outcome as not staffing them at all. Arrivals data
+          tells you which languages earn a live agent and which are better served
+          another way.
+        </p>
+        <p>
+          See the{" "}
+          <a href="/industries/travel-and-hospitality">
+            travel and hospitality outsourcing overview
+          </a>{" "}
+          for the full service mix.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "utility-outage-call-handling",
+    date: "2026-08-09",
+    title: "Handling utility outage calls without drowning",
+    tag: "Energy & Utilities",
+    read: "8 min read",
+    excerpt:
+      "Outage contact arrives in the same shape every time: nothing, then everything, then questions about when it ends.",
+    description:
+      "How utilities handle outage call volume with outsourced capacity, what agents can safely tell customers, and why safety reports need their own path.",
+    img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Utility contact volume is close to flat until it is not. A storm, a
+          substation fault, or a widespread outage produces the sharpest demand
+          curve in any customer-facing industry, and unlike retail peaks it
+          arrives with no notice at all.
+        </p>
+        <h2>Three distinct contact types, one queue</h2>
+        <p>
+          Outage events generate reports of a loss of supply, requests for
+          restoration estimates, and — critically — safety reports about downed
+          lines, gas odours, or damaged equipment. These are not equivalent, and
+          routing them identically is the most consequential design mistake
+          available in this sector.
+        </p>
+        <blockquote>
+          A safety report is not a customer service contact. It needs its own
+          path and its own urgency.
+        </blockquote>
+        <h2>Safety reports need an unconditional escalation route</h2>
+        <p>
+          An agent taking a report of a downed line or a gas smell should have one
+          job: capture the location precisely, give the caller the scripted safety
+          instruction, and escalate immediately. There is no version of this where
+          agent judgement improves the outcome, and the escalation path has to work
+          at full queue depth rather than only when things are calm.
+        </p>
+        <h2>What agents can safely say about restoration</h2>
+        <p>
+          Restoration estimates change, and an agent repeating an estimate that
+          later slips creates a second, angrier contact. The workable approach is
+          to relay only what the operational system currently shows, state plainly
+          that it is an estimate, and avoid any commitment beyond it. Scripts that
+          allow reassurance beyond the data cause more damage than a blunt
+          &ldquo;we do not know yet&rdquo; does.
+        </p>
+        <div className="callout">
+          <strong>Design rule:</strong> agents relay system state, they do not
+          predict it. Every prediction becomes a promise in the customer&rsquo;s
+          memory.
+        </div>
+        <h2>Volume rises as your own capacity falls</h2>
+        <p>
+          Widespread events affect staff as well as customers. The value of
+          outsourced coverage is that the agents are not in the affected area, and
+          that only holds if it was arranged in advance — routing, access, and
+          authority all take time to establish and cannot be improvised while the
+          event is running.
+        </p>
+        <h2>Deflection is worth more here than anywhere</h2>
+        <p>
+          A well-maintained outage map, proactive text updates, and an accurate
+          recorded message remove a large share of &ldquo;is it off, and when is it
+          back&rdquo; contact before it reaches a queue. Programmes that invest
+          here first need materially less live capacity during an event.
+        </p>
+        <h2>Measure the tail, not the peak</h2>
+        <p>
+          Everyone watches the spike. The number that predicts customer sentiment
+          is how long the queue stayed elevated after restoration, because those
+          are billing questions, damage claims, and complaints — and they arrive
+          when the emergency staffing has already stood down.
+        </p>
+        <p>
+          The{" "}
+          <a href="/industries/energy-and-utilities">
+            energy and utilities outsourcing overview
+          </a>{" "}
+          covers the wider service mix.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "telecom-customer-service-outsourcing",
+    date: "2026-08-08",
+    title: "Telecom customer service outsourcing that cuts churn",
+    tag: "Telecommunications",
+    read: "9 min read",
+    excerpt:
+      "In telecom the support queue and the retention funnel are the same queue, and most operators staff them as if they were not.",
+    description:
+      "How telecom operators outsource technical support and retention, why the two belong in one conversation, and what agents need authority to resolve.",
+    img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Telecom customers rarely call to cancel out of nowhere. They call about
+          a fault, wait too long, get transferred, fail to get it fixed, and then
+          call to cancel. The cancellation is the last event in a chain that
+          started as a support contact, which means support quality and churn are
+          the same problem measured at different points.
+        </p>
+        <h2>Fix-first beats save-first</h2>
+        <p>
+          Retention offers made to a customer whose original problem is still
+          unresolved buy weeks, not years. The higher-return sequence is resolving
+          the fault, confirming it is resolved, and only then discussing the
+          account. Programmes that route straight to retention treat the symptom.
+        </p>
+        <blockquote>
+          A discount on a service that still does not work is a delayed
+          cancellation.
+        </blockquote>
+        <h2>Tier-one has to genuinely resolve</h2>
+        <p>
+          A tier that only triages adds a handoff without removing work, and in
+          telecom every handoff is a churn risk because it resets the
+          customer&rsquo;s patience. The measure worth reporting is the share of
+          contact closed without a transfer, not the share answered quickly.
+        </p>
+        <h2>Truck rolls are the expensive outcome</h2>
+        <p>
+          Every avoidable engineer visit costs more than the entire contact that
+          scheduled it. Agents equipped to run real line diagnostics, walk through
+          equipment resets properly, and identify known area faults prevent a
+          meaningful share of dispatches — which is usually the clearest financial
+          case for investing in the tier rather than minimising it.
+        </p>
+        <div className="callout">
+          <strong>Worth tracking:</strong> dispatches avoided per hundred
+          technical contacts. It is the number that justifies the programme to a
+          finance team.
+        </div>
+        <h2>Authority is what customers actually experience</h2>
+        <p>
+          What the agent may credit, waive, or commit to without asking determines
+          whether the call felt like a resolution or a negotiation. Withholding
+          that authority does not save money; it moves the cost into escalations,
+          repeat contacts, and cancellations.
+        </p>
+        <h2>Known area faults change the script</h2>
+        <p>
+          When a fault is already identified, the correct handling is to say so
+          immediately, give the current restoration state, and offer proactive
+          notification. Making a customer run diagnostics on a fault you already
+          know about is the fastest way to lose them.
+        </p>
+        <h2>Compliance sits underneath all of it</h2>
+        <p>
+          Outbound retention and win-back calling carries calling-time, consent,
+          and do-not-call obligations, and those rules apply to whoever dials
+          regardless of who employs them. Build them into scripts and dialler
+          configuration from the start rather than bolting them on after a
+          complaint.
+        </p>
+        <p>
+          See{" "}
+          <a href="/industries/telecommunications">
+            telecommunications outsourcing
+          </a>{" "}
+          and{" "}
+          <a href="/services/technical-support">technical support outsourcing</a>{" "}
+          for the service detail.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "insurance-claims-outsourcing",
+    date: "2026-08-07",
+    title: "Outsourcing insurance claims intake and FNOL",
+    tag: "Insurance",
+    read: "8 min read",
+    excerpt:
+      "First notice of loss is simple work with an unforgiving boundary: capture everything, promise nothing.",
+    description:
+      "What outsourced first notice of loss handling covers, where the coverage boundary sits, and how to plan claim capacity for catastrophe weeks.",
+    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Claims intake is among the most outsourceable work in insurance and
+          among the easiest to get badly wrong. The task itself is
+          straightforward. The boundary around it is not, and that boundary is
+          where liability lives.
+        </p>
+        <h2>Capture everything, promise nothing</h2>
+        <p>
+          An agent taking a first notice of loss records what happened, when,
+          where, who was involved, and what the immediate situation is. What they
+          must never do is indicate whether the loss is covered. That judgement
+          belongs to an adjuster, and an offhand reassurance on an intake call can
+          bind an insurer in ways nobody intended.
+        </p>
+        <blockquote>
+          The intake script is not a service document. It is a liability control.
+        </blockquote>
+        <h2>The record determines everything downstream</h2>
+        <p>
+          A complete first notice shortens the whole claim. A thin one generates
+          callbacks, delays assignment, and frustrates a policyholder who has
+          already had a bad day. Defining a prescribed minimum and enforcing it
+          through the script protects the entire process, not just the call.
+        </p>
+        <h2>Distressed callers need a different script</h2>
+        <p>
+          Someone reporting a house fire or a serious accident is not in a
+          transactional frame of mind. Scripts written for routine service handle
+          these badly, and the failure shows up in complaints rather than in handle
+          time. Acknowledgement, pacing, and clear next steps matter more than
+          efficiency here.
+        </p>
+        <div className="callout">
+          <strong>Practical check:</strong> read your intake script aloud
+          imagining the caller has just watched their home flood. If it sounds
+          like a form, it needs rewriting.
+        </div>
+        <h2>Catastrophe weeks define the year</h2>
+        <p>
+          Claim volume is not evenly distributed. A single storm can generate more
+          contact in seventy-two hours than the preceding quarter, and staffing to
+          an annual average guarantees failure in exactly the week that determines
+          your reputation. Plan to a surge floor instead, and accept the cost of
+          capacity you will not always use.
+        </p>
+        <h2>Train in the quiet season</h2>
+        <p>
+          Agents cannot be trained into claim intake while claims are arriving.
+          The preparation window is the quiet part of the year, and insurers who
+          treat it that way come out of catastrophe weeks intact.
+        </p>
+        <h2>Status contact is the second wave</h2>
+        <p>
+          Once claims are filed, the queue fills with people asking where theirs
+          has got to. This is high-volume, low-complexity, and highly
+          outsourceable, and handling it well removes a large distraction from
+          adjusters who should be adjusting.
+        </p>
+        <p>
+          The{" "}
+          <a href="/industries/insurance">insurance outsourcing overview</a>{" "}
+          covers policy servicing alongside claims.
+        </p>
+      </>
+    ),
+  },
   {
     slug: "what-to-outsource",
     date: "2026-07-10",
