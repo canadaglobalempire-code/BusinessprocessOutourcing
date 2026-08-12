@@ -40,6 +40,13 @@ const nextConfig: NextConfig = {
        * path stops being recrawled and its equity transfers.
        */
       { source: "/about", destination: "/about-us", permanent: true },
+      /*
+       * Blog pagination starts at /blog/page/2 because page one is /blog, so
+       * /blog/page/1 returned a 404. It is the URL anyone hand-editing the
+       * pagination guesses first, and the one a crawler infers from seeing
+       * /blog/page/2 and /blog/page/3.
+       */
+      { source: "/blog/page/1", destination: "/blog", permanent: true },
     ];
   },
 };
