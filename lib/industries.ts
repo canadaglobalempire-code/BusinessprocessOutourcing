@@ -391,6 +391,112 @@ export const INDUSTRIES: Industry[] = [
       "Intake reporting and call quality reviews",
     ],
   },
+  {
+    name: "Logistics and Transportation",
+    seoTitle: "Logistics Call Center Outsourcing and Freight Support",
+    summary:
+      "Outsourced logistics support for carriers, brokers, and 3PLs covering delivery exceptions, dispatch coordination, and shipment status.",
+    metaDescription:
+      "Outsource logistics call center support for carriers, brokers, and 3PLs: delivery exceptions, dispatch coordination, shipment status, and overnight coverage.",
+    seoIntro:
+      "Business Process Outsourcing supports carriers, freight brokers, and third-party logistics providers with the contact that arrives when a shipment does not go to plan — exceptions, rescheduling, dispatch coordination, and status escalation.",
+    seoBody: {
+      heading: "Support scoped for exceptions, not status lookups.",
+      paragraphs: [
+        "Routine tracking is increasingly self-served, so what actually reaches an agent is the shipment that is late, damaged, held, or misrouted. That makes the average logistics call harder than it used to be, and a programme sized against total volume rather than exception volume will be staffed and trained incorrectly.",
+        "The variable that decides whether the programme helps is resolution authority. An agent who can only log an exception adds a step without solving anything; one who can authorise a reship, a credit, or a redelivery removes work from your team and effort from your customer. Freight also moves overnight, so coverage is matched to when problems surface rather than to office hours.",
+      ],
+    },
+    serviceDetails: {
+      "Delivery exception handling":
+        "Late, damaged, held, and misrouted shipments worked to resolution inside your systems rather than logged for someone else to pick up.",
+      "Dispatch and driver coordination":
+        "Coordinate schedule changes, appointment times, and delivery windows between dispatch, drivers, and receivers.",
+      "Shipment status and escalation":
+        "Answer status enquiries against live system data and escalate anything outside documented tolerances.",
+      "Overnight and weekend coverage":
+        "Freight moves through the night; coverage matches when exceptions actually arise rather than when offices open.",
+      "Customs and documentation intake":
+        "Capture and route customs, paperwork, and compliance queries without interpreting them.",
+      "Carrier and broker account support":
+        "Rate enquiries, booking requests, and account administration handled against documented workflows.",
+      "Claims intake for loss and damage":
+        "Capture the detail a claim requires at first contact so the process downstream does not stall on missing information.",
+      "Peak season surge capacity":
+        "Absorb the pre-holiday shipping peak without carrying the headcount through the rest of the year.",
+      "Exception reporting by cause":
+        "Report exceptions by root cause so the recurring ones can be removed rather than repeatedly handled.",
+    },
+    services: [
+      "Delivery exception handling",
+      "Dispatch and driver coordination",
+      "Shipment status and escalation",
+      "Overnight and weekend coverage",
+      "Customs and documentation intake",
+      "Carrier and broker account support",
+      "Claims intake for loss and damage",
+      "Peak season surge capacity",
+      "Exception reporting by cause",
+    ],
+    crossLinks: [
+      { href: "/services/order-taking-services", label: "Order taking services" },
+      { href: "/services/back-office-outsourcing", label: "Back office outsourcing" },
+      { href: "/locations/call-center-outsourcing-illinois", label: "Illinois coverage" },
+    ],
+  },
+  {
+    name: "Education",
+    seoTitle: "Education Call Center Outsourcing for Schools",
+    summary:
+      "Outsourced education support for universities, colleges, and school districts covering admissions, enrolment, and student services contact.",
+    metaDescription:
+      "Outsource education call center support for universities and colleges: admissions and enrolment enquiries, student services, and financial aid contact.",
+    seoIntro:
+      "Business Process Outsourcing supports universities, colleges, and school districts with admissions, enrolment, financial aid, and student services contact — volume that peaks against the academic calendar rather than the commercial one.",
+    seoBody: {
+      heading: "Volume that follows the academic year, not the retail one.",
+      paragraphs: [
+        "Admissions deadlines, enrolment windows, and semester starts drive contact spikes with no relationship to a commercial calendar, and capacity planned against a retail year will be wrong in both directions. Institutions that plan against their own cycle staff the peaks properly and avoid carrying that capacity through the quiet months.",
+        "The defining operational requirement is verification. A parent calling about a student's account is the normal case rather than the exception, and what they may be told is governed by federal education records rules rather than service preference. Those rules belong in the agent's workflow, surfaced at the moment the question arises, not in a policy document nobody opens under pressure.",
+      ],
+    },
+    serviceDetails: {
+      "Admissions and prospective student enquiries":
+        "Answer programme, deadline, and requirement questions and route genuine applicant interest to the right department.",
+      "Enrolment and registration support":
+        "Handle registration questions, deadline reminders, and process guidance during the windows when volume concentrates.",
+      "Financial aid and billing enquiries":
+        "Answer routine aid, invoice, and payment plan questions within documented limits and escalate anything requiring a determination.",
+      "Student records verification":
+        "Apply documented rules on what may be disclosed and to whom, with every verification decision logged.",
+      "Parent and guardian contact handling":
+        "Handle calls made on a student's behalf correctly rather than treating them as an edge case.",
+      "Peak-cycle surge capacity":
+        "Scale into admissions and enrolment peaks and back out again without permanent headcount.",
+      "After-hours and weekend coverage":
+        "Keep the institution reachable outside office hours during deadline periods.",
+      "Multilingual family support":
+        "Serve families whose first language is not English without routing them to a callback.",
+      "Enquiry reporting by programme":
+        "Report enquiry volume and outcome by programme so recruitment effort can follow demand.",
+    },
+    services: [
+      "Admissions and prospective student enquiries",
+      "Enrolment and registration support",
+      "Financial aid and billing enquiries",
+      "Student records verification",
+      "Parent and guardian contact handling",
+      "Peak-cycle surge capacity",
+      "After-hours and weekend coverage",
+      "Multilingual family support",
+      "Enquiry reporting by programme",
+    ],
+    crossLinks: [
+      { href: "/services/inbound-call-center-services", label: "Inbound call center services" },
+      { href: "/locations/call-center-outsourcing-massachusetts", label: "Massachusetts coverage" },
+      { href: "/services/after-hours-answering-service", label: "After-hours answering service" },
+    ],
+  },
 ];
 
 export function slugify(value: string) {

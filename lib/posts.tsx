@@ -489,6 +489,152 @@ export const POSTS: Post[] = [
    * matching /industries page.
    * ------------------------------------------------------------------ */
   {
+    slug: "logistics-exception-handling-outsourcing",
+    date: "2026-08-12",
+    title: "Outsourcing logistics exception handling",
+    tag: "Logistics",
+    read: "8 min read",
+    excerpt:
+      "Customers track their own shipments now. What reaches an agent is the one that went wrong, which makes the average call harder than it used to be.",
+    description:
+      "Why logistics support should be scoped around exceptions rather than call volume, and why resolution authority matters more than answer speed.",
+    img: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Ten years ago a large share of logistics contact was people asking
+          where their shipment was. Almost all of that is now self-served, and
+          the calls that remain are the ones tracking could not answer: the late,
+          the damaged, the held, and the misrouted.
+        </p>
+        <h2>Scope for exceptions, not volume</h2>
+        <p>
+          A programme sized against total historical contact will be trained and
+          staffed for a job that no longer exists. The useful number is exception
+          volume, and the useful skill profile is problem resolution rather than
+          information lookup. These are different hires and different scripts.
+        </p>
+        <blockquote>
+          The easy contacts already left. What remains is the hard half.
+        </blockquote>
+        <h2>Resolution authority is the whole game</h2>
+        <p>
+          The single largest variable in whether outsourced logistics support
+          helps is what the agent may authorise without asking. An agent who can
+          issue a reship, approve a credit, or rebook a delivery closes the
+          contact. An agent who can only log it has added a step to a process the
+          customer was already unhappy with.
+        </p>
+        <div className="callout">
+          <strong>Set this first:</strong> the dollar value an agent can approve
+          unilaterally. Every hour spent debating it is repaid in escalations
+          that never happen.
+        </div>
+        <h2>Systems access is where programmes stall</h2>
+        <p>
+          Exception work requires visibility into the same systems your internal
+          team uses — the TMS, the WMS, the carrier portals. Provisioning that
+          access is almost always the longest item at launch, and programmes that
+          go live without it spend their first months relaying information rather
+          than resolving anything.
+        </p>
+        <h2>Coverage should match when freight moves</h2>
+        <p>
+          Freight moves overnight and exceptions surface with it. A support
+          arrangement staffed only to office hours is structurally missing
+          contact rather than occasionally missing it, and the gap shows up as a
+          backlog every morning.
+        </p>
+        <h2>Report by cause, not by count</h2>
+        <p>
+          Counting exceptions tells you how busy the team was. Grouping them by
+          root cause tells you which ones can be removed entirely — a
+          mislabelled lane, a carrier that consistently misses a window, a
+          packaging spec that fails in transit. That reporting is where an
+          outsourced team earns more than its cost.
+        </p>
+        <p>
+          See{" "}
+          <a href="/industries/logistics-and-transportation">
+            logistics outsourcing
+          </a>{" "}
+          for the service mix.
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: "university-admissions-call-handling",
+    date: "2026-08-12",
+    title: "Handling admissions and enrolment call peaks",
+    tag: "Education",
+    read: "8 min read",
+    excerpt:
+      "University contact volume spikes against deadlines that have nothing to do with the commercial calendar, and most capacity models are built for the wrong year.",
+    description:
+      "How universities and colleges handle admissions and enrolment call peaks, and why verifying who is on the line matters more than answering quickly.",
+    img: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1400&q=80",
+    body: (
+      <>
+        <p>
+          Institutions run on a calendar almost nobody else uses. Application
+          deadlines, enrolment windows, financial aid cutoffs, and semester
+          starts produce contact spikes that are severe, repeatable, and
+          completely unrelated to the retail year most capacity models assume.
+        </p>
+        <h2>Plan against the academic year</h2>
+        <p>
+          The peaks are known a year ahead, which makes them among the easiest
+          surges to staff for and the least excusable to be caught out by. What
+          catches institutions out is planning against an annual average, which
+          leaves them overstaffed in July and drowning in January.
+        </p>
+        <blockquote>
+          A deadline week is not a busy period. It is a different operation.
+        </blockquote>
+        <h2>The caller is often not the student</h2>
+        <p>
+          A parent calling about a student&rsquo;s account is the normal case
+          here, not an edge case. What they may be told is governed by federal
+          education records rules rather than by service preference, and an agent
+          who improvises that decision creates a records problem rather than a
+          service failure.
+        </p>
+        <div className="callout">
+          <strong>Design rule:</strong> verification rules belong in the
+          agent&rsquo;s workflow at the moment the question arises. Rules that
+          live in a policy document get improvised around under volume pressure.
+        </div>
+        <h2>Log the decision, not just the call</h2>
+        <p>
+          What was verified, and what was disclosed on the strength of it, needs
+          recording. The log is what makes the decision defensible months later,
+          and it costs nothing at the time.
+        </p>
+        <h2>Speed is the wrong headline metric</h2>
+        <p>
+          For institutional contact the measure that matters is whether the
+          caller left with the right answer and a correct next step. Programmes
+          optimised purely on handle time degrade faster in this setting than in
+          consumer service, because the questions are procedural and the wrong
+          answer sends someone down a dead end for weeks.
+        </p>
+        <h2>Multilingual coverage is an access question</h2>
+        <p>
+          Families whose first language is not English are frequently the ones
+          navigating the process for the first time. Routing them to a callback
+          rather than a live agent has a measurable effect on completion, which
+          makes it an enrolment issue rather than an inclusion gesture.
+        </p>
+        <p>
+          See{" "}
+          <a href="/industries/education">education outsourcing</a> for how the
+          coverage is structured.
+        </p>
+      </>
+    ),
+  },
+  {
     slug: "bpo-for-airlines",
     date: "2026-08-11",
     title: "How airlines outsource disruption and rebooking calls",

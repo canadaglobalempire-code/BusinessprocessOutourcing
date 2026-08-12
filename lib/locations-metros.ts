@@ -43,6 +43,11 @@ const metro = (
   deepDive,
   faq,
   h1: seoTitle.split(" | ")[0],
+  /*
+   * Five fixed links plus one per metro gives six, filling two rows of three.
+   * The parent state comes first because it is the link most worth following
+   * from a city page.
+   */
   crossLinks: [
     {
       href: `/locations/call-center-outsourcing-${stateSlug}`,
@@ -50,6 +55,8 @@ const metro = (
     },
     { href: "/locations/call-center-outsourcing-usa", label: "US market coverage" },
     { href: "/services/customer-support", label: "Customer support outsourcing" },
+    { href: "/services/inbound-call-center-services", label: "Inbound call center services" },
+    { href: "/services/after-hours-answering-service", label: "After-hours answering service" },
     ...extraLinks,
   ],
 });
@@ -502,7 +509,7 @@ export const METRO_LOCATIONS: Location[] = [
       { q: "Is Ohio a one-party consent state for call recording?", a: "Ohio is generally treated as a one-party consent state, though calls with customers in stricter states may need those states' treatment. Confirm current requirements with your own counsel before launch." },
       { q: "How quickly can Columbus coverage start?", a: "Most programmes begin within one to two weeks of confirming scope, tools, coverage hours, and escalation rules." },
     ],
-    [{ href: "/services/after-hours-answering-service", label: "After-hours answering service" }],
+    [{ href: "/services/omnichannel-contact-center", label: "Omnichannel contact center" }],
   ),
 
   metro(
@@ -1302,6 +1309,106 @@ export const METRO_LOCATIONS: Location[] = [
       { q: "Is Tennessee a one-party consent state for call recording?", a: "Tennessee is generally treated as a one-party consent state, meaning a participant may record. Confirm current requirements with your own counsel before launch." },
       { q: "How quickly can Memphis coverage start?", a: "Most programmes begin within one to two weeks. Systems provisioning for exception handling is usually the longest item rather than training." },
     ],
-    [{ href: "/services/after-hours-answering-service", label: "After-hours answering service" }],
+    [{ href: "/industries/logistics-and-transportation", label: "Logistics outsourcing" }],
+  ),
+
+  metro(
+    "call-center-outsourcing-las-vegas",
+    "Las Vegas",
+    "nevada",
+    "Nevada",
+    "Call Center Outsourcing for Las Vegas Businesses",
+    "Call center outsourcing for Las Vegas companies: genuine overnight coverage, convention surge capacity, and booking and cancellation handling.",
+    "Outsourced call center coverage for Las Vegas companies across hospitality, gaming, conventions, and entertainment.",
+    "Las Vegas is the clearest example in the country of a market where overnight contact is ordinary volume rather than an after-hours exception.",
+    "A city where 3am is a business hour.",
+    [
+      "Hotels, entertainment, and gaming run continuously, and guests behave accordingly. A booking change or a service issue at three in the morning is routine here, which means an arrangement built around business hours is missing a structural share of contact rather than an occasional call.",
+      "The complication is authority. There is nobody to escalate to overnight, so whatever the agent cannot settle themselves becomes a callback the following day — and a callback about a problem that happened last night rarely lands well. What an overnight agent may resolve is the single most consequential scoping decision in this market.",
+      "Convention volume sits on top of all of it. Major events multiply booking, change, and enquiry contact in a way that is severe but scheduled months ahead, which makes it the easiest kind of peak to plan flexed capacity against.",
+    ],
+    [
+      ["Genuine overnight coverage", "Overnight staffed as ordinary volume rather than as after-hours overflow."],
+      ["Real overnight resolution authority", "Defined scope for what an agent can settle when there is nobody to escalate to."],
+      ["Convention and event surge capacity", "Absorb scheduled event peaks without carrying the headcount year-round."],
+      ["Booking, change, and cancellation handling", "Handled inside your reservation systems, with cancellations treated as retention moments."],
+      ["Bilingual English and Spanish on one queue", "Live bilingual agents rather than a separate callback line."],
+      ["Tone-led quality standards", "Documented standards for contact judged on experience as much as resolution."],
+    ],
+    [
+      {
+        heading: "Overnight is the defining requirement",
+        sections: [
+          { title: "The volume is structural, not residual", body: "In a 24-hour hospitality economy the overnight share of contact is a stable, measurable portion of the total. Treating it as overflow guarantees a permanent gap during the hours the city is busiest." },
+          { title: "Authority is everything after midnight", body: "With no escalation path available, the agent's own resolution scope determines whether the contact is closed or merely logged. This is worth over-specifying rather than under-specifying." },
+          { title: "The handover format matters", body: "What the overnight team passes to the day team decides whether the night's work compounds or gets repeated. Designing that format explicitly is cheap and repeatedly overlooked." },
+        ],
+      },
+      {
+        heading: "Events and cancellations carry the value",
+        sections: [
+          { title: "Conventions are scheduled surges", body: "Major events are known months ahead, which makes them the easiest peak to staff against and the least excusable to be caught out by." },
+          { title: "Cancellations are the highest-leverage call", body: "A cancellation is a revenue event handled by most operators as pure administration. Deciding in advance what an agent may offer to save it changes the outcome materially." },
+          { title: "Reviews follow tone, not resolution", body: "Guest contact is judged publicly on how it felt. Documented tone standards and sampling matter more here than average handle time." },
+        ],
+      },
+    ],
+    [
+      { q: "Do you provide real overnight coverage in Las Vegas?", a: "Yes, staffed as ordinary volume rather than after-hours overflow. In a 24-hour hospitality economy the overnight share of contact is a stable, measurable portion of the total." },
+      { q: "Can overnight agents resolve issues themselves?", a: "Resolution authority is defined at scoping and matters most overnight, because there is no escalation path available. Whatever the agent cannot settle becomes a next-day callback about a problem from last night." },
+      { q: "Can you handle convention surges?", a: "Yes. Convention volume is severe but scheduled months ahead, which makes it the easiest kind of peak to plan flexed capacity against." },
+      { q: "How quickly can Las Vegas coverage start?", a: "Most programmes begin within one to two weeks of confirming scope, tools, coverage hours, and escalation rules." },
+    ],
+    [{ href: "/industries/travel-and-hospitality", label: "Travel and hospitality outsourcing" }],
+  ),
+
+  metro(
+    "call-center-outsourcing-portland",
+    "Portland",
+    "oregon",
+    "Oregon",
+    "Call Center Outsourcing for Portland Businesses",
+    "Call center outsourcing for Portland companies: consumer and outdoor brand support with documented tone standards, plus tiered technical support.",
+    "Outsourced call center coverage for Portland companies across athletic and outdoor brands, food and beverage, software, and professional services.",
+    "Portland's best-known companies sell on identity as much as product, which makes brand voice the thing an outsourced team is actually being judged on.",
+    "Where sounding right is the deliverable.",
+    [
+      "Athletic, outdoor, and food and beverage brands here have unusually strong customer identification, and their buyers notice immediately when a support interaction sounds like it came from somewhere else. Consistency of voice across thousands of interactions is the product, and it is a documentation and sampling problem rather than a hiring one.",
+      "That means the quality framework does more work than the staffing model. Written standards with worked examples, continuous sampling, and a correction loop fast enough that drift never compounds are what keep an outsourced team sounding like the brand six months in.",
+      "The Silicon Forest corridor west of the city adds a second, entirely different profile: tiered technical support for semiconductors and software, where the measure is how much contact closes without touching an internal engineer.",
+    ],
+    [
+      ["Consumer brand voice standards", "Documented tone standards with sampling and fast correction so drift never compounds."],
+      ["Seasonal gear-cycle capacity", "Absorb product launch and season-driven volume without carrying it year-round."],
+      ["Returns and exchange handling", "High-volume transactional contact handled inside your store platform."],
+      ["Tiered technical support", "Tier-one resolution and triage with documented escalation into your engineering queue."],
+      ["Pacific-hours coverage that reaches east", "A nine-to-five Pacific desk has already missed the East Coast morning."],
+      ["Call-type-aware recording configuration", "Telephone and in-person treated separately, because Oregon does not apply one rule to both."],
+    ],
+    [
+      {
+        heading: "Brand voice is a process, not a personality",
+        sections: [
+          { title: "Write the standard down", body: "Tone that lives only in the heads of a founding team does not survive being outsourced, or being hired for. Documented standards with worked examples are what make it transferable." },
+          { title: "Sample continuously", body: "Voice drifts gradually and invisibly. Regular sampling catches it while it is still a coaching conversation rather than the new normal." },
+          { title: "Correct within the week", body: "The gap between drift and correction determines how much of it reaches customers. A weekly loop is worth considerably more than a monthly report." },
+        ],
+      },
+      {
+        heading: "The technical corridor is a separate programme",
+        sections: [
+          { title: "The runbook sets the ceiling", body: "Outsourced technical support performs exactly to the quality of the documentation it is given, so runbook preparation is the highest-return work before launch." },
+          { title: "Track what closes, not what answers", body: "A tier that only triages adds a handoff without removing work. Report the share of contact closed without touching an internal engineer." },
+          { title: "Do not merge the two queues", body: "Consumer brand contact and deep technical support need different scorecards. Running them through one team produces a compromise that serves neither." },
+        ],
+      },
+    ],
+    [
+      { q: "How do you keep brand voice consistent?", a: "Documented tone standards with worked examples, continuous sampling, and a correction loop fast enough that drift never compounds. Consistency is a process rather than a hiring outcome." },
+      { q: "Is Oregon a one-party consent state for call recording?", a: "Oregon treats telephone calls and in-person conversations differently, with the stricter expectation generally attaching to in-person communications. Confirm current requirements with your own counsel before launch." },
+      { q: "Can you handle seasonal gear-cycle volume?", a: "Yes. Launch and season-driven peaks are predictable enough to plan precisely, which suits flexed capacity better than permanent headcount." },
+      { q: "How quickly can Portland coverage start?", a: "Most programmes begin within one to two weeks of confirming scope, tools, coverage hours, and escalation rules." },
+    ],
+    [{ href: "/services/ecommerce-support", label: "E-commerce support outsourcing" }],
   ),
 ];

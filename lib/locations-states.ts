@@ -60,11 +60,17 @@ const state = (
   withinCountry: "United States",
 });
 
-/** Links every state page carries, before its own sector-specific additions. */
+/*
+ * Links every state page carries, before its own sector-specific additions.
+ *
+ * Four here plus two per state gives six, which fills two rows of three in the
+ * cross-link grid. Five would leave an orphan on every one of these pages.
+ */
 const BASE_LINKS = [
   { href: "/locations/call-center-outsourcing-usa", label: "US market coverage" },
   { href: "/services/customer-support", label: "Customer support outsourcing" },
   { href: "/services/inbound-call-center-services", label: "Inbound call center services" },
+  { href: "/services/bilingual-call-center-services", label: "Bilingual call center services" },
 ];
 
 const CONSENT_CAVEAT =
@@ -1568,6 +1574,126 @@ export const STATE_LOCATIONS: Location[] = [
       ...BASE_LINKS,
       { href: "/industries/energy-and-utilities", label: "Energy and utilities outsourcing" },
       { href: "/services/after-hours-answering-service", label: "After-hours answering service" },
+    ],
+  ),
+
+  /* ------------------------------------------------------------------ */
+  state(
+    "call-center-outsourcing-nevada",
+    "Nevada",
+    "Call Center Outsourcing in Nevada | 24/7 Cover",
+    "Call center outsourcing for Nevada companies: round-the-clock coverage for a 24-hour economy, distribution support, and bilingual Spanish agents.",
+    "Outsourced call center coverage for Nevada companies across hospitality and gaming, distribution and logistics, and professional services.",
+    "Nevada is the one state where round-the-clock coverage is a baseline expectation rather than a premium tier, because a large part of its economy genuinely never closes.",
+    "A 24-hour economy needs 24-hour cover.",
+    [
+      "Hospitality, gaming, and entertainment run continuously, and their customers behave accordingly. A guest query at three in the morning is ordinary volume here, not an edge case, which means an answering arrangement built around business hours misses a structural share of contact rather than an occasional call.",
+      "Overnight cover only helps if the agent can act. There is nobody to escalate to at four in the morning, so what an overnight agent may resolve without asking — a booking change, a credit, a rebooking — determines whether the coverage reduces work or simply records it.",
+      "The second Nevada economy is distribution. Reno and Sparks sit within a day's truck reach of the entire West Coast, which has pulled a large fulfilment and logistics base into the state. That produces delivery exception contact with its own overnight pattern tied to freight movements rather than to guests.",
+    ],
+    [
+      ["Genuine round-the-clock coverage", "Overnight treated as ordinary volume rather than an after-hours add-on."],
+      ["Real overnight resolution authority", "Defined scope for what an agent can settle at 4am, when there is nobody to escalate to."],
+      ["Hospitality and booking contact", "Reservations, changes, and cancellations handled inside your systems with retention framing."],
+      ["Distribution and delivery exception handling", "The late, damaged, or misrouted shipment rather than the routine status lookup."],
+      ["Bilingual English and Spanish on one queue", "Live bilingual agents rather than a separate callback line."],
+      ["Event and convention surge capacity", "Absorb conference and event peaks without carrying the headcount year-round."],
+    ],
+    [
+      { name: "Las Vegas", note: "Hospitality, gaming, conventions, and entertainment. The clearest 24-hour contact profile in the country, with severe event-driven spikes on top." },
+      { name: "Reno and Sparks", note: "Distribution, fulfilment, and manufacturing. Within a day's truck reach of the West Coast, which makes delivery exception handling the dominant contact type." },
+      { name: "Henderson", note: "Professional services, healthcare, and corporate relocation. A steadier daytime contact profile than the Strip economy next door." },
+      { name: "Carson City and northern Nevada", note: "State government suppliers, mining services, and manufacturing. Procedural, record-driven contact suited to documented workflows." },
+    ],
+    [
+      {
+        heading: "Overnight is the default, not the exception",
+        sections: [
+          { title: "Guests do not keep business hours", body: "In a 24-hour economy, overnight contact is a defined share of total volume rather than an occasional overflow. Staffing it as an add-on guarantees a permanent gap in exactly the hours the local economy is busiest." },
+          { title: "Authority matters more at 4am", body: "There is nobody to escalate to overnight, so the agent's own resolution scope is the entire determinant of whether the contact helps. A line that can only take messages is worse than voicemail." },
+          { title: "Handovers decide whether the night compounds", body: "What the overnight team leaves for the day team, and in what format, decides whether the night's work carries forward or gets repeated. That format is worth designing explicitly." },
+        ],
+      },
+      {
+        heading: "Events move the whole curve",
+        sections: [
+          { title: "Conventions are scheduled surges", body: "Major conferences multiply booking, change, and enquiry volume in a way that is severe but known months ahead — which is the easiest kind of peak to plan flexed capacity against." },
+          { title: "Cancellations are retention moments", body: "A cancellation call is the highest-leverage contact in hospitality and the one most often handled as pure administration. Deciding what an agent may offer to save the booking changes the outcome." },
+          { title: "Tone is reviewed publicly", body: "Hospitality contact is judged on how it felt as much as what it resolved, which makes documented standards and monitoring more valuable than raw handling speed." },
+        ],
+      },
+    ],
+    [
+      { q: "Do you provide genuine 24/7 coverage in Nevada?", a: "Yes, and here it is treated as baseline rather than a premium tier. In a 24-hour economy overnight contact is a defined share of volume, so it is staffed as ordinary coverage rather than as after-hours overflow." },
+      { q: "Can overnight agents actually resolve issues?", a: "Resolution authority is defined at scoping and matters more overnight than in daylight, because there is nobody to escalate to. A line that can only take messages at 4am produces a worse impression than voicemail." },
+      { q: "Is Nevada a one-party consent state for call recording?", a: `Nevada is generally treated as a one-party consent state for telephone calls, though its statute has been read strictly in places. ${CONSENT_CAVEAT}` },
+      { q: "Can you handle convention and event surges?", a: "Yes. Convention volume is severe but known months ahead, which is the easiest kind of peak to plan flexed capacity against." },
+      { q: "How quickly can Nevada coverage start?", a: "Most programmes begin within one to two weeks of confirming scope, tools, coverage hours, and escalation rules." },
+    ],
+    [
+      ...BASE_LINKS,
+      { href: "/services/after-hours-answering-service", label: "After-hours answering service" },
+      { href: "/industries/travel-and-hospitality", label: "Travel and hospitality outsourcing" },
+    ],
+  ),
+
+  /* ------------------------------------------------------------------ */
+  state(
+    "call-center-outsourcing-oregon",
+    "Oregon",
+    "Call Center Outsourcing in Oregon | Tech Support",
+    "Call center outsourcing for Oregon companies: semiconductor and software tiered support, consumer brand contact, and recording rules that differ by call type.",
+    "Outsourced call center coverage for Oregon companies across semiconductors and software, outdoor and athletic brands, food and beverage, and healthcare.",
+    "Oregon has a recording rule almost no other state shares: telephone calls and in-person conversations are treated differently, and programmes that apply one rule to both get it wrong.",
+    "Two economies, and a split recording rule.",
+    [
+      "The state's recording statute distinguishes between telephonic communications and in-person conversations, with the stricter all-party expectation attaching to the latter. For a phone programme that generally simplifies matters, but it also means guidance written for a neighbouring state does not transfer cleanly, and any in-person or recorded-video element needs separate treatment.",
+      "Commercially the state splits in two. The Silicon Forest corridor around Hillsboro and Beaverton is semiconductors and software, where support is tiered and technical and the value of an outsourced team is absorbing tier-one so internal engineers stop being the first line.",
+      "The second economy is consumer brands — athletic, outdoor, and food and beverage — where contact is high-volume, seasonal, and judged on brand voice as much as resolution. The two need different quality frameworks and should not share a queue.",
+    ],
+    [
+      ["Call-type-aware recording configuration", "Telephone and in-person treated separately, because Oregon does not apply one rule to both."],
+      ["Tiered semiconductor and software support", "Tier-one resolution and triage with documented escalation into your engineering queue."],
+      ["Consumer and outdoor brand support", "High-volume seasonal contact with documented tone and escalation standards."],
+      ["Seasonal gear-cycle capacity", "Absorb product launch and season-driven volume without carrying it year-round."],
+      ["Pacific-hours coverage that reaches east", "A nine-to-five Pacific desk has already missed the East Coast morning."],
+      ["Healthcare patient communication", "Scheduling, reminders, and triage with a business associate agreement in place."],
+    ],
+    [
+      { name: "Portland", note: "Athletic and outdoor brands, food and beverage, and professional services. Consumer contact where brand voice is judged as heavily as resolution." },
+      { name: "Hillsboro and Beaverton", note: "Semiconductors, hardware, and software. Deeply technical contact where tier-one resolution keeps engineers off routine questions." },
+      { name: "Eugene", note: "Higher education, healthcare, and manufacturing. Institutional contact with verification requirements on the health side." },
+      { name: "Bend and central Oregon", note: "Outdoor recreation, tourism, and technology. Sharply seasonal consumer contact tied to weather and gear cycles." },
+    ],
+    [
+      {
+        heading: "Recording rules depend on the channel",
+        sections: [
+          { title: "Phone and in-person are not the same", body: "Oregon treats telephonic communications differently from in-person conversations, with the stricter expectation attaching to the latter. Programmes that inherit a single national configuration usually fail to notice the distinction exists." },
+          { title: "Video and in-office elements need separate treatment", body: "Any part of the programme that is not a phone call — recorded video support, in-person appointments — should be assessed on its own rather than folded into the phone policy." },
+          { title: "Consistency still matters", body: "Whichever rule applies, a disclosure applied to most calls but not all is worse than none, because it establishes that a process existed and failed. Monitoring checks it actually happened." },
+        ],
+      },
+      {
+        heading: "Technical and consumer support are different disciplines",
+        sections: [
+          { title: "The runbook sets the technical ceiling", body: "An outsourced tier performs exactly to the quality of the documentation it is given. Where technical programmes disappoint, thin runbooks are nearly always the cause rather than weak agents." },
+          { title: "Tone is the deliverable for consumer brands", body: "For athletic and outdoor brands, sounding like the brand across thousands of interactions is what is being bought. That is a documentation and sampling problem, not a hiring one." },
+          { title: "They should not share a queue", body: "Running deep technical support and consumer brand contact through one team produces a compromise that serves neither. Separate programmes with separate scorecards is the right structure." },
+        ],
+      },
+    ],
+    [
+      { q: "Is Oregon a one-party consent state for call recording?", a: `Oregon treats telephone calls and in-person conversations differently, with the stricter all-party expectation generally attaching to in-person communications. Guidance written for a neighbouring state does not transfer cleanly. ${CONSENT_CAVEAT}` },
+      { q: "Can outsourced tier-one support semiconductor and software products?", a: "Yes, and it is the highest-value use in the Silicon Forest corridor. The constraint is documentation rather than talent — the tier performs to the quality of the runbook it is given." },
+      { q: "How do you keep consumer brand voice consistent?", a: "Documented tone standards with worked examples, continuous sampling, and a correction loop fast enough that drift never compounds." },
+      { q: "What hours should an Oregon business cover?", a: "Most benefit more from opening earlier than staying open later. A Pacific-hours desk misses the East Coast morning entirely, so eastward extension typically recovers more contacts." },
+      { q: "How quickly can Oregon coverage start?", a: "Most programmes begin within one to two weeks of confirming scope, tools, coverage hours, and escalation rules." },
+    ],
+    [
+      ...BASE_LINKS,
+      { href: "/services/technical-support", label: "Technical support outsourcing" },
+      { href: "/services/ecommerce-support", label: "E-commerce support outsourcing" },
     ],
   ),
 ];

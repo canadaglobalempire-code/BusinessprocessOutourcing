@@ -441,4 +441,46 @@ export const EXTRA_SERVICES: Service[] = [
       { href: "/blog/outsourced-customer-service-cost", label: "What outsourced support costs" },
     ],
   },
+  {
+    /*
+     * Bilingual support is referenced as a requirement on almost every US state
+     * and metro page — Texas, California, Florida, Arizona, San Antonio — and
+     * had nowhere to link to. It is also what takes the services grid to 24, so
+     * every row on /services is full.
+     */
+    slug: "bilingual-call-center-services",
+    name: "Bilingual Call Center Services",
+    accent: "accent-yellow",
+    icon: "globe",
+    short:
+      "Live Spanish and English agents on one queue, because a callback is a lost customer.",
+    metaTitle: "Bilingual Call Center Services | Spanish Support",
+    metaDescription:
+      "Bilingual call center outsourcing: live Spanish and English agents on one queue, with identical service standards and verification in both languages.",
+    heroDesc:
+      "Routing Spanish-speaking callers to a callback rather than a live agent measurably costs conversions. Bilingual agents on the same queue keep the experience identical whichever language the caller opens with.",
+    heroImage: "/assets/img/service-customer-support.jpg",
+    heroImageAlt: "Bilingual support agent taking a customer call",
+    tasksHeading: "One queue, one standard, two languages.",
+    tasks: [
+      t("Live bilingual answering", "Spanish and English handled by the same agents on the same queue rather than a separate line with its own wait time."),
+      t("Written scripts in both languages", "Scripts authored in Spanish rather than translated live, so accuracy does not depend on the agent improvising."),
+      t("Verification in both languages", "Identity and authority checks held to identical rigour whichever language the call is in."),
+      t("Neutral Spanish for mixed markets", "Neutral register where your customers span several Spanish-speaking countries, regional where they do not."),
+      t("Bilingual written follow-up", "Confirmations, emails, and messages that match the language of the call rather than defaulting to English."),
+      t("Language mix reporting", "Report what share of contact arrives in each language so staffing follows the data."),
+    ],
+    bestSuited: [
+      "Consumer businesses in Texas, California, Florida, and Arizona",
+      "Companies routing Spanish callers to a callback today",
+      "Healthcare and insurance with mixed-language members",
+      "Retail and services with a national US customer base",
+    ],
+    related: ["customer-support", "inbound-call-center-services", "order-taking-services"],
+    crossLinks: [
+      { href: "/solutions/multilingual-support", label: "Multilingual support" },
+      { href: "/locations/call-center-outsourcing-texas", label: "Texas coverage" },
+      { href: "/locations/call-center-outsourcing-california", label: "California coverage" },
+    ],
+  },
 ];

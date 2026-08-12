@@ -559,3 +559,44 @@ h3{font-size:23px;margin-bottom:12px}
   .btn,.service-card,.blog-card,.related-card{transition:none}
   .btn:hover,.service-card:hover,.blog-card:hover{transform:none}
 }
+
+/* ---------------------------------------------------------------------------
+   Card grids: centre an incomplete final row.
+
+   These were CSS Grid, which parks the last row hard-left with an empty cell
+   whenever the item count is not a multiple of the column count. That is
+   visible on services (23 items), industries (16), the state and metro lists
+   (25 each) and the final blog page, and it reappears the moment anything is
+   added or removed.
+
+   Flex with justify-content:center leaves every full row identical to the grid
+   version and only changes the orphan row, so the layout stops depending on a
+   collection happening to divide by three. The grid-template-columns rules
+   above are inert once display is flex; the flex-basis values below reproduce
+   the same column counts at the same breakpoints.
+   --------------------------------------------------------------------------- */
+.service-grid,.task-grid,.related-grid,.blog-grid,
+.values-grid,.content-grid,.pricing-grid{
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch
+}
+.service-grid>*,.task-grid>*,.related-grid>*,.blog-grid>*,
+.values-grid>*,.content-grid>*,.pricing-grid>*{min-width:0}
+.service-grid>*{flex:0 1 calc((100% - 40px) / 3)}
+.task-grid>*{flex:0 1 calc((100% - 36px) / 3)}
+.related-grid>*{flex:0 1 calc((100% - 40px) / 3)}
+.blog-grid>*{flex:0 1 calc((100% - 48px) / 3)}
+.values-grid>*,.content-grid>*,.pricing-grid>*{flex:0 1 calc((100% - 44px) / 3)}
+@media(max-width:1100px){
+  .blog-grid>*,.values-grid>*,.content-grid>*,.pricing-grid>*{
+    flex-basis:calc((100% - 24px) / 2)
+  }
+}
+@media(max-width:800px){
+  .service-grid>*{flex-basis:100%}
+  .task-grid>*{flex-basis:calc((100% - 18px) / 2)}
+  .related-grid>*{flex-basis:calc((100% - 20px) / 2)}
+}
+@media(max-width:520px){
+  .task-grid>*,.related-grid>*,.blog-grid>*,
+  .values-grid>*,.content-grid>*,.pricing-grid>*{flex-basis:100%}
+}
