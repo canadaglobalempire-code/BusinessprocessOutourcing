@@ -9,12 +9,13 @@ import { SOLUTIONS } from "@/lib/solutions";
 import { slugify } from "@/lib/industries";
 import { FaqSection } from "@/components/faq";
 import { SOLUTIONS_INDEX_FAQ } from "@/lib/faq-content";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/solutions" },
-  title: { absolute: "Outsourcing Solutions | Phone, Email, Chat & Back Office Support" },
+  title: { absolute: "Outsourcing Solutions | Phone, Email & Chat Support" },
   description:
-    "Explore outsourcing solutions for phone support, email support, live chat, multilingual customer service, appointment setting, order processing, hotlines, and accounting support.",
+    "Explore outsourcing solutions for phone support, email support, live chat, multilingual customer service, appointment setting, order processing, hotlines.",
 };
 
 const ACCENTS = [
@@ -29,6 +30,7 @@ const ACCENTS = [
 export default function SolutionsPage() {
   return (
     <>
+      <Breadcrumbs crumbs={[{ name: "Solutions", path: "/solutions" }]} />
       <section className="page-hero">
         <div className="container page-hero-grid">
           <Reveal>

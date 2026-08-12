@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BlogList } from "@/components/blog-list";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog" },
@@ -9,5 +10,10 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndex() {
-  return <BlogList page={1} />;
+  return (
+    <>
+      <Breadcrumbs crumbs={[{ name: "Blog", path: "/blog" }]} />
+      <BlogList page={1} />
+    </>
+  );
 }

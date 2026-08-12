@@ -9,13 +9,16 @@ import {
   MARKET_LOCATIONS,
   DELIVERY_LOCATIONS,
   SPECIALTY_LOCATIONS,
+  US_STATE_LOCATIONS,
+  US_METRO_LOCATIONS,
 } from "@/lib/locations";
 import { PAGE_IMAGES } from "@/lib/page-images";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
-  title: { absolute: "Call Center Outsourcing Locations | Business Process Outsourcing" },
+  title: { absolute: "Call Center Outsourcing Locations & Delivery Countries" },
   description:
-    "Call center outsourcing across the markets we serve — the US, UK, Europe, and the UAE — and the locations we deliver from, including Mexico, the Philippines, Colombia, and India.",
+    "Call center outsourcing across the markets we serve — the US, UK, Europe, and the UAE — and the locations we deliver from.",
   alternates: { canonical: "/locations" },
 };
 
@@ -27,6 +30,22 @@ const GROUPS = [
     intro:
       "Coverage built around the business hours, languages, and data expectations of the market you sell into.",
     items: MARKET_LOCATIONS,
+  },
+  {
+    key: "states",
+    eyebrow: "United States, state by state",
+    heading: "Coverage across the US.",
+    intro:
+      "Each state page covers the industries that concentrate there, the metros that generate the contact volume, and the operational rules — time zone behaviour and call recording consent — that differ from one state to the next.",
+    items: US_STATE_LOCATIONS,
+  },
+  {
+    key: "metros",
+    eyebrow: "US metros",
+    heading: "City by city.",
+    intro:
+      "Metro pages sit under their state and cover what that city's economy actually is — the sectors that generate the contact volume and the support profile they need.",
+    items: US_METRO_LOCATIONS,
   },
   {
     key: "delivery",
@@ -51,6 +70,7 @@ export default function LocationsPage() {
 
   return (
     <>
+      <Breadcrumbs crumbs={[{ name: "Locations", path: "/locations" }]} />
       <section className="page-hero accent-blue">
         <div className="container page-hero-grid">
           <Reveal>

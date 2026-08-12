@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { MiniMark } from "@/components/mini-mark";
 import { POSTS, getPost } from "@/lib/posts";
 import { LeadCta } from "@/components/lead-cta";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -77,6 +78,12 @@ export default async function Article({ params }: Params) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Breadcrumbs
+        crumbs={[
+          { name: "Blog", path: "/blog" },
+          { name: post.title, path: `/blog/${slug}` },
+        ]}
       />
       <article>
         <header className="article-hero">

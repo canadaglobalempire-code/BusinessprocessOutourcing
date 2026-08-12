@@ -7,12 +7,13 @@ import { MiniMark } from "@/components/mini-mark";
 import { PAGE_IMAGES } from "@/lib/page-images";
 import { FaqSection } from "@/components/faq";
 import { ABOUT_FAQ } from "@/lib/faq-content";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/about-us" },
   title: { absolute: "About Business Process Outsourcing | BPO Partner Since 2000" },
   description:
-    "Learn about Business Process Outsourcing, a BPO and contact center outsourcing partner helping companies reduce pressure, improve customer care, and scale operations since 2000.",
+    "Learn about Business Process Outsourcing, a BPO and contact center outsourcing partner helping companies reduce pressure, improve customer care.",
 };
 
 const STATEMENTS = [
@@ -24,6 +25,7 @@ const STATEMENTS = [
 export default function AboutUsPage() {
   return (
     <>
+      <Breadcrumbs crumbs={[{ name: "About Us", path: "/about-us" }]} />
       <section className="page-hero">
         <div className="container page-hero-grid">
           <Reveal>

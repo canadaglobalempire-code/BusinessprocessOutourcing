@@ -37,9 +37,9 @@ export const SERVICES: Service[] = [
     short:
       "Friendly, professional support across email, chat, phone, and social channels.",
     metaTitle:
-      "Customer Support Outsourcing | Outsourced Customer Service Solutions",
+      "Customer Support Outsourcing | Outsourced Customer Service",
     metaDescription:
-      "Customer support outsourcing across phone, email, live chat, and social. Outsourced customer service with dedicated or shared teams, documented quality standards, and reporting you can audit.",
+      "Customer support outsourcing across phone, email, live chat, and social, with dedicated or shared teams, documented quality standards, and auditable reporting.",
     heroDesc:
       "Outsourced customer service across phone, email, live chat, tickets, and social channels — built around your tools, your tone, your response times, and the hours your customers actually contact you.",
     heroImage: "/assets/img/service-customer-support.jpg",
@@ -211,7 +211,7 @@ export const SERVICES: Service[] = [
     icon: "virtual-assistance",
     short:
       "Skilled support for inboxes, calendars, admin, coordination, and daily operations.",
-    metaTitle: "Virtual Assistant Outsourcing | Business Process Outsourcing",
+    metaTitle: "Virtual Assistant Outsourcing | Outsourced VA Services",
     metaDescription:
       "Outsource virtual assistant services for admin work, scheduling, inbox management, CRM updates, research, and daily operations.",
     heroDesc:
@@ -243,7 +243,7 @@ export const SERVICES: Service[] = [
     icon: "accounting",
     short:
       "Bookkeeping assistance, invoicing, reconciliations, and organized reporting.",
-    metaTitle: "Accounting & Bookkeeping Support | Business Process Outsourcing",
+    metaTitle: "Accounting & Bookkeeping Outsourcing Services",
     metaDescription:
       "Outsource bookkeeping support, invoicing, accounts payable, accounts receivable, reconciliations, expense tracking, and reporting assistance.",
     heroDesc:
@@ -275,7 +275,7 @@ export const SERVICES: Service[] = [
     icon: "marketing",
     short:
       "Campaign, social media, content, and reporting support for consistent growth.",
-    metaTitle: "Digital Marketing Support | Business Process Outsourcing",
+    metaTitle: "Digital Marketing Outsourcing Services",
     metaDescription:
       "Outsource digital marketing support for social media, content scheduling, email campaigns, campaign coordination, creative requests, and reporting.",
     heroDesc:
@@ -306,7 +306,7 @@ export const SERVICES: Service[] = [
     icon: "ecommerce",
     short:
       "Product, order, marketplace, customer care, and store operations support.",
-    metaTitle: "E-commerce Support Outsourcing | Business Process Outsourcing",
+    metaTitle: "E-commerce Support Outsourcing | Online Store Support",
     metaDescription:
       "Outsource e-commerce support for product listings, order processing, inventory updates, marketplace management, customer care, and returns.",
     heroDesc:
@@ -337,7 +337,7 @@ export const SERVICES: Service[] = [
     icon: "content",
     short:
       "Brand-aligned content that helps you stay visible, relevant, and consistent.",
-    metaTitle: "Content Creation Outsourcing | Business Process Outsourcing",
+    metaTitle: "Content Creation Outsourcing Services",
     metaDescription:
       "Outsource content creation for blogs, social media copy, newsletters, product descriptions, repurposing, editing, and proofreading.",
     heroDesc:
@@ -368,7 +368,7 @@ export const SERVICES: Service[] = [
     icon: "tech",
     short:
       "Reliable first-line technical help, documentation, onboarding, and troubleshooting.",
-    metaTitle: "IT & Technical Support Outsourcing | Business Process Outsourcing",
+    metaTitle: "IT & Technical Support Outsourcing Services",
     metaDescription:
       "Outsource IT and technical support for first-line help desk, ticket triage, user onboarding, documentation, troubleshooting, and monitoring support.",
     heroDesc:
@@ -399,7 +399,7 @@ export const SERVICES: Service[] = [
     icon: "data",
     short:
       "Accurate data processing, list building, web research, and database maintenance.",
-    metaTitle: "Data Entry & Research Outsourcing | Business Process Outsourcing",
+    metaTitle: "Data Entry & Research Outsourcing Services",
     metaDescription:
       "Outsource data entry and research for data cleanup, list building, web research, database maintenance, lead enrichment, and reporting.",
     heroDesc:
@@ -430,7 +430,7 @@ export const SERVICES: Service[] = [
     icon: "target",
     short:
       "Prospect research, qualification, outreach support, and appointment-ready leads.",
-    metaTitle: "Lead Generation Outsourcing | Business Process Outsourcing",
+    metaTitle: "Lead Generation Outsourcing Services",
     metaDescription:
       "Outsource lead generation for prospect research, lead list building, qualification, outbound campaign support, appointment handoff, and CRM updates.",
     heroDesc:
@@ -465,9 +465,9 @@ SERVICES.push(
     short:
       "HIPAA-aware patient call handling for practices, clinics, and medical groups — day, night, and weekend.",
     metaTitle:
-      "HIPAA Compliant Medical Answering Service | Patient Call Handling",
+      "HIPAA Compliant Medical Answering Service",
     metaDescription:
-      "HIPAA compliant medical answering service for practices and clinics: 24/7 patient call handling, appointment scheduling, prescription refill intake, and after-hours triage routing.",
+      "HIPAA compliant medical answering service for practices and clinics: 24/7 patient call handling, appointment scheduling, prescription refill intake.",
     heroDesc:
       "A medical answering service built around protected health information. Patient calls are answered live, handled under documented HIPAA-aware rules, and routed to your on-call staff by urgency — not left on a machine until morning.",
     heroImage: "/assets/img/service-customer-support.jpg",
@@ -535,7 +535,7 @@ SERVICES.push(
       "An outsourced inside sales team that researches, calls, qualifies, and books — so your closers close.",
     metaTitle: "Inside Sales Outsourcing | Outsourced Inside Sales Team",
     metaDescription:
-      "Outsource inside sales: prospect research, outbound calling, lead qualification, and booked meetings run by a trained team against your ICP, with your closers keeping the close.",
+      "Outsource inside sales: prospect research, outbound calling, lead qualification, and booked meetings run by a trained team against your ICP.",
     heroDesc:
       "Outsourced inside sales covers the work that fills a pipeline — research, first contact, follow-up, and qualification — while your own team keeps the conversations that actually close revenue.",
     heroImage: "/assets/img/service-lead-generation.jpg",

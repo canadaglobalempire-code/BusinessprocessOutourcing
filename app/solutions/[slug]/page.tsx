@@ -11,6 +11,7 @@ import { SOLUTIONS, getSolution } from "@/lib/solutions";
 import { FaqSection } from "@/components/faq";
 import { LeadCta } from "@/components/lead-cta";
 import { solutionFaq } from "@/lib/faq-content";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -33,9 +34,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!solution) return {};
   return {
     title: {
-      absolute: solution.seoTitle
-        ? `${solution.seoTitle} | Business Process Outsourcing`
-        : `${solution.title} Outsourcing | Business Process Outsourcing`,
+      absolute: solution.seoTitle ?? `${solution.title} Outsourcing Services`,
     },
     description: solution.metaDescription,
     alternates: { canonical: `/solutions/${slug}` },
@@ -77,6 +76,12 @@ export default async function SolutionDetail({ params }: Params) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <Breadcrumbs
+        crumbs={[
+          { name: "Solutions", path: "/solutions" },
+          { name: solution.title, path: `/solutions/${slug}` },
+        ]}
       />
       <section className={`page-hero service-detail-hero ${accent}`}>
         <div className="container page-hero-grid">

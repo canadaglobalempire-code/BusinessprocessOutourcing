@@ -17,12 +17,21 @@ export const metadata: Metadata = {
   verification: {
     google: "zVuKAWJs1nU23vAO-7188SOub_AadTuqan2-RXvafk0",
   },
+  /*
+   * The template deliberately adds nothing.
+   *
+   * It used to append " - Business Process Outsourcing", which put every one of
+   * the site's titles over the ~60-character SERP limit — the brand ate the
+   * space where the differentiating keyword should have been, and Google
+   * truncated the useful half. Pages carry their own descriptive titles, and
+   * the brand is the domain name anyway.
+   */
   title: {
-    default: "Business Process Outsourcing | Call Center & Back Office Support",
-    template: "%s - Business Process Outsourcing",
+    default: "Business Process Outsourcing | Call Center & Back Office",
+    template: "%s",
   },
   description:
-    "Business Process Outsourcing provides outsourced call center, customer support, technical support, data entry, back-office, and lead generation services for growing companies.",
+    "Business Process Outsourcing provides outsourced call center, customer support, technical support, data entry, back-office.",
   keywords: [
     "business process outsourcing",
     "BPO services",
@@ -34,7 +43,7 @@ export const metadata: Metadata = {
     "lead generation outsourcing",
   ],
   openGraph: {
-    title: "Business Process Outsourcing | Call Center & Back Office Support",
+    title: "Business Process Outsourcing | Call Center & Back Office",
     description:
       "Outsourced call center, customer support, technical support, data entry, back-office, and lead generation services.",
     url: "https://businessprocessoutsourcing.info",
@@ -51,7 +60,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Business Process Outsourcing | Call Center & Back Office Support",
+    title: "Business Process Outsourcing | Call Center & Back Office",
     description:
       "Outsourced call center, customer support, technical support, data entry, back-office, and lead generation services.",
     images: ["/assets/img/services-overview.jpg"],

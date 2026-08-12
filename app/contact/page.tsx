@@ -5,6 +5,7 @@ import { LeadForm } from "@/components/lead-form";
 import { SERVICE_NAMES } from "@/lib/services";
 import { FaqSection } from "@/components/faq";
 import { CONTACT_FAQ } from "@/lib/faq-content";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
@@ -24,6 +25,7 @@ export default async function ContactPage({
 
   return (
     <>
+      <Breadcrumbs crumbs={[{ name: "Contact", path: "/contact" }]} />
       <section className="page-hero">
         <div className="container">
           <Reveal className="section-heading">

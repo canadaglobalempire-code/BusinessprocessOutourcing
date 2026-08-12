@@ -7,6 +7,7 @@ import { MiniMark } from "@/components/mini-mark";
 import { PAGE_IMAGES } from "@/lib/page-images";
 import { FaqSection } from "@/components/faq";
 import { HOW_IT_WORKS_FAQ } from "@/lib/faq-content";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/how-it-works" },
@@ -49,6 +50,7 @@ const STEPS = [
 export default function HowItWorksPage() {
   return (
     <>
+      <Breadcrumbs crumbs={[{ name: "How It Works", path: "/how-it-works" }]} />
       <section className="page-hero how-hero">
         <div className="container page-hero-grid">
           <Reveal>

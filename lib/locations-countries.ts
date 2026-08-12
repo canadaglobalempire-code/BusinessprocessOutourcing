@@ -14,7 +14,7 @@ export const COUNTRY_LOCATIONS: Location[] = [
     kind: "delivery",
     seoTitle: "Call Centre Outsourcing in Poland | Nearshore Europe",
     metaDescription:
-      "Call centre outsourcing in Poland: multilingual European coverage, EU data protection, strong German and English capability, and nearshore hours for Western European buyers.",
+      "Call centre outsourcing in Poland: multilingual European coverage, EU data protection, strong German and English capability.",
     summary:
       "Nearshore European delivery from Poland, chosen for multilingual coverage and EU-internal data handling.",
     intro:
@@ -155,7 +155,7 @@ export const COUNTRY_LOCATIONS: Location[] = [
     kind: "delivery",
     seoTitle: "Call Centre Outsourcing in Portugal | Nearshore Europe",
     metaDescription:
-      "Call centre outsourcing in Portugal: strong English proficiency, Portuguese and Brazilian market coverage, EU data processing, and a stable multilingual workforce.",
+      "Call centre outsourcing in Portugal: strong English proficiency, Portuguese and Brazilian market coverage, EU data processing.",
     summary:
       "Nearshore European delivery from Portugal, with unusually high English proficiency and a bridge to Brazilian markets.",
     intro:
@@ -200,9 +200,9 @@ export const COUNTRY_LOCATIONS: Location[] = [
     slug: "call-center-outsourcing-spain",
     name: "Spain",
     kind: "delivery",
-    seoTitle: "Call Centre Outsourcing in Spain | European and LATAM Coverage",
+    seoTitle: "Call Centre Outsourcing in Spain | Europe & LATAM",
     metaDescription:
-      "Call centre outsourcing in Spain: native Spanish for European markets, EU data processing, and a bridge between Spanish-language customers in Europe and Latin America.",
+      "Call centre outsourcing in Spain: native Spanish for European markets, EU data processing.",
     summary:
       "European delivery from Spain, for programmes that need native European Spanish rather than Latin American Spanish.",
     intro:
@@ -247,9 +247,9 @@ export const COUNTRY_LOCATIONS: Location[] = [
     slug: "call-center-outsourcing-ireland",
     name: "Ireland",
     kind: "delivery",
-    seoTitle: "Call Centre Outsourcing in Ireland | EU English-Language Delivery",
+    seoTitle: "Call Centre Outsourcing in Ireland | EU English Delivery",
     metaDescription:
-      "Call centre outsourcing in Ireland: native English inside the EU, a multilingual expatriate workforce, and delivery for regulated technology and financial programmes.",
+      "Call centre outsourcing in Ireland: native English inside the EU, a multilingual expatriate workforce.",
     summary:
       "Native English-language delivery inside the EU, used where both requirements are non-negotiable.",
     intro:
@@ -294,7 +294,7 @@ export const COUNTRY_LOCATIONS: Location[] = [
     slug: "call-center-outsourcing-south-africa",
     name: "South Africa",
     kind: "delivery",
-    seoTitle: "Call Centre Outsourcing in South Africa | UK-Aligned Delivery",
+    seoTitle: "Call Centre Outsourcing in South Africa | UK-Aligned",
     metaDescription:
       "Call centre outsourcing in South Africa: neutral English accents well received by UK customers, UK-aligned time zones, and lower cost than European delivery.",
     summary:
@@ -341,7 +341,7 @@ export const COUNTRY_LOCATIONS: Location[] = [
     slug: "call-center-outsourcing-egypt",
     name: "Egypt",
     kind: "delivery",
-    seoTitle: "Call Centre Outsourcing in Egypt | Arabic and European Coverage",
+    seoTitle: "Call Centre Outsourcing in Egypt | Arabic & EU Coverage",
     metaDescription:
       "Call centre outsourcing in Egypt: native Arabic across Gulf and North African dialects, European language coverage, and low delivery cost on European hours.",
     summary:
@@ -388,7 +388,7 @@ export const COUNTRY_LOCATIONS: Location[] = [
     slug: "call-center-outsourcing-morocco",
     name: "Morocco",
     kind: "delivery",
-    seoTitle: "Call Centre Outsourcing in Morocco | French and Arabic Delivery",
+    seoTitle: "Call Centre Outsourcing in Morocco | French & Arabic",
     metaDescription:
       "Call centre outsourcing in Morocco: native-standard French, Arabic coverage, European time zones, and lower cost than French or Belgian delivery.",
     summary:
@@ -529,7 +529,7 @@ export const COUNTRY_LOCATIONS: Location[] = [
     slug: "call-center-outsourcing-malaysia",
     name: "Malaysia",
     kind: "delivery",
-    seoTitle: "Call Centre Outsourcing in Malaysia | Multilingual Asian Delivery",
+    seoTitle: "Call Centre Outsourcing in Malaysia | Multilingual Asia",
     metaDescription:
       "Call centre outsourcing in Malaysia: English, Mandarin, Malay, and Tamil coverage from one market, strong infrastructure, and regional Asian reach.",
     summary:
@@ -578,7 +578,7 @@ export const COUNTRY_LOCATIONS: Location[] = [
     kind: "delivery",
     seoTitle: "Call Center Outsourcing in Costa Rica | Nearshore Delivery",
     metaDescription:
-      "Call center outsourcing in Costa Rica: high English proficiency, US time zone alignment, political stability, and bilingual delivery for North American programs.",
+      "Call center outsourcing in Costa Rica: high English proficiency, US time zone alignment, political stability.",
     summary:
       "Nearshore Central American delivery, chosen for English quality and stability rather than lowest cost.",
     intro:
@@ -670,9 +670,9 @@ export const COUNTRY_LOCATIONS: Location[] = [
     slug: "call-center-outsourcing-dominican-republic",
     name: "the Dominican Republic",
     kind: "delivery",
-    seoTitle: "Call Center Outsourcing in the Dominican Republic | Caribbean Nearshore",
+    seoTitle: "Call Center Outsourcing in the Dominican Republic",
     metaDescription:
-      "Call center outsourcing in the Dominican Republic: US Eastern time alignment, bilingual agents, established free-zone infrastructure, and Caribbean nearshore delivery.",
+      "Call center outsourcing in the Dominican Republic: US Eastern time alignment, bilingual agents, established free-zone infrastructure.",
     summary:
       "Caribbean nearshore delivery on US Eastern time, with established free-zone outsourcing infrastructure.",
     intro:
@@ -764,9 +764,9 @@ export const COUNTRY_LOCATIONS: Location[] = [
     slug: "call-center-outsourcing-argentina",
     name: "Argentina",
     kind: "delivery",
-    seoTitle: "Call Center Outsourcing in Argentina | South American Delivery",
+    seoTitle: "Call Center Outsourcing in Argentina | South America",
     metaDescription:
-      "Call center outsourcing in Argentina: highly educated bilingual workforce, US time zone overlap, and strong capability for technical and complex support programs.",
+      "Call center outsourcing in Argentina: highly educated bilingual workforce, US time zone overlap.",
     summary:
       "South American delivery from Argentina, suited to complex and technical programmes rather than routine volume.",
     intro:
@@ -811,7 +811,7 @@ export const COUNTRY_LOCATIONS: Location[] = [
     slug: "call-center-outsourcing-brazil",
     name: "Brazil",
     kind: "delivery",
-    seoTitle: "Call Center Outsourcing in Brazil | Portuguese-Language Delivery",
+    seoTitle: "Call Center Outsourcing in Brazil | Portuguese Delivery",
     metaDescription:
       "Call center outsourcing in Brazil: native Brazilian Portuguese, the largest Latin American domestic market, and delivery for companies selling into Brazil.",
     summary:

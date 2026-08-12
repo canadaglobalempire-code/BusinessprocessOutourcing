@@ -11,6 +11,7 @@ import { FaqSection } from "@/components/faq";
 import { LeadCta } from "@/components/lead-cta";
 import { CrossLinks } from "@/components/cross-links";
 import { serviceFaq } from "@/lib/faq-content";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -62,6 +63,12 @@ export default async function ServiceDetail({ params }: Params) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <Breadcrumbs
+        crumbs={[
+          { name: "Services", path: "/services" },
+          { name: service.name, path: `/services/${service.slug}` },
+        ]}
       />
       <section className={`page-hero service-detail-hero ${service.accent}`}>
         <div className="container page-hero-grid">

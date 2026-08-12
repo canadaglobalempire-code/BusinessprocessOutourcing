@@ -11,6 +11,7 @@ import { FaqSection } from "@/components/faq";
 import { LeadCta } from "@/components/lead-cta";
 import { CrossLinks } from "@/components/cross-links";
 import { industryFaq } from "@/lib/faq-content";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!industry) return {};
   const title = industry.seoTitle ?? `${industry.name} Outsourcing Support`;
   return {
-    title: { absolute: `${title} | Business Process Outsourcing` },
+    title: { absolute: title },
     description: industry.metaDescription,
     alternates: { canonical: `/industries/${slug}` },
   };
@@ -79,6 +80,12 @@ export default async function IndustryDetail({ params }: Params) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <Breadcrumbs
+        crumbs={[
+          { name: "Industries", path: "/industries" },
+          { name: industry.name, path: `/industries/${slug}` },
+        ]}
       />
       <section className={`page-hero service-detail-hero ${accent}`}>
         <div className="container page-hero-grid">

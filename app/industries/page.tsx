@@ -8,12 +8,13 @@ import { INDUSTRIES, slugify } from "@/lib/industries";
 import { PAGE_IMAGES, INDUSTRY_IMAGES, pageImage } from "@/lib/page-images";
 import { FaqSection } from "@/components/faq";
 import { INDUSTRIES_INDEX_FAQ } from "@/lib/faq-content";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/industries" },
   title: { absolute: "Industries We Support | BPO & Call Center Outsourcing" },
   description:
-    "Industry-specific outsourcing support for healthcare, retail, ecommerce, technology, utilities, banking, telecommunications, travel, insurance, government, and emergency call centers.",
+    "Industry-specific outsourcing support for healthcare, retail, ecommerce, technology, utilities, banking, telecommunications, travel, insurance, government.",
 };
 
 const ACCENTS = [
@@ -34,6 +35,7 @@ function industryOptions(services: string[]) {
 export default function IndustriesPage() {
   return (
     <>
+      <Breadcrumbs crumbs={[{ name: "Industries", path: "/industries" }]} />
       <section className="page-hero">
         <div className="container page-hero-grid">
           <Reveal>

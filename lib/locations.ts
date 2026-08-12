@@ -16,6 +16,8 @@
  */
 import { COUNTRY_LOCATIONS } from "./locations-countries";
 import { CITY_LOCATIONS } from "./locations-cities";
+import { STATE_LOCATIONS } from "./locations-states";
+import { METRO_LOCATIONS } from "./locations-metros";
 
 export type Location = {
   slug: string;
@@ -30,6 +32,24 @@ export type Location = {
   highlightDetails: Record<string, string>;
   /** Contextual links OUT of the locations silo. Falls back to DEFAULT_LOCATION_LINKS. */
   crossLinks?: { href: string; label: string }[];
+
+  /* ---- Optional depth, rendered only when present. ----------------------
+     Used by the US state pages, which have to outrank established directory
+     sites rather than merely exist. Each block adds a real heading level:
+     deepDive gives H2 + H3, metros gives H3 + H4. Country and city pages
+     leave these undefined and render exactly as before. -------------------- */
+  deepDive?: { heading: string; sections: { title: string; body: string }[] }[];
+  /** Major metros inside a state, each with its own economic reason to appear. */
+  metros?: { name: string; note: string }[];
+  /** Page-specific FAQ. Falls back to the generated one when absent. */
+  faq?: { q: string; a: string }[];
+  /**
+   * Headline, where it should differ from the title tag. Titles carry a
+   * "| qualifier" tail for the SERP that reads badly as an on-page headline.
+   */
+  h1?: string;
+  /** Set on administrative areas so schema can express geographic containment. */
+  withinCountry?: string;
 };
 
 const CORE_LOCATIONS: Location[] = [
@@ -40,7 +60,7 @@ const CORE_LOCATIONS: Location[] = [
     kind: "market",
     seoTitle: "Call Center Outsourcing for US Companies",
     metaDescription:
-      "Call center outsourcing for US companies: US-based and nearshore agents, all four continental time zones, inbound and outbound coverage, and compliance-aware handling.",
+      "Call center outsourcing for US companies: US-based and nearshore agents, all four continental time zones, inbound and outbound coverage.",
     summary:
       "Outsourced call center and back-office coverage for companies operating in the United States, across US-based and nearshore delivery.",
     intro:
@@ -124,7 +144,7 @@ const CORE_LOCATIONS: Location[] = [
     kind: "market",
     seoTitle: "Call Center Outsourcing in Dubai and the UAE",
     metaDescription:
-      "Call center outsourcing for Dubai and UAE companies: Arabic and English bilingual agents, Gulf business-hours coverage including Sunday to Thursday weeks, and multilingual support.",
+      "Call center outsourcing for Dubai and UAE companies: Arabic and English bilingual agents, Gulf business-hours coverage including Sunday to Thursday weeks.",
     summary:
       "Outsourced call center coverage for companies operating in Dubai and the wider UAE, including Arabic and English bilingual support.",
     intro:
@@ -166,7 +186,7 @@ const CORE_LOCATIONS: Location[] = [
     kind: "market",
     seoTitle: "Call Center Outsourcing for European Companies",
     metaDescription:
-      "Multilingual call center outsourcing for European companies: coverage across major European languages, GDPR-aware data handling, and support scheduled to European business hours.",
+      "Multilingual call center outsourcing for European companies: coverage across major European languages, GDPR-aware data handling.",
     summary:
       "Multilingual outsourced call center coverage for companies serving customers across European markets.",
     intro:
@@ -252,7 +272,7 @@ const CORE_LOCATIONS: Location[] = [
     kind: "delivery",
     seoTitle: "Call Center Outsourcing in the Philippines | Offshore BPO",
     metaDescription:
-      "Call center outsourcing in the Philippines: neutral-accent English agents, 24/7 coverage, deep BPO talent pool, and scale for high-volume customer support programs.",
+      "Call center outsourcing in the Philippines: neutral-accent English agents, 24/7 coverage, deep BPO talent pool.",
     summary:
       "Offshore call center outsourcing in the Philippines for companies that need round-the-clock English-language coverage at scale.",
     intro:
@@ -292,9 +312,9 @@ const CORE_LOCATIONS: Location[] = [
     slug: "call-center-outsourcing-colombia",
     name: "Colombia",
     kind: "delivery",
-    seoTitle: "Call Center Outsourcing in Colombia | Nearshore Contact Center",
+    seoTitle: "Call Center Outsourcing in Colombia | Nearshore BPO",
     metaDescription:
-      "Call center outsourcing in Colombia: nearshore bilingual agents on US Eastern time, neutral Spanish for Latin American markets, and a growing contact center talent pool.",
+      "Call center outsourcing in Colombia: nearshore bilingual agents on US Eastern time, neutral Spanish for Latin American markets.",
     summary:
       "Nearshore call center outsourcing in Colombia, with US Eastern time overlap and neutral Spanish for Latin American customers.",
     intro:
@@ -336,7 +356,7 @@ const CORE_LOCATIONS: Location[] = [
     kind: "delivery",
     seoTitle: "Call Center Outsourcing in India | Offshore BPO Services",
     metaDescription:
-      "Call center outsourcing in India: technical support and back-office depth, 24/7 coverage, large English-speaking talent pool, and strong IT and process expertise.",
+      "Call center outsourcing in India: technical support and back-office depth, 24/7 coverage, large English-speaking talent pool.",
     summary:
       "Offshore call center and back-office outsourcing in India, with particular depth in technical support and process work.",
     intro:
@@ -378,7 +398,7 @@ const CORE_LOCATIONS: Location[] = [
     kind: "delivery",
     seoTitle: "Nearshore Call Center Services | Nearshore Outsourcing",
     metaDescription:
-      "Nearshore call center services in Latin America: same-day time zone overlap with US operations, bilingual Spanish and English agents, and lower cost than onshore delivery.",
+      "Nearshore call center services in Latin America: same-day time zone overlap with US operations, bilingual Spanish and English agents.",
     summary:
       "Nearshore call center outsourcing across Latin America, chosen when time zone overlap matters more than the lowest possible seat cost.",
     intro:
@@ -471,9 +491,9 @@ const CORE_LOCATIONS: Location[] = [
     ],
     name: "Healthcare BPO in the Philippines",
     kind: "specialty",
-    seoTitle: "Healthcare BPO Philippines | Medical Billing and Patient Support",
+    seoTitle: "Healthcare BPO Philippines | Medical Billing Support",
     metaDescription:
-      "Healthcare BPO in the Philippines: medical billing and coding, claims processing, patient scheduling, and 24/7 patient support with documented HIPAA safeguards.",
+      "Healthcare BPO in the Philippines: medical billing and coding, claims processing, patient scheduling, and 24/7 patient support.",
     summary:
       "Healthcare business process outsourcing delivered from the Philippines, covering medical billing, claims, coding, and patient communication.",
     intro:
@@ -520,7 +540,7 @@ const CORE_LOCATIONS: Location[] = [
     kind: "specialty",
     seoTitle: "Telemarketing Philippines | Outsourced Outbound Calling",
     metaDescription:
-      "Outsource telemarketing to the Philippines: outbound calling at scale, neutral-accent English agents, lead qualification and appointment setting, with TCPA and DNC rules built into scripts.",
+      "Outsource telemarketing to the Philippines: outbound calling at scale, neutral-accent English agents, lead qualification and appointment setting.",
     summary:
       "Outsourced telemarketing and outbound calling delivered from the Philippines, for programmes that need volume without sacrificing conversation quality.",
     intro:
@@ -567,7 +587,7 @@ const CORE_LOCATIONS: Location[] = [
     kind: "specialty",
     seoTitle: "IT Support Outsourcing USA | US-Based Help Desk Services",
     metaDescription:
-      "US-based IT support outsourcing and help desk services: onshore tier-one and tier-two support, documented security controls, and coverage across all US time zones.",
+      "US-based IT support outsourcing and help desk services: onshore tier-one and tier-two support, documented security controls.",
     summary:
       "Onshore IT support and service desk outsourcing for US companies that need domestic delivery for security, contractual, or customer-expectation reasons.",
     intro:
@@ -614,7 +634,7 @@ const CORE_LOCATIONS: Location[] = [
     kind: "delivery",
     seoTitle: "BPO Companies in Cebu | Cebu Call Center Outsourcing",
     metaDescription:
-      "BPO and call center outsourcing in Cebu, the Philippines' second-largest outsourcing hub: experienced agents, lower attrition than Manila, and 24/7 English-language coverage.",
+      "BPO and call center outsourcing in Cebu, the Philippines' second-largest outsourcing hub: experienced agents, lower attrition than Manila.",
     summary:
       "Call center and BPO delivery from Cebu, the Philippines' second outsourcing hub, chosen for retention and cost relative to Manila.",
     intro:
@@ -662,6 +682,8 @@ export const DEFAULT_LOCATION_LINKS = [
 export const LOCATIONS: Location[] = [
   ...CORE_LOCATIONS,
   ...COUNTRY_LOCATIONS,
+  ...STATE_LOCATIONS,
+  ...METRO_LOCATIONS,
   ...CITY_LOCATIONS,
 ];
 
@@ -670,5 +692,40 @@ export function getLocation(slug: string) {
 }
 
 export const SPECIALTY_LOCATIONS = LOCATIONS.filter((l) => l.kind === "specialty");
-export const MARKET_LOCATIONS = LOCATIONS.filter((l) => l.kind === "market");
 export const DELIVERY_LOCATIONS = LOCATIONS.filter((l) => l.kind === "delivery");
+
+/*
+ * US states are markets, but listing them alongside countries and cities would
+ * put roughly sixty undifferentiated links in one group on the hub — which
+ * helps neither a reader scanning it nor a crawler trying to work out the
+ * shape of the silo. They get their own group instead.
+ */
+const STATE_SLUGS = new Set(STATE_LOCATIONS.map((l) => l.slug));
+export const US_STATE_LOCATIONS = STATE_LOCATIONS;
+
+/*
+ * The ten original US city pages predate the metro file, so the US metro group
+ * is those plus everything in it. Listed explicitly rather than inferred,
+ * because "is this slug a US city" is not something a name can be trusted for.
+ */
+const ORIGINAL_US_CITY_SLUGS = [
+  "atlanta", "chicago", "dallas", "denver", "houston",
+  "los-angeles", "miami", "new-york", "phoenix", "seattle",
+].map((c) => `call-center-outsourcing-${c}`);
+
+const US_METRO_SLUGS = new Set([
+  ...ORIGINAL_US_CITY_SLUGS,
+  ...METRO_LOCATIONS.map((l) => l.slug),
+]);
+
+export const US_METRO_LOCATIONS = LOCATIONS.filter((l) =>
+  US_METRO_SLUGS.has(l.slug),
+);
+
+/** Countries, regions, and non-US cities — everything else sold into. */
+export const MARKET_LOCATIONS = LOCATIONS.filter(
+  (l) =>
+    l.kind === "market" &&
+    !STATE_SLUGS.has(l.slug) &&
+    !US_METRO_SLUGS.has(l.slug),
+);

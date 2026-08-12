@@ -21,7 +21,7 @@ export const INDUSTRIES: Industry[] = [
     summary:
       "Outsourced automotive support for dealers, OEMs, service teams, customer inquiries, appointment scheduling, and follow-up.",
     metaDescription:
-      "Outsource automotive call center support for dealerships, OEMs, service departments, customer inquiries, test drive scheduling, service appointments, and follow-up.",
+      "Outsource automotive call center support for dealerships, OEMs, service departments, customer inquiries, test drive scheduling, service appointments.",
     seoIntro:
       "Business Process Outsourcing helps automotive dealerships, OEM programs, and service departments manage customer calls, lead follow-up, appointment requests, campaign outreach, and post-sale communication without adding internal headcount.",
     seoBody: {
@@ -348,7 +348,7 @@ export const INDUSTRIES: Industry[] = [
     summary:
       "Legal call center support for new client intake, conflict pre-screening, consultation scheduling, case status updates, and after-hours coverage.",
     metaDescription:
-      "Legal call center services for law firms: 24/7 new client intake, conflict-of-interest pre-screening, consultation scheduling, case status lines, and after-hours overflow coverage.",
+      "Legal call center services for law firms: 24/7 new client intake, conflict-of-interest pre-screening, consultation scheduling, case status lines.",
     seoIntro:
       "Legal call centers answer the calls a law firm cannot afford to miss. Outsourced legal intake covers new client inquiries, consultation scheduling, conflict pre-screening questions, case status calls, and after-hours coverage so potential clients reach a person instead of voicemail.",
     seoBody: {

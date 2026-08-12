@@ -18,7 +18,7 @@ export const EXTRA_SERVICES: Service[] = [
       "Live answering for the calls your customers make to you — support, orders, accounts, and urgent issues.",
     metaTitle: "Inbound Call Center Services | Outsourced Inbound Support",
     metaDescription:
-      "Outsourced inbound call center services: live answering for customer support, order taking, account queries, and urgent issues, with documented escalation and reporting.",
+      "Outsourced inbound call center services: live answering for customer support, order taking, account queries, and urgent issues.",
     heroDesc:
       "Inbound coverage for the calls customers make to you. Answered live, handled to your script, escalated by your rules, and reported on so you can see what is actually arriving.",
     heroImage: "/assets/img/service-customer-support.jpg",
@@ -54,7 +54,7 @@ export const EXTRA_SERVICES: Service[] = [
       "Structured outbound calling for follow-up, qualification, renewals, and win-back campaigns.",
     metaTitle: "Outbound Call Center Services | Outsourced Outbound Calling",
     metaDescription:
-      "Outsourced outbound call center services: lead follow-up, qualification, renewals, reactivation, and appointment setting, with compliance rules built into scripts and dialers.",
+      "Outsourced outbound call center services: lead follow-up, qualification, renewals, reactivation, and appointment setting.",
     heroDesc:
       "Outbound calling run as a programme rather than an activity — defined lists, approved scripts, compliance rules in the dialer, and reporting on outcomes rather than dials.",
     heroImage: "/assets/img/service-lead-generation.jpg",
@@ -90,7 +90,7 @@ export const EXTRA_SERVICES: Service[] = [
       "Live coverage for evenings, weekends, and holidays, so urgent calls never reach a recording.",
     metaTitle: "After-Hours Answering Service | 24/7 Call Coverage",
     metaDescription:
-      "After-hours answering service: live evening, weekend, and holiday coverage with urgency-based escalation, message handling, and 24/7 availability without night-shift staffing.",
+      "After-hours answering service: live evening, weekend, and holiday coverage with urgency-based escalation, message handling.",
     heroDesc:
       "Coverage for the hours your team is not working. Calls answered live, triaged against your urgency rules, and escalated or held until morning according to criteria you set.",
     heroImage: "/assets/img/service-customer-support.jpg",
@@ -162,7 +162,7 @@ export const EXTRA_SERVICES: Service[] = [
       "Reporting that explains why your numbers moved, not just what they are.",
     metaTitle: "Call Center Analytics Services | Contact Center Reporting",
     metaDescription:
-      "Call center analytics and reporting: volume and contact-driver analysis, agent performance metrics, quality scorecards, SLA tracking, and benchmarks that inform decisions.",
+      "Call center analytics and reporting: volume and contact-driver analysis, agent performance metrics, quality scorecards, SLA tracking.",
     heroDesc:
       "Most contact centre reporting says what happened. Analytics should say why it happened and what to do about it — which contact drivers are growing, where handle time is going, and which changes actually moved the number.",
     heroImage: "/assets/img/service-data-research.jpg",
@@ -198,7 +198,7 @@ export const EXTRA_SERVICES: Service[] = [
       "Analyse what is actually said on calls, across all of them rather than a sample.",
     metaTitle: "Speech Analytics for Call Centers | Conversation Analysis",
     metaDescription:
-      "Speech analytics for contact centers: analyse every call rather than a sample, detect compliance risk, surface emerging contact drivers, and find the phrases that predict escalation.",
+      "Speech analytics for contact centers: analyse every call rather than a sample, detect compliance risk, surface emerging contact drivers.",
     heroDesc:
       "Manual quality review samples a fraction of calls. Speech analytics reads all of them — surfacing compliance risk, emerging issues, and the phrases that reliably precede an escalation.",
     heroImage: "/assets/img/service-data-research.jpg",
@@ -234,7 +234,7 @@ export const EXTRA_SERVICES: Service[] = [
       "Take card payments over the phone without pulling your whole operation into PCI scope.",
     metaTitle: "PCI Compliant Call Center Services | Secure Phone Payments",
     metaDescription:
-      "PCI DSS compliant call center services: secure phone payment handling, pause-and-resume recording, DTMF masking, scope reduction, and documented agent controls.",
+      "PCI DSS compliant call center services: secure phone payment handling, pause-and-resume recording, DTMF masking, scope reduction.",
     heroDesc:
       "Handling card details on a call is the fastest way to drag your entire contact centre into PCI DSS scope. The work is arranging things so that never happens.",
     heroImage: "/assets/img/service-accounting-support.jpg",
@@ -270,7 +270,7 @@ export const EXTRA_SERVICES: Service[] = [
       "The processing work behind the front line — documents, data, claims, and reconciliation.",
     metaTitle: "Back Office Outsourcing Services | BPO Back Office Support",
     metaDescription:
-      "Back office outsourcing: document processing, data entry and validation, claims handling, order processing, reconciliation, and exception management to documented rules.",
+      "Back office outsourcing: document processing, data entry and validation, claims handling, order processing, reconciliation.",
     heroDesc:
       "Back office work is invisible until it is late. Outsourced processing keeps documents, claims, orders, and reconciliation moving to a defined turnaround rather than whenever someone finds time.",
     heroImage: "/assets/img/service-data-research.jpg",
@@ -306,7 +306,7 @@ export const EXTRA_SERVICES: Service[] = [
       "A service desk for your users — tier one resolution, clean escalation, and SLA tracking.",
     metaTitle: "Help Desk Outsourcing | Outsourced IT Service Desk",
     metaDescription:
-      "Help desk outsourcing and IT service desk support: tier-one resolution, ticket triage, access and account management, SLA tracking, and documented escalation to your engineers.",
+      "Help desk outsourcing and IT service desk support: tier-one resolution, ticket triage, access and account management, SLA tracking.",
     heroDesc:
       "An outsourced service desk that resolves what is documented, escalates what is genuinely novel, and keeps your engineers out of the ticket queue.",
     heroImage: "/assets/img/service-technical-support.jpg",
@@ -342,7 +342,7 @@ export const EXTRA_SERVICES: Service[] = [
       "Take orders by phone and chat, accurately, at whatever volume the day brings.",
     metaTitle: "Order Taking Services | Outsourced Phone Order Processing",
     metaDescription:
-      "Outsourced order taking services: phone and chat order capture, upsell prompts, payment handling, order status and amendments, and surge capacity for peak trading.",
+      "Outsourced order taking services: phone and chat order capture, upsell prompts, payment handling, order status and amendments.",
     heroDesc:
       "Order taking is revenue capture, not customer service. Every unanswered call at peak is a sale that went somewhere else.",
     heroImage: "/assets/img/service-ecommerce-support.jpg",
@@ -376,9 +376,9 @@ export const EXTRA_SERVICES: Service[] = [
     icon: "growth",
     short:
       "Turn enquiries into customers — speed to lead, qualification, and conversion follow-up.",
-    metaTitle: "Customer Acquisition Outsourcing | Outsourced Acquisition Services",
+    metaTitle: "Customer Acquisition Outsourcing Services",
     metaDescription:
-      "Customer acquisition outsourcing: speed-to-lead response, enquiry qualification, conversion follow-up, onboarding support, and reporting on cost per acquired customer.",
+      "Customer acquisition outsourcing: speed-to-lead response, enquiry qualification, conversion follow-up, onboarding support.",
     heroDesc:
       "Most acquisition spend is wasted at the point of response. Outsourced acquisition support answers enquiries fast, qualifies them properly, and follows up until the customer either converts or clearly does not.",
     heroImage: "/assets/img/service-lead-generation.jpg",
@@ -414,7 +414,7 @@ export const EXTRA_SERVICES: Service[] = [
       "Diagnose why your support underperforms before you spend money scaling it.",
     metaTitle: "Customer Experience Consulting | CX Outsourcing Advisory",
     metaDescription:
-      "Customer experience consulting: contact driver analysis, journey mapping, support process design, quality framework build, and a costed roadmap before you scale.",
+      "Customer experience consulting: contact driver analysis, journey mapping, support process design, quality framework build.",
     heroDesc:
       "Scaling a support operation that is not working produces a larger operation that is not working. This is the diagnostic step that comes first.",
     heroImage: "/assets/img/services-overview.jpg",

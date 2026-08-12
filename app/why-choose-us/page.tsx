@@ -7,12 +7,13 @@ import { MiniMark } from "@/components/mini-mark";
 import { PAGE_IMAGES } from "@/lib/page-images";
 import { FaqSection } from "@/components/faq";
 import { WHY_CHOOSE_US_FAQ } from "@/lib/faq-content";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/why-choose-us" },
-  title: { absolute: "Why Choose Business Process Outsourcing | Reliable BPO Partner" },
+  title: { absolute: "Why Choose Us | Reliable BPO Outsourcing Partner" },
   description:
-    "Why companies choose Business Process Outsourcing for reliable customer support outsourcing, contact center services, technical support, and back-office operations.",
+    "Why companies choose Business Process Outsourcing for reliable customer support outsourcing, contact center services, technical support.",
 };
 
 const VALUES = [
@@ -63,6 +64,7 @@ const VALUES = [
 export default function WhyChooseUsPage() {
   return (
     <>
+      <Breadcrumbs crumbs={[{ name: "Why Choose Us", path: "/why-choose-us" }]} />
       <section className="page-hero">
         <div className="container page-hero-grid">
           <Reveal>

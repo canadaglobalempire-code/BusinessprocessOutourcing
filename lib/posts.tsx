@@ -1242,7 +1242,7 @@ export const POSTS: Post[] = [
     excerpt:
       "The ten call center capabilities that decide whether a law firm converts the calls it already pays to generate.",
     description:
-      "A buyer's guide to the ten call center services law firms actually need—24/7 legal intake, conflict pre-screening, bilingual intake, consultation scheduling, and case status coverage.",
+      "A buyer's guide to the ten call center services law firms actually need—24/7 legal intake, conflict pre-screening, bilingual intake, consultation scheduling.",
     img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -1380,7 +1380,7 @@ export const POSTS: Post[] = [
     excerpt:
       "What a legal call center handles, what it must never do, and the signals that tell you your firm is ready for one.",
     description:
-      "A plain explanation of legal call centers—what they handle, the limits agents must respect, how they differ from a general answering service, and when a law firm should outsource intake.",
+      "A plain explanation of legal call centers—what they handle, the limits agents must respect, how they differ from a general answering service.",
     img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -1480,7 +1480,7 @@ export const POSTS: Post[] = [
     excerpt:
       "Fifteen business process outsourcing providers compared on delivery footprint, specialization, compliance, and who each one actually fits.",
     description:
-      "The top 15 BPO companies in the world for 2026, compared on global delivery footprint, industry specialization, compliance standards, technology maturity, and the client profile each provider fits best.",
+      "The top 15 BPO companies in the world for 2026, compared on global delivery footprint, industry specialization, compliance standards, technology maturity.",
     img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -1673,7 +1673,7 @@ export const POSTS: Post[] = [
     excerpt:
       "Ten outsourcing providers compared for law firm intake, consultation scheduling, and after-hours coverage.",
     description:
-      "The top 10 BPO companies for legal services in 2026, compared on legal intake capability, conflict pre-screening, bilingual coverage, compliance handling, and the type of firm each provider fits.",
+      "The top 10 BPO companies for legal services in 2026, compared on legal intake capability, conflict pre-screening, bilingual coverage, compliance handling.",
     img: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -1852,7 +1852,7 @@ export const POSTS: Post[] = [
     excerpt:
       "The real trade-off is not cost per seat. It is whether you need someone available while your own team is working.",
     description:
-      "Nearshore vs offshore call centers compared on time zone overlap, cost, scale, language, and escalation speed \u2014 with the decision rule that actually separates the two.",
+      "Nearshore vs offshore call centers compared on time zone overlap, cost, scale, language, and escalation speed, plus the rule that separates the two.",
     img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -1990,7 +1990,7 @@ export const POSTS: Post[] = [
     excerpt:
       "The four variables that set the price, the pricing models you will be quoted, and the cost nobody puts in the proposal.",
     description:
-      "What outsourced customer service costs and what drives it: delivery location, dedicated vs shared agents, coverage hours, and skill level \u2014 plus the pricing models and the hidden management cost.",
+      "What outsourced customer service costs and what drives it: delivery location, dedicated vs shared agents, coverage hours, skill level, and pricing model.",
     img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -2119,7 +2119,7 @@ export const POSTS: Post[] = [
     excerpt:
       "The major Philippine BPO operators, what each is known for, and how to choose between Manila and Cebu.",
     description:
-      "Top 10 call center companies in the Philippines: the major BPO operators, what each is known for, and how to choose between Manila and Cebu for your programme.",
+      "Top 10 call center companies in the Philippines: the major BPO operators, what each is known for.",
     img: "https://images.unsplash.com/photo-1573790387438-4da905039392?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -2254,7 +2254,7 @@ export const POSTS: Post[] = [
     excerpt:
       "What a healthcare practice must require from any vendor that will touch protected health information.",
     description:
-      "HIPAA compliance when outsourcing patient calls: business associate agreements, least-privilege access, recording and retention rules, offshore processing, and the vendor questions that matter.",
+      "HIPAA compliance when outsourcing patient calls: business associate agreements, least-privilege access, recording and retention rules, offshore processing.",
     img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -2387,7 +2387,7 @@ export const POSTS: Post[] = [
     excerpt:
       "Ten outsourcing providers serving US businesses, what each fits, and how to shortlist without wasting a month.",
     description:
-      "The top 10 BPO companies in the USA for 2026: what each provider is best suited to, how to shortlist them, and the questions that separate a good fit from an expensive mistake.",
+      "The top 10 BPO companies in the USA for 2026: what each provider is best suited to, how to shortlist them.",
     img: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -2464,7 +2464,7 @@ export const POSTS: Post[] = [
     excerpt:
       "Ten outsourcing providers for healthcare organisations, and the compliance questions that should decide between them.",
     description:
-      "The top 10 BPO companies for healthcare: provider comparison plus the HIPAA, access control, and business associate agreement questions that should decide your shortlist.",
+      "The top 10 BPO companies for healthcare compared, plus the HIPAA, access control, and patient data questions to settle before signing with any provider.",
     img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -2535,7 +2535,7 @@ export const POSTS: Post[] = [
     excerpt:
       "Ten providers for outbound calling, and why compliance discipline matters more than dial volume.",
     description:
-      "The top 10 outbound call center companies: provider comparison, plus the compliance, list hygiene, and reporting questions that separate a working outbound programme from an expensive one.",
+      "The top 10 outbound call center companies compared, plus the compliance, list hygiene, and reporting questions worth asking before you sign.",
     img: "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -2605,7 +2605,7 @@ export const POSTS: Post[] = [
     excerpt:
       "Most contact centre scorecards measure activity. These are the numbers that predict whether customers stay.",
     description:
-      "Which call center KPIs actually matter: first contact resolution, contact rate per customer, and quality scores — and why average handle time is the most over-weighted metric in the industry.",
+      "Which call center KPIs actually matter: first contact resolution, contact rate per customer, and quality scores.",
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -2680,7 +2680,7 @@ export const POSTS: Post[] = [
     excerpt:
       "It analyses every call instead of one in fifty. That changes what you can detect — and it is not right for everyone.",
     description:
-      "What speech analytics does, what it detects that manual QA cannot, when it is worth the investment, and the volume threshold below which it rarely pays for itself.",
+      "What speech analytics does, what it detects that manual QA cannot, when it is worth the investment.",
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -2745,13 +2745,13 @@ export const POSTS: Post[] = [
   {
     slug: "pci-compliance-phone-payments",
     date: "2026-08-10",
-    title: "PCI compliance for phone payments: what you actually have to do",
+    title: "PCI compliance for phone payments: what you must do",
     tag: "Compliance",
     read: "9 min read",
     excerpt:
       "Taking card details on a call can pull your whole operation into scope. Here is how to avoid that.",
     description:
-      "PCI DSS compliance for phone payments: how card data expands your scope, what DTMF masking and pause-and-resume recording do, and the controls to agree before launch.",
+      "PCI DSS compliance for phone payments: how card data expands your scope, what DTMF masking and pause-and-resume recording do.",
     img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -2823,13 +2823,13 @@ export const POSTS: Post[] = [
   {
     slug: "inbound-vs-outbound-call-centers",
     date: "2026-08-10",
-    title: "Inbound vs outbound call centers: which does your business need",
+    title: "Inbound vs outbound call centers: which do you need",
     tag: "Strategy",
     read: "8 min read",
     excerpt:
       "They look similar and require almost opposite things from agents, metrics, and management.",
     description:
-      "Inbound vs outbound call centers compared: different agent profiles, metrics, staffing models, and compliance requirements — and why running both on one team usually fails.",
+      "Inbound vs outbound call centers compared: different agent profiles, metrics, staffing models, and compliance requirements.",
     img: "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -2890,13 +2890,13 @@ export const POSTS: Post[] = [
   {
     slug: "reduce-customer-support-costs",
     date: "2026-08-10",
-    title: "How to reduce customer support costs without wrecking quality",
+    title: "How to reduce support costs without losing quality",
     tag: "Strategy",
     read: "9 min read",
     excerpt:
       "The largest savings come from removing contacts, not from paying less per contact.",
     description:
-      "How to reduce customer support costs: eliminate contact drivers at source, tier your contacts, choose delivery location by contact type, and the false economies to avoid.",
+      "How to reduce customer support costs: eliminate contact drivers at source, tier your contacts, choose delivery location by contact type.",
     img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -2970,7 +2970,7 @@ export const POSTS: Post[] = [
     excerpt:
       "The overnight hours are cheap to promise and expensive to staff badly. Here is the arithmetic.",
     description:
-      "What 24/7 customer support actually requires: minimum staffing floors, why domestic night shifts cost a premium, follow-the-sun models, and when round-the-clock is not worth it.",
+      "What 24/7 customer support actually requires: minimum staffing floors, why domestic night shifts cost a premium, follow-the-sun models.",
     img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -3033,13 +3033,13 @@ export const POSTS: Post[] = [
   {
     slug: "omnichannel-vs-multichannel-support",
     date: "2026-08-10",
-    title: "Omnichannel vs multichannel support: the difference that matters",
+    title: "Omnichannel vs multichannel support: the real difference",
     tag: "Strategy",
     read: "7 min read",
     excerpt:
       "Multichannel means you are on several channels. Omnichannel means they know each other.",
     description:
-      "Omnichannel vs multichannel customer support: what actually separates them, why context continuity matters, and whether the upgrade is worth it for your business.",
+      "Omnichannel vs multichannel customer support: what actually separates them, why context continuity matters.",
     img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -3106,7 +3106,7 @@ export const POSTS: Post[] = [
     excerpt:
       "Most RFPs produce comparable-looking proposals that hide the differences that matter.",
     description:
-      "How to write a call center or BPO RFP: the volume and scope detail providers need, the questions that reveal real differences, and the requirements that quietly inflate every quote.",
+      "How to write a call center or BPO RFP: the volume and scope detail providers need, the questions that reveal real differences.",
     img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -3178,7 +3178,7 @@ export const POSTS: Post[] = [
     excerpt:
       "Most outsourcing engagements are decided in the first three months, usually by how much attention the client gave.",
     description:
-      "A 90-day plan for launching outsourced customer support: what to document before launch, how to pilot narrowly, what to review weekly, and the failure signs to act on early.",
+      "A 90-day plan for launching outsourced customer support: what to document before launch, how to pilot narrowly, what to review weekly.",
     img: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>
@@ -3247,7 +3247,7 @@ export const POSTS: Post[] = [
     excerpt:
       "The questions to settle before a European customer's data reaches an outsourced team.",
     description:
-      "GDPR and outsourced customer support: controller and processor roles, data processing agreements, international transfers, call recording, and the questions to settle before launch.",
+      "GDPR and outsourced customer support: controller and processor roles, data processing agreements, international transfers, call recording.",
     img: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1400&q=80",
     body: (
       <>

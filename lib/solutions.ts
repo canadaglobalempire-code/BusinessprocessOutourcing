@@ -17,7 +17,7 @@ export const SOLUTIONS: Solution[] = [
     summary:
       "Multilingual call center outsourcing for companies serving callers, shoppers, patients, and users across several language markets.",
     metaDescription:
-      "Multilingual call center outsourcing: live agents across several languages on one queue, multilingual customer support and help desk coverage, and one service standard in every market.",
+      "Multilingual call center outsourcing: live agents across several languages on one queue, multilingual customer support and help desk coverage.",
     services: [
       "Live coverage across several languages",
       "Multilingual customer support and help desk",

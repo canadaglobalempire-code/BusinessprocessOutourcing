@@ -8,17 +8,19 @@ import { PAGE_IMAGES, SERVICE_IMAGES, pageImage } from "@/lib/page-images";
 import { SERVICES } from "@/lib/services";
 import { FaqSection } from "@/components/faq";
 import { SERVICES_INDEX_FAQ } from "@/lib/faq-content";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/services" },
-  title: { absolute: "BPO Services | Customer Support, Help Desk & Back Office Outsourcing" },
+  title: { absolute: "BPO Services | Customer Support & Back Office Outsourcing" },
   description:
-    "Explore BPO services for customer support, virtual assistance, accounting support, digital marketing, e-commerce operations, content, IT help desk, data entry, and lead generation.",
+    "Explore BPO services for customer support, virtual assistance, accounting support, digital marketing, e-commerce operations, content, IT help desk, data entry.",
 };
 
 export default function ServicesPage() {
   return (
     <>
+      <Breadcrumbs crumbs={[{ name: "Services", path: "/services" }]} />
       <section className="page-hero">
         <div className="container page-hero-grid">
           <Reveal>

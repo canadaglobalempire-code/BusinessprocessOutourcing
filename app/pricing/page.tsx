@@ -4,6 +4,7 @@ import { Reveal } from "@/components/reveal";
 import { MiniMark } from "@/components/mini-mark";
 import { FaqSection } from "@/components/faq";
 import { PRICING_FAQ } from "@/lib/faq-content";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/pricing" },
@@ -60,6 +61,7 @@ const PLANS = [
 export default function PricingPage() {
   return (
     <>
+      <Breadcrumbs crumbs={[{ name: "Pricing", path: "/pricing" }]} />
       <section className="page-hero">
         <div className="container">
           <Reveal className="section-heading">

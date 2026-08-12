@@ -12,7 +12,7 @@ import { SERVICE_IMAGES, pageImage } from "@/lib/page-images";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
-  title: { absolute: "Business Process Outsourcing | Call Center & Back Office Support" },
+  title: { absolute: "Business Process Outsourcing | Call Center & Back Office" },
   description:
     "Outsource customer support, call center operations, technical support, data entry, back-office work, and lead generation with flexible BPO teams.",
 };

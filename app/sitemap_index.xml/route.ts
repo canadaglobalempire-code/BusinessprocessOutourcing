@@ -1,57 +1,38 @@
-import { INDUSTRIES } from "@/lib/industries";
-import { LOCATIONS } from "@/lib/locations";
-import { POSTS } from "@/lib/posts";
-import { SERVICES } from "@/lib/services";
-import { SOLUTIONS } from "@/lib/solutions";
-
-const BASE = "https://businessprocessoutsourcing.info";
+import {
+  BASE,
+  SECTION_NAMES,
+  sectionLastmod,
+  xmlResponse,
+} from "@/lib/sitemap-sections";
 
 /*
- * Sitemap index pointing at /sitemap.xml.
+ * The sitemap index.
  *
- * Two reasons this exists:
+ * Two reasons this path exists:
  *
- * 1. /sitemap_index.xml was submitted to Search Console in 2020 by whatever
- *    ran on this domain previously and has returned 404 ever since. A 404 on a
- *    submitted sitemap is a standing error in the Sitemaps report.
+ * 1. /sitemap_index.xml was submitted to Search Console in 2020 by whatever ran
+ *    on this domain previously. It sat on a stale "Success / 0 pages" reading
+ *    from Jan 2025 because it was pointing at nothing real.
  *
- * 2. Search Console caches fetch state per sitemap path. When an entry is
- *    wedged, submitting a different valid path forces a fresh fetch attempt
- *    rather than waiting on the stuck one.
+ * 2. Search Console caches fetch state per sitemap path. When an entry wedges,
+ *    a newly submitted path forces a fresh fetch rather than waiting on the
+ *    stuck one — which is what the per-section children below provide.
  *
- * lastmod is derived from real content so it only moves when content does.
+ * It now lists real child sitemaps instead of pointing back at the flat file,
+ * so coverage is reported per silo.
  */
 export const dynamic = "force-static";
 
-function latestContentDate(): string {
-  const postDates = POSTS.map((p) => new Date(p.date).getTime());
-  const structural = new Date("2026-08-10T00:00:00.000Z").getTime();
-  const counts = [
-    LOCATIONS.length,
-    SERVICES.length,
-    INDUSTRIES.length,
-    SOLUTIONS.length,
-  ];
-  // Counts are referenced so the index regenerates when content is added.
-  void counts;
-  return new Date(Math.max(structural, ...postDates)).toISOString();
-}
-
 export function GET() {
-  const lastmod = latestContentDate();
-  const body = `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>${BASE}/sitemap.xml</loc>
-    <lastmod>${lastmod}</lastmod>
-  </sitemap>
-</sitemapindex>
-`;
+  const children = SECTION_NAMES.map((name) => {
+    const loc = `${BASE}/sitemaps/${name}.xml`;
+    const lastmod = sectionLastmod(name).toISOString();
+    return `  <sitemap>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </sitemap>`;
+  }).join("\n");
 
-  return new Response(body, {
-    headers: {
-      "Content-Type": "application/xml; charset=utf-8",
-      "Cache-Control": "public, max-age=0, must-revalidate",
-    },
-  });
+  return xmlResponse(`<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${children}
+</sitemapindex>
+`);
 }

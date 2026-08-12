@@ -14,6 +14,7 @@ import {
 } from "@/lib/locations";
 import { CrossLinks } from "@/components/cross-links";
 import { LOCATION_IMAGES } from "@/lib/page-images";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -37,7 +38,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const location = getLocation(slug);
   if (!location) return {};
   return {
-    title: { absolute: `${location.seoTitle} | Business Process Outsourcing` },
+    // No brand suffix: it cost 31 characters on every title and pushed all of
+    // them past the SERP truncation point. "Outsourcing" already appears in the
+    // titles themselves, so the brand added no term Google wasn't already given.
+    title: { absolute: location.seoTitle },
     description: location.metaDescription,
     alternates: { canonical: `/locations/${slug}` },
   };
@@ -60,7 +64,10 @@ export default async function LocationDetail({ params }: Params) {
   };
 
   const isMarket = location.kind === "market";
-  const faq = [
+  // A page-specific FAQ beats the generated one wherever it exists — the
+  // generated version repeats the intro verbatim, which is fine on a country
+  // page and wasteful on a page written to rank.
+  const faq = location.faq ?? [
     {
       q: isMarket
         ? `What call center services do you provide for ${location.name}?`
@@ -89,7 +96,18 @@ export default async function LocationDetail({ params }: Params) {
     name: location.seoTitle,
     description: location.metaDescription,
     serviceType: "Call center outsourcing",
-    areaServed: location.name,
+    // A bare string leaves Google to guess what kind of place this is. For an
+    // administrative area the containment is worth stating outright.
+    areaServed: location.withinCountry
+      ? {
+          "@type": "State",
+          name: location.name,
+          containedInPlace: {
+            "@type": "Country",
+            name: location.withinCountry,
+          },
+        }
+      : location.name,
     provider: {
       "@type": "Organization",
       name: "Business Process Outsourcing",
@@ -104,13 +122,21 @@ export default async function LocationDetail({ params }: Params) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <Breadcrumbs
+        crumbs={[
+          { name: "Locations", path: "/locations" },
+          { name: location.name, path: `/locations/${location.slug}` },
+        ]}
+      />
       <section className={`page-hero service-detail-hero ${accent}`}>
         <div className="container page-hero-grid">
           <Reveal>
             <p className="eyebrow">
               <MiniMark /> {isMarket ? "Market coverage" : "Delivery location"}
             </p>
-            <h1 className="industry-detail-title">{location.seoTitle}</h1>
+            <h1 className="industry-detail-title">
+              {location.h1 ?? location.seoTitle}
+            </h1>
             <p>{location.intro}</p>
             <Link className="btn btn-dark btn-large" href={contactUrl}>
               Discuss coverage
@@ -200,6 +226,58 @@ export default async function LocationDetail({ params }: Params) {
           </Reveal>
         </div>
       </section>
+
+      {location.metros && location.metros.length > 0 && (
+        <section className="section">
+          <div className="container">
+            <Reveal className="section-heading">
+              <p className="eyebrow">
+                <MiniMark /> Where the volume is
+              </p>
+              <h2>
+                Metro coverage across{" "}
+                <span className="hl">{location.name}</span>.
+              </h2>
+              <p>
+                Support is delivered to businesses across the state. These are
+                the metros that generate most of the contact volume.
+              </p>
+            </Reveal>
+            <div className={`task-grid ${accent}`}>
+              {location.metros.map((metro, metroIndex) => (
+                <Reveal
+                  as="article"
+                  key={metro.name}
+                  className="task-item"
+                  delay={(metroIndex % 3) * 0.05}
+                >
+                  <span>{String(metroIndex + 1).padStart(2, "0")}</span>
+                  <h3>{metro.name}</h3>
+                  <p>{metro.note}</p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {location.deepDive && (
+        <section className="section">
+          <div className="container narrow deep-dive">
+            {location.deepDive.map((block) => (
+              <Reveal as="article" key={block.heading} className="deep-dive-block">
+                <h2>{block.heading}</h2>
+                {block.sections.map((item) => (
+                  <div key={item.title}>
+                    <h3>{item.title}</h3>
+                    <p>{item.body}</p>
+                  </div>
+                ))}
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
 
       <CrossLinks
         items={location.crossLinks ?? DEFAULT_LOCATION_LINKS}
