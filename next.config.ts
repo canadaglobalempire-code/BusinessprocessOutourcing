@@ -47,6 +47,11 @@ const nextConfig: NextConfig = {
        * /blog/page/2 and /blog/page/3.
        */
       { source: "/blog/page/1", destination: "/blog", permanent: true },
+      {
+        source: "/blog/outsourcing-vs-hiring-in-house",
+        destination: "/blog/outsourcing-vs-hiring",
+        permanent: true,
+      },
     ];
   },
 };

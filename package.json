@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:contact": "node --test tests/splitforms-config.test.mjs"
   },
   "dependencies": {
     "motion": "^12.42.2",

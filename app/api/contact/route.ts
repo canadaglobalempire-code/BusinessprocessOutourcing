@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { splitformsAccessKey } from "@/lib/splitforms-config.mjs";
 
 /*
  * Lead intake endpoint. Forwards the enquiry to Splitforms server-side
@@ -6,8 +7,6 @@ import { NextResponse } from "next/server";
  * form can show an honest success/error message.
  */
 const SPLITFORMS_ENDPOINT = "https://splitforms.com/api/submit";
-const ACCESS_KEY =
-  process.env.SPLITFORMS_ACCESS_KEY || "efc59dc094784bb0974e761755a93a1f";
 
 export async function POST(req: Request) {
   let data: Record<string, unknown>;
@@ -39,6 +38,19 @@ export async function POST(req: Request) {
     );
   }
 
+  const accessKey = splitformsAccessKey();
+  if (!accessKey) {
+    console.error("SPLITFORMS_ACCESS_KEY is not configured.");
+    return NextResponse.json(
+      {
+        ok: false,
+        message:
+          "We couldn’t send your enquiry right now. Please try again later.",
+      },
+      { status: 503 },
+    );
+  }
+
   try {
     const res = await fetch(SPLITFORMS_ENDPOINT, {
       method: "POST",
@@ -47,7 +59,7 @@ export async function POST(req: Request) {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        access_key: ACCESS_KEY,
+        access_key: accessKey,
         subject: "New enquiry — Business Process Outsourcing",
         ...data,
       }),
