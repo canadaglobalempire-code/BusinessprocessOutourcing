@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const HERO_TILES = [
   { src: "/assets/img/work-dashboard.webp", alt: "Outsourced work dashboard" },
-  { src: "https://images.unsplash.com/photo-1553775282-20af80779df7?auto=format&fit=crop&w=1000&q=80", alt: "Customer support headset at an agent workstation" },
+  { src: "/assets/img/unsplash/photo-1553775282-20af80779df7.jpg", alt: "Customer support headset at an agent workstation" },
   { src: "/assets/img/visibility-card.webp", alt: "Task visibility card" },
   { src: "/assets/img/team-updates.webp", alt: "Team updates card" },
   { src: "/assets/img/services-overview.jpg", alt: "Outsourced support team reviewing work together" },

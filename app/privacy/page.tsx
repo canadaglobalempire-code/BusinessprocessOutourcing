@@ -3,6 +3,7 @@ import { MiniMark } from "@/components/mini-mark";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
+  robots: { index: false, follow: true },
   title: "Privacy Policy",
   description:
     "Privacy policy for Business Process Outsourcing, including contact form information, service enquiries, cookies, and data use.",

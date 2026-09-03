@@ -3,6 +3,7 @@ import { MiniMark } from "@/components/mini-mark";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/terms" },
+  robots: { index: false, follow: true },
   title: "Website Terms",
   description:
     "Website terms for using the Business Process Outsourcing website and requesting information about outsourced support services.",

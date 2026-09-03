@@ -57,7 +57,7 @@ export default async function Article({ params }: Params) {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
-    image: post.img,
+    image: `${BASE}${post.img}`,
     datePublished: post.date,
     dateModified: post.date,
     author: {

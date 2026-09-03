@@ -2,7 +2,6 @@ import type { MetadataRoute } from "next";
 import { INDUSTRIES, slugify } from "@/lib/industries";
 import { LOCATIONS } from "@/lib/locations";
 import { POSTS } from "@/lib/posts";
-import { POSTS_PER_PAGE } from "@/components/pagination";
 import { SERVICES } from "@/lib/services";
 import { SOLUTIONS } from "@/lib/solutions";
 
@@ -27,8 +26,6 @@ const entry = (
   lastModified: Date = CONTENT_UPDATED,
   changeFrequency: Entry["changeFrequency"] = "monthly",
 ): Entry => ({ url: `${BASE}${path}`, lastModified, changeFrequency, priority });
-
-const blogPages = Math.max(0, Math.ceil(POSTS.length / POSTS_PER_PAGE) - 1);
 
 /*
  * Sections are the unit of publication, not just of organisation.
@@ -63,9 +60,6 @@ export const SECTIONS: Record<string, Entry[]> = {
   blog: [
     entry("/blog", 0.8, CONTENT_UPDATED, "weekly"),
     ...POSTS.map((p) => entry(`/blog/${p.slug}`, 0.6, new Date(p.date))),
-    ...Array.from({ length: blogPages }, (_, i) =>
-      entry(`/blog/page/${i + 2}`, 0.4),
-    ),
   ],
 };
 

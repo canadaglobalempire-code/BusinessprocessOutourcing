@@ -1,5 +1,4 @@
-const unsplash = (id: string) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1400&q=80`;
+const unsplash = (id: string) => `/assets/img/unsplash/${id}.jpg`;
 
 export type PageImage = {
   src: string;

@@ -32,16 +32,6 @@ export const metadata: Metadata = {
   },
   description:
     "Business Process Outsourcing provides outsourced call center, customer support, technical support, data entry, back-office.",
-  keywords: [
-    "business process outsourcing",
-    "BPO services",
-    "call center outsourcing",
-    "customer support outsourcing",
-    "back office outsourcing",
-    "technical support outsourcing",
-    "data entry outsourcing",
-    "lead generation outsourcing",
-  ],
   openGraph: {
     title: "Business Process Outsourcing | Call Center & Back Office",
     description:
@@ -83,9 +73,25 @@ const structuredData = {
       name: "Business Process Outsourcing",
       url: "https://businessprocessoutsourcing.info",
       logo: "https://businessprocessoutsourcing.info/icon.png",
+      foundingDate: "2000",
       description:
         "Business Process Outsourcing provides outsourced call center, customer support, technical support, data entry, back-office, and lead generation services.",
       areaServed: "Global",
+      knowsAbout: [
+        "Business process outsourcing",
+        "Call center outsourcing",
+        "Customer support outsourcing",
+        "Technical support outsourcing",
+        "Back-office outsourcing",
+        "Data entry outsourcing",
+        "Lead generation outsourcing",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        url: "https://businessprocessoutsourcing.info/contact",
+        availableLanguage: "English",
+      },
       serviceType: [
         "Business process outsourcing",
         "Call center outsourcing",

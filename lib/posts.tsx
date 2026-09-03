@@ -498,7 +498,7 @@ export const POSTS: Post[] = [
       "Customers track their own shipments now. What reaches an agent is the one that went wrong, which makes the average call harder than it used to be.",
     description:
       "Why logistics support should be scoped around exceptions rather than call volume, and why resolution authority matters more than answer speed.",
-    img: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1553413077-190dd305871c.jpg",
     body: (
       <>
         <p>
@@ -573,7 +573,7 @@ export const POSTS: Post[] = [
       "University contact volume spikes against deadlines that have nothing to do with the commercial calendar, and most capacity models are built for the wrong year.",
     description:
       "How universities and colleges handle admissions and enrolment call peaks, and why verifying who is on the line matters more than answering quickly.",
-    img: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1562774053-701939374585.jpg",
     body: (
       <>
         <p>
@@ -644,7 +644,7 @@ export const POSTS: Post[] = [
       "Airline contact volume does not arrive gradually. It arrives all at once, and staffing to the average guarantees failure on the day it matters.",
     description:
       "Why airline contact volume spikes without warning, what an outsourced team can safely handle during a disruption, and where the limits have to sit.",
-    img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1436491865332-7a61a109cc05.jpg",
     body: (
       <>
         <p>
@@ -738,7 +738,7 @@ export const POSTS: Post[] = [
       "In hospitality the cancellation call is the highest-leverage contact you receive, and most operators handle it as pure administration.",
     description:
       "How hotels outsource reservations, cancellations, and guest support, and why the cancellation call is the contact most worth training agents on.",
-    img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1566073771259-6a8506099945.jpg",
     body: (
       <>
         <p>
@@ -824,7 +824,7 @@ export const POSTS: Post[] = [
       "Outage contact arrives in the same shape every time: nothing, then everything, then questions about when it ends.",
     description:
       "How utilities handle outage call volume with outsourced capacity, what agents can safely tell customers, and why safety reports need their own path.",
-    img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1473341304170-971dccb5ac1e.jpg",
     body: (
       <>
         <p>
@@ -909,7 +909,7 @@ export const POSTS: Post[] = [
       "In telecom the support queue and the retention funnel are the same queue, and most operators staff them as if they were not.",
     description:
       "How telecom operators outsource technical support and retention, why the two belong in one conversation, and what agents need authority to resolve.",
-    img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1516321318423-f06f85e504b3.jpg",
     body: (
       <>
         <p>
@@ -994,7 +994,7 @@ export const POSTS: Post[] = [
       "First notice of loss is simple work with an unforgiving boundary: capture everything, promise nothing.",
     description:
       "What outsourced first notice of loss handling covers, where the coverage boundary sits, and how to plan claim capacity for catastrophe weeks.",
-    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1450101499163-c8848c66ca85.jpg",
     body: (
       <>
         <p>
@@ -1073,7 +1073,7 @@ export const POSTS: Post[] = [
       "A practical framework for identifying work that should leave your internal team first.",
     description:
       "The best first tasks are repetitive, teachable, measurable, and important—but not the highest-value use of your internal team.",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1454165804606-c3d57bc86b40.jpg",
     body: (
       <>
         <p>
@@ -1138,7 +1138,7 @@ export const POSTS: Post[] = [
       "Compare cost, speed, control, flexibility, and long-term needs before choosing.",
     description:
       "Outsourcing and hiring solve different problems. The right choice depends on how stable, strategic, and full-time the work really is.",
-    img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1521737711867-e3b97375f902.jpg",
     body: (
       <>
         <p>
@@ -1195,7 +1195,7 @@ export const POSTS: Post[] = [
       "How to protect your customer experience while increasing support capacity.",
     description:
       "Outsourced support can raise quality, not lower it—if you invest in documentation, tone, and clear escalation from day one.",
-    img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1600880292203-757bb62b4baf.jpg",
     body: (
       <>
         <p>
@@ -1250,7 +1250,7 @@ export const POSTS: Post[] = [
       "A clear onboarding sequence for tools, processes, standards, and communication.",
     description:
       "A structured first two weeks—access, context, shadowing, and feedback—turns an outsourced team into a reliable extension of yours.",
-    img: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1591115765373-5207764f72e7.jpg",
     body: (
       <>
         <p>
@@ -1304,7 +1304,7 @@ export const POSTS: Post[] = [
       "A practical checklist for access, confidentiality, devices, and incident handling.",
     description:
       "Before sharing systems and data, confirm how access, devices, confidentiality, and incidents are actually handled—not just promised.",
-    img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1550751827-4bd374c3f58b.jpg",
     body: (
       <>
         <p>
@@ -1357,7 +1357,7 @@ export const POSTS: Post[] = [
       "Build repeatable support capacity without adding permanent overhead too early.",
     description:
       "Outsourcing lets operations scale in steps—adding capacity when demand rises without locking in fixed cost before you are ready.",
-    img: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1507925921958-8a62f3d1a50d.jpg",
     body: (
       <>
         <p>
@@ -1410,7 +1410,7 @@ export const POSTS: Post[] = [
       "The tasks that free up the most time when they leave your desk, and how to hand them over cleanly.",
     description:
       "A practical list of the administrative, scheduling, and inbox tasks worth delegating to an outsourced virtual assistant first.",
-    img: "https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1531973576160-7125cd663d86.jpg",
     body: (
       <>
         <p>
@@ -1464,7 +1464,7 @@ export const POSTS: Post[] = [
       "Signs your finance admin has outgrown spare hours, and how to hand it off without losing control.",
     description:
       "How growing businesses outsource bookkeeping, invoicing, reconciliations, and reporting while keeping oversight of the numbers.",
-    img: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1526304640581-d334cdbbf45e.jpg",
     body: (
       <>
         <p>
@@ -1518,7 +1518,7 @@ export const POSTS: Post[] = [
       "Delegate the execution and reporting while keeping strategy, voice, and approvals in-house.",
     description:
       "A framework for outsourcing digital marketing execution, content, and campaign reporting while protecting brand voice and strategy.",
-    img: "https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1533750516457-a7f992034fec.jpg",
     body: (
       <>
         <p>
@@ -1570,7 +1570,7 @@ export const POSTS: Post[] = [
       "Handle order questions, returns, and listings during peaks without over-hiring for the quiet months.",
     description:
       "How online stores use outsourced e-commerce support for order management, customer questions, returns, and product listings.",
-    img: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1607082348824-0a96f2a4b9da.jpg",
     body: (
       <>
         <p>
@@ -1622,7 +1622,7 @@ export const POSTS: Post[] = [
       "Publish consistently without burning out your team, while keeping quality and voice intact.",
     description:
       "How to outsource blog posts, social content, and creative production while protecting brand voice and editorial quality.",
-    img: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1542038784456-1ea8e935640e.jpg",
     body: (
       <>
         <p>
@@ -1672,7 +1672,7 @@ export const POSTS: Post[] = [
       "Give customers fast, reliable help across time zones without stretching your engineers thin.",
     description:
       "How to set up outsourced technical support and help-desk coverage with clear tiers, documentation, and escalation paths.",
-    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1581091226825-a6a2a5aee158.jpg",
     body: (
       <>
         <p>
@@ -1723,7 +1723,7 @@ export const POSTS: Post[] = [
       "Keep your CRM clean and your research current without tying up skilled staff on manual work.",
     description:
       "Best practices for outsourcing data entry, CRM cleanup, list building, and market research with accuracy checks built in.",
-    img: "https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1543286386-713bdd548da4.jpg",
     body: (
       <>
         <p>
@@ -1774,7 +1774,7 @@ export const POSTS: Post[] = [
       "Keep your sales team selling by outsourcing research, outreach, and qualification&mdash;not the closing.",
     description:
       "How to outsource lead generation, prospect research, and appointment setting while keeping qualification standards and closing in-house.",
-    img: "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1552581234-26160f608093.jpg",
     body: (
       <>
         <p>
@@ -1825,7 +1825,7 @@ export const POSTS: Post[] = [
       "The ten call center capabilities that decide whether a law firm converts the calls it already pays to generate.",
     description:
       "A buyer's guide to the ten call center services law firms actually need—24/7 legal intake, conflict pre-screening, bilingual intake, consultation scheduling.",
-    img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1589829545856-d10d557cf95f.jpg",
     body: (
       <>
         <p>
@@ -1963,7 +1963,7 @@ export const POSTS: Post[] = [
       "What a legal call center handles, what it must never do, and the signals that tell you your firm is ready for one.",
     description:
       "A plain explanation of legal call centers—what they handle, the limits agents must respect, how they differ from a general answering service.",
-    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1450101499163-c8848c66ca85.jpg",
     body: (
       <>
         <p>
@@ -2063,7 +2063,7 @@ export const POSTS: Post[] = [
       "Fifteen business process outsourcing providers compared on delivery footprint, specialization, compliance, and who each one actually fits.",
     description:
       "The top 15 BPO companies in the world for 2026, compared on global delivery footprint, industry specialization, compliance standards, technology maturity.",
-    img: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1497215728101-856f4ea42174.jpg",
     body: (
       <>
         <p>
@@ -2256,7 +2256,7 @@ export const POSTS: Post[] = [
       "Ten outsourcing providers compared for law firm intake, consultation scheduling, and after-hours coverage.",
     description:
       "The top 10 BPO companies for legal services in 2026, compared on legal intake capability, conflict pre-screening, bilingual coverage, compliance handling.",
-    img: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1505664194779-8beaceb93744.jpg",
     body: (
       <>
         <p>
@@ -2435,7 +2435,7 @@ export const POSTS: Post[] = [
       "The real trade-off is not cost per seat. It is whether you need someone available while your own team is working.",
     description:
       "Nearshore vs offshore call centers compared on time zone overlap, cost, scale, language, and escalation speed, plus the rule that separates the two.",
-    img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1521737604893-d14cc237f11d.jpg",
     body: (
       <>
         <p>
@@ -2573,7 +2573,7 @@ export const POSTS: Post[] = [
       "The four variables that set the price, the pricing models you will be quoted, and the cost nobody puts in the proposal.",
     description:
       "What outsourced customer service costs and what drives it: delivery location, dedicated vs shared agents, coverage hours, skill level, and pricing model.",
-    img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1554224155-6726b3ff858f.jpg",
     body: (
       <>
         <p>
@@ -2702,7 +2702,7 @@ export const POSTS: Post[] = [
       "The major Philippine BPO operators, what each is known for, and how to choose between Manila and Cebu.",
     description:
       "Top 10 call center companies in the Philippines: the major BPO operators, what each is known for.",
-    img: "https://images.unsplash.com/photo-1573790387438-4da905039392?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1573790387438-4da905039392.jpg",
     body: (
       <>
         <p>
@@ -2837,7 +2837,7 @@ export const POSTS: Post[] = [
       "What a healthcare practice must require from any vendor that will touch protected health information.",
     description:
       "HIPAA compliance when outsourcing patient calls: business associate agreements, least-privilege access, recording and retention rules, offshore processing.",
-    img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1519494026892-80bbd2d6fd0d.jpg",
     body: (
       <>
         <p>
@@ -2970,7 +2970,7 @@ export const POSTS: Post[] = [
       "Ten outsourcing providers serving US businesses, what each fits, and how to shortlist without wasting a month.",
     description:
       "The top 10 BPO companies in the USA for 2026: what each provider is best suited to, how to shortlist them.",
-    img: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1496442226666-8d4d0e62e6e9.jpg",
     body: (
       <>
         <p>
@@ -3047,7 +3047,7 @@ export const POSTS: Post[] = [
       "Ten outsourcing providers for healthcare organisations, and the compliance questions that should decide between them.",
     description:
       "The top 10 BPO companies for healthcare compared, plus the HIPAA, access control, and patient data questions to settle before signing with any provider.",
-    img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1576091160550-2173dba999ef.jpg",
     body: (
       <>
         <p>
@@ -3118,7 +3118,7 @@ export const POSTS: Post[] = [
       "Ten providers for outbound calling, and why compliance discipline matters more than dial volume.",
     description:
       "The top 10 outbound call center companies compared, plus the compliance, list hygiene, and reporting questions worth asking before you sign.",
-    img: "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1552581234-26160f608093.jpg",
     body: (
       <>
         <p>
@@ -3188,7 +3188,7 @@ export const POSTS: Post[] = [
       "Most contact centre scorecards measure activity. These are the numbers that predict whether customers stay.",
     description:
       "Which call center KPIs actually matter: first contact resolution, contact rate per customer, and quality scores.",
-    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1551288049-bebda4e38f71.jpg",
     body: (
       <>
         <p>
@@ -3263,7 +3263,7 @@ export const POSTS: Post[] = [
       "It analyses every call instead of one in fifty. That changes what you can detect — and it is not right for everyone.",
     description:
       "What speech analytics does, what it detects that manual QA cannot, when it is worth the investment.",
-    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1460925895917-afdab827c52f.jpg",
     body: (
       <>
         <p>
@@ -3334,7 +3334,7 @@ export const POSTS: Post[] = [
       "Taking card details on a call can pull your whole operation into scope. Here is how to avoid that.",
     description:
       "PCI DSS compliance for phone payments: how card data expands your scope, what DTMF masking and pause-and-resume recording do.",
-    img: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1563013544-824ae1b704d3.jpg",
     body: (
       <>
         <p>
@@ -3412,7 +3412,7 @@ export const POSTS: Post[] = [
       "They look similar and require almost opposite things from agents, metrics, and management.",
     description:
       "Inbound vs outbound call centers compared: different agent profiles, metrics, staffing models, and compliance requirements.",
-    img: "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1560264280-88b68371db39.jpg",
     body: (
       <>
         <p>
@@ -3479,7 +3479,7 @@ export const POSTS: Post[] = [
       "The largest savings come from removing contacts, not from paying less per contact.",
     description:
       "How to reduce customer support costs: eliminate contact drivers at source, tier your contacts, choose delivery location by contact type.",
-    img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1554224155-6726b3ff858f.jpg",
     body: (
       <>
         <p>
@@ -3553,7 +3553,7 @@ export const POSTS: Post[] = [
       "The overnight hours are cheap to promise and expensive to staff badly. Here is the arithmetic.",
     description:
       "What 24/7 customer support actually requires: minimum staffing floors, why domestic night shifts cost a premium, follow-the-sun models.",
-    img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1521737711867-e3b97375f902.jpg",
     body: (
       <>
         <p>
@@ -3622,7 +3622,7 @@ export const POSTS: Post[] = [
       "Multichannel means you are on several channels. Omnichannel means they know each other.",
     description:
       "Omnichannel vs multichannel customer support: what actually separates them, why context continuity matters.",
-    img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1553877522-43269d4ea984.jpg",
     body: (
       <>
         <p>
@@ -3689,7 +3689,7 @@ export const POSTS: Post[] = [
       "Most RFPs produce comparable-looking proposals that hide the differences that matter.",
     description:
       "How to write a call center or BPO RFP: the volume and scope detail providers need, the questions that reveal real differences.",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1454165804606-c3d57bc86b40.jpg",
     body: (
       <>
         <p>
@@ -3761,7 +3761,7 @@ export const POSTS: Post[] = [
       "Most outsourcing engagements are decided in the first three months, usually by how much attention the client gave.",
     description:
       "A 90-day plan for launching outsourced customer support: what to document before launch, how to pilot narrowly, what to review weekly.",
-    img: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1551434678-e076c223a692.jpg",
     body: (
       <>
         <p>
@@ -3830,7 +3830,7 @@ export const POSTS: Post[] = [
       "The questions to settle before a European customer's data reaches an outsourced team.",
     description:
       "GDPR and outsourced customer support: controller and processor roles, data processing agreements, international transfers, call recording.",
-    img: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1400&q=80",
+    img: "/assets/img/unsplash/photo-1467269204594-9661b134dd2b.jpg",
     body: (
       <>
         <p>
