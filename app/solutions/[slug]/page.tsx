@@ -128,7 +128,10 @@ export default async function SolutionDetail({ params }: Params) {
               <Reveal as="article" key={service} className="task-item" delay={(index % 3) * 0.05}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <h3>{service}</h3>
-                <p>Handled by trained BPO agents working from clear process notes, priorities, and quality checks.</p>
+                <p>
+                  {solution.details?.[service] ??
+                    "Handled by trained BPO agents working from clear process notes, priorities, and quality checks."}
+                </p>
               </Reveal>
             ))}
           </div>
@@ -161,6 +164,19 @@ export default async function SolutionDetail({ params }: Params) {
           </Reveal>
         </div>
       </section>
+
+      {solution.body && (
+        <section className="section">
+          <div className="container narrow deep-dive">
+            <Reveal as="article" className="deep-dive-block">
+              <h2>{solution.body.heading}</h2>
+              {solution.body.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </Reveal>
+          </div>
+        </section>
+      )}
 
       <section className="section">
         <div className="container split-section detail-section">

@@ -7,6 +7,14 @@ export type Solution = {
   summary: string;
   metaDescription: string;
   services: string[];
+  /**
+   * One sentence per entry in `services`, keyed by the entry. Rendered in
+   * place of the generic template line. Only the pages measured thin enough
+   * to stall in Bing's crawl queue carry these; add more as pages are written.
+   */
+  details?: Record<string, string>;
+  /** An extra section of page-specific copy, rendered only when present. */
+  body?: { heading: string; paragraphs: string[] };
   icon: string;
 };
 
@@ -25,6 +33,26 @@ export const SOLUTIONS: Solution[] = [
       "One service standard in every language",
       "Coverage that flexes by market",
     ],
+    details: {
+      "Live coverage across several languages":
+        "Each language is staffed on its own hours, so a Spanish queue and an English queue are both answered during their own business day rather than one region's.",
+      "Multilingual customer support and help desk":
+        "Tier-one support and help desk tickets handled in the customer's language, with technical escalations passed to your team in English with a translated summary attached.",
+      "Bilingual agents on the same queue":
+        "Agents who hold two languages take contacts from both queues, which keeps low-volume languages covered without a dedicated seat sitting idle.",
+      "One service standard in every language":
+        "The same scripts, quality scorecard, and escalation rules are translated and applied per language, so a review in Portuguese is scored against the same rubric as one in English.",
+      "Coverage that flexes by market":
+        "Hours and headcount are set per language market and adjusted as volume shifts; a product launch in one country does not mean re-staffing every other queue.",
+    },
+    body: {
+      heading: "How a multilingual queue is set up",
+      paragraphs: [
+        "Language routing comes first. Callers and chats are identified by IVR selection, site locale, or the language of the first message, and land with an agent who works in that language instead of being transferred after a greeting. Where a language has too little volume for a dedicated seat it is folded into a bilingual pool with a defined fallback language.",
+        "Quality is measured per language, not per programme. Each language has its own reviewer, its own weekly sample of scored contacts, and its own translated knowledge base, so a tone or accuracy problem in one market shows on its own line in reporting instead of being averaged away.",
+        "Reporting is delivered in one language of your choice, with volume, handle time, and satisfaction broken out by market, so you can see which languages are growing and where coverage hours should move next.",
+      ],
+    },
     icon: "globe",
   },
   {
@@ -90,6 +118,22 @@ export const SOLUTIONS: Solution[] = [
       "Clear accounting assistance",
       "Cost-efficient back-office help",
     ],
+    details: {
+      "Outsourced financial support":
+        "Accounts payable and receivable processing: invoice capture, coding against your chart of accounts, approval routing, and payment-run preparation inside your accounting system.",
+      "Clear accounting assistance":
+        "Bank and ledger reconciliations, expense and card-statement matching, and month-end close checklists worked to your calendar, with exceptions flagged rather than quietly adjusted.",
+      "Cost-efficient back-office help":
+        "Vendor and customer statement queries, collection reminders, and document filing handled as a scheduled workload, so your controller reviews results instead of doing the entry.",
+    },
+    body: {
+      heading: "What outsourced finance support covers day to day",
+      paragraphs: [
+        "The work runs inside your systems. Agents are given scoped access to your accounting platform, expense tool, and shared inbox and follow your approval matrix; releasing payments stays with your team.",
+        "Every task has a defined owner and turnaround: invoices coded within one business day, reconciliations completed to a fixed schedule, and a close checklist with each item signed off by name. Anything that does not match, such as a duplicate invoice, an unmatched deposit, or a vendor asking to change bank details, is escalated with the evidence attached rather than resolved by guesswork.",
+        "Reporting covers throughput, ageing, and exception counts, so you can see where volume comes from and where the process upstream of the team needs attention.",
+      ],
+    },
     icon: "accounting",
   },
   {

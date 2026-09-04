@@ -54,6 +54,15 @@ const nextConfig: NextConfig = {
        */
       { source: "/about", destination: "/about-us", permanent: true },
       /*
+       * One sitemap. /sitemap.xml is the flat, every-URL file that Google and
+       * Bing already fetch successfully; the two index paths that used to sit
+       * above it are folded into it so there is exactly one document to
+       * submit, verify and debug. Both legacy paths redirect straight here, no
+       * chain, because both were submitted to search consoles in the past.
+       */
+      { source: "/sitemapindex.xml", destination: "/sitemap.xml", permanent: true },
+      { source: "/sitemap_index.xml", destination: "/sitemap.xml", permanent: true },
+      /*
        * Blog pagination starts at /blog/page/2 because page one is /blog, so
        * /blog/page/1 returned a 404. It is the URL anyone hand-editing the
        * pagination guesses first, and the one a crawler infers from seeing

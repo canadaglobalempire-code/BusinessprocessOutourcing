@@ -39,5 +39,4 @@
 
 ## Sitemaps
 
-- Index: https://businessprocessoutsourcing.info/sitemapindex.xml
-- Flat (legacy, already submitted): https://businessprocessoutsourcing.info/sitemap.xml
+- https://businessprocessoutsourcing.info/sitemap.xml

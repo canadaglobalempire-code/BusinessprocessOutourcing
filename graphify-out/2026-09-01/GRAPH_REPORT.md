@@ -1,16 +1,16 @@
-# Graph Report - Business oursourcing  (2026-09-04)
+# Graph Report - Business oursourcing  (2026-09-01)
 
 ## Corpus Check
-- 82 files · ~1,741,218 words
+- 79 files · ~985,503 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 448 nodes · 809 edges · 33 communities (23 shown, 10 thin omitted)
+- 427 nodes · 767 edges · 32 communities (24 shown, 8 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `14a55e9b`
+- Built from commit: `80b9926c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -26,8 +26,8 @@
 - Community 8
 - page.tsx
 - SEO Keyword Plan
-- Community 11
-- page.tsx
+- image-loader.ts
+- Community 13
 - Community 14
 - Community 15
 - Community 16
@@ -50,11 +50,11 @@
 3. `Breadcrumbs()` - 17 edges
 4. `SvgIcon()` - 16 edges
 5. `slugify()` - 16 edges
-6. `main()` - 16 edges
-7. `compilerOptions` - 16 edges
-8. `FaqSection()` - 14 edges
-9. `What You Must Do When Invoked` - 12 edges
-10. `/graphify` - 10 edges
+6. `compilerOptions` - 16 edges
+7. `FaqSection()` - 14 edges
+8. `What You Must Do When Invoked` - 12 edges
+9. `/graphify` - 10 edges
+10. `pageImage` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `generateMetadata()` --calls--> `getPost()`  [EXTRACTED]
@@ -65,17 +65,17 @@
   app/industries/[slug]/page.tsx → lib/industries.ts
 - `generateMetadata()` --calls--> `getIndustry()`  [EXTRACTED]
   app/industries/[slug]/page.tsx → lib/industries.ts
-- `IndustriesPage()` --calls--> `slugify()`  [EXTRACTED]
-  app/industries/page.tsx → lib/industries.ts
+- `IndustriesPage()` --calls--> `pageImage`  [EXTRACTED]
+  app/industries/page.tsx → lib/page-images.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (33 total, 10 thin omitted)
+## Communities (32 total, 8 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.07
-Nodes (55): metadata, STATEMENTS, metadata, metadata, STEPS, ACCENTS, IndustriesPage(), industryOptions() (+47 more)
+Cohesion: 0.06
+Nodes (49): metadata, STATEMENTS, metadata, STEPS, ACCENTS, generateMetadata(), LocationDetail(), Params (+41 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.07
@@ -83,35 +83,43 @@ Nodes (29): ./*, dom, dom.iterable, esnext, .next/dev/types/**/*.ts, next-env.d.
 
 ### Community 2 - "Community 2"
 Cohesion: 0.06
-Nodes (35): motion, next, dependencies, motion, next, react, react-dom, devDependencies (+27 more)
+Nodes (32): motion, next, dependencies, motion, next, react, react-dom, devDependencies (+24 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.20
-Nodes (20): buildPayload(), chunk(), decodeXml(), dedupe(), diffManifest(), fetchPage(), hashText(), inspectPage() (+12 more)
+Cohesion: 0.11
+Nodes (17): ContactPage(), metadata, metadata, metadata, AGENT_COUNTS, CALL_CENTRE_SERVICES, CALL_VOLUMES, LeadForm() (+9 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.08
 Nodes (24): For /graphify add and --watch, For /graphify query, For the commit hook and native CLAUDE.md integration, For --update and --cluster-only, /graphify, Honesty Rules, Interpreter guard for subcommands, Part A - Structural extraction for code files (+16 more)
 
 ### Community 5 - "locations.ts"
-Cohesion: 0.08
-Nodes (27): GROUPS, metadata, ACCENTS, generateMetadata(), LocationDetail(), Params, CITY_LOCATIONS, EU_LINKS (+19 more)
+Cohesion: 0.09
+Nodes (20): GROUPS, metadata, CITY_LOCATIONS, EU_LINKS, UAE_LINKS, UK_LINKS, CORE_LOCATIONS, COUNTRY_LOCATIONS (+12 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.09
 Nodes (20): metadata, Params, Article(), generateMetadata(), Params, BlogList(), TOTAL_BLOG_PAGES, LeadCta() (+12 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 0.07
-Nodes (33): ContactPage(), inter, metadata, structuredData, generateMetadata(), ServiceDetail(), AGENT_COUNTS, CALL_CENTRE_SERVICES (+25 more)
+Cohesion: 0.18
+Nodes (13): inter, metadata, structuredData, ModalProvider(), SiteFooter(), ABOUT_NAV, MEGA_NAV, NAV (+5 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.11
-Nodes (26): ACCENTS, generateMetadata(), generateStaticParams(), IndustryDetail(), Params, GET(), ACCENTS, generateMetadata() (+18 more)
+Cohesion: 0.13
+Nodes (28): ACCENTS, IndustriesPage(), industryOptions(), metadata, ACCENTS, generateMetadata(), generateStaticParams(), IndustryDetail() (+20 more)
+
+### Community 9 - "page.tsx"
+Cohesion: 0.24
+Nodes (7): generateMetadata(), Params, ServiceDetail(), EXTRA_SERVICES, getService(), Service, SERVICES
 
 ### Community 10 - "SEO Keyword Plan"
 Cohesion: 0.25
 Nodes (7): Blog Topics To Add Next, Business Positioning, Content Rules, Page Keyword Map, Primary Keywords, SEO Keyword Plan, Target Audience
+
+### Community 13 - "Community 13"
+Cohesion: 0.14
+Nodes (13): GET(), GET(), ALL_ENTRIES, blogPages, CONTENT_UPDATED, Entry, renderSitemapIndex(), renderUrlset() (+5 more)
 
 ### Community 19 - "graphify reference: extra exports and benchmark"
 Cohesion: 0.22
@@ -146,24 +154,24 @@ Cohesion: 0.13
 Nodes (14): Anti-Patterns Verdict, Design Health Score, Homepage design critique, Minor Observations, Overall Impression, [P1] Large credibility claims lack evidence, [P1] The hero promise and CTA do not qualify the buyer, [P2] Accessibility and failure-state polish is incomplete (+6 more)
 
 ## Knowledge Gaps
-- **187 isolated node(s):** `metadata`, `STATEMENTS`, `Params`, `metadata`, `Params` (+182 more)
+- **185 isolated node(s):** `metadata`, `STATEMENTS`, `Params`, `metadata`, `Params` (+180 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `MiniMark()` connect `Community 0` to `locations.ts`, `Community 6`, `Community 7`, `Community 8`, `page.tsx`, `page.tsx`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
-- **Why does `Reveal()` connect `Community 0` to `Community 8`, `locations.ts`, `Community 6`?**
+- **Why does `MiniMark()` connect `Community 3` to `Community 0`, `locations.ts`, `Community 6`, `Community 8`, `page.tsx`?**
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+- **Why does `slugify()` connect `Community 8` to `Community 0`, `Community 13`, `Community 7`?**
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
+- **Why does `SvgIcon()` connect `Community 0` to `Community 8`, `page.tsx`, `locations.ts`, `Community 7`?**
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
-- **Why does `SvgIcon()` connect `Community 0` to `Community 8`, `locations.ts`, `Community 7`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `metadata`, `STATEMENTS`, `Params` to the rest of the system?**
-  _187 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _185 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.06523655598001764 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06116700201207243 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._

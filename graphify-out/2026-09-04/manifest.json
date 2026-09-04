@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "app/robots.ts": {
-    "mtime": 1788546527.81218,
-    "ast_hash": "da8433342c894f969f657b70a27e19a7",
+    "mtime": 1788455523.501147,
+    "ast_hash": "2c50b77fb54f15b1a4ac4230620b02e8",
     "semantic_hash": ""
   },
   "app/services/[slug]/page.tsx": {
@@ -70,8 +70,8 @@
     "semantic_hash": ""
   },
   "app/sitemap.ts": {
-    "mtime": 1788546527.8136103,
-    "ast_hash": "e18ab51bd41330cc5e33dc821592b0f6",
+    "mtime": 1786557424.1671078,
+    "ast_hash": "3adf88fb220bf5f8a3606732164bde2f",
     "semantic_hash": ""
   },
   "app/terms/page.tsx": {
@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "next.config.ts": {
-    "mtime": 1788546527.81309,
-    "ast_hash": "f0a0f7f398f70a2e2fe7cacdc595132b",
+    "mtime": 1788455698.0141635,
+    "ast_hash": "8137254f2e7b08456e09da4ce41c8cce",
     "semantic_hash": ""
   },
   "outsourcepro-full-website/assets/js/main.js": {
@@ -145,8 +145,8 @@
     "semantic_hash": "dffd04f23dab07cadaa6e245a95533ca"
   },
   "package.json": {
-    "mtime": 1788546603.3150275,
-    "ast_hash": "8c85512a8d6aad031b56b4ba9cf9da45",
+    "mtime": 1788282630.765088,
+    "ast_hash": "68bdb4a3fbe267e6186bd57ce5eb0e71",
     "semantic_hash": ""
   },
   "postcss.config.mjs": {
@@ -720,8 +720,8 @@
     "semantic_hash": ""
   },
   "app/solutions/[slug]/page.tsx": {
-    "mtime": 1788546852.3407912,
-    "ast_hash": "a4f7a7db700f5de05b6b4f0df6f748d0",
+    "mtime": 1786558093.7044158,
+    "ast_hash": "1c6dae9e5f2286a67d32537ba757feb4",
     "semantic_hash": ""
   },
   "lib/industries.ts": {
@@ -730,8 +730,8 @@
     "semantic_hash": ""
   },
   "lib/solutions.ts": {
-    "mtime": 1788546852.3403463,
-    "ast_hash": "f1bc7a902e2ab0b677f8dcdb92e8ef89",
+    "mtime": 1786557729.035397,
+    "ast_hash": "beccc288d07a113b91261e2371c09f86",
     "semantic_hash": ""
   },
   "docs/seo-keyword-plan.md": {
@@ -757,6 +757,16 @@
   "app/locations/page.tsx": {
     "mtime": 1786566452.1848314,
     "ast_hash": "9a5a38a5cf0e8447351ebb73e5a66e52",
+    "semantic_hash": ""
+  },
+  "app/sitemap_index.xml/route.ts": {
+    "mtime": 1788281015.0299075,
+    "ast_hash": "a079e663d9bc2fcae8ce7d91c8fe6e45",
+    "semantic_hash": ""
+  },
+  "app/sitemapindex.xml/route.ts": {
+    "mtime": 1788281015.0775843,
+    "ast_hash": "2caa9265d0069f7211781871e67519cb",
     "semantic_hash": ""
   },
   "app/sitemaps/[section]/route.ts": {
@@ -830,8 +840,8 @@
     "semantic_hash": ""
   },
   "lib/sitemap-sections.ts": {
-    "mtime": 1788546527.8142283,
-    "ast_hash": "c34e1e70e0c49d463525cfce0f671d13",
+    "mtime": 1788455759.7190042,
+    "ast_hash": "9a420a7af6f67d8011710b1f324c1e03",
     "semantic_hash": ""
   },
   "ChatGPT Image Jul 17, 2026, 12_02_26 PM.png": {
@@ -870,8 +880,8 @@
     "semantic_hash": ""
   },
   "public/llms.txt": {
-    "mtime": 1788546527.8145878,
-    "ast_hash": "47c8c94806953b4fad3f68dfd7b377e2",
+    "mtime": 1788455520.8069897,
+    "ast_hash": "c9ec626f83feec86309d7a13f81a284b",
     "semantic_hash": ""
   },
   "public/assets/img/unsplash/photo-1436491865332-7a61a109cc05.jpg": {
@@ -1422,26 +1432,6 @@
   "public/assets/img/unsplash/photo-1611348586804-61bf6c080437.jpg": {
     "mtime": 1788455674.5517323,
     "ast_hash": "87063f40e1d59f4ed6ec658682fc4bb6",
-    "semantic_hash": ""
-  },
-  ".indexnow/manifest.json": {
-    "mtime": 1788546603.2176788,
-    "ast_hash": "8a80554c91d9fca8acb82f023de02f11",
-    "semantic_hash": ""
-  },
-  "app/indexnow/[key]/route.ts": {
-    "mtime": 1788546603.217068,
-    "ast_hash": "eaded1f302b5e3a2d010870f2566b28c",
-    "semantic_hash": ""
-  },
-  "scripts/indexnow.mjs": {
-    "mtime": 1788546705.3949993,
-    "ast_hash": "d752a2f6eac5acde0a5f8c8eec23bf03",
-    "semantic_hash": ""
-  },
-  "scripts/indexnow.test.mjs": {
-    "mtime": 1788546705.3974147,
-    "ast_hash": "263a171218972da0ae1d7c8ab7015c46",
     "semantic_hash": ""
   }
 }

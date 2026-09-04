@@ -65,16 +65,8 @@ export const SECTIONS: Record<string, Entry[]> = {
 
 export const SECTION_NAMES = Object.keys(SECTIONS);
 
-/** Every URL in one list, for the flat /sitemap.xml that is already submitted. */
+/** Every URL in one list, for the canonical /sitemap.xml. */
 export const ALL_ENTRIES: Entry[] = SECTION_NAMES.flatMap((n) => SECTIONS[n]);
-
-/** Newest lastModified in a section — the value its parent index should carry. */
-export function sectionLastmod(name: string): Date {
-  const times = SECTIONS[name].map((e) =>
-    e.lastModified ? new Date(e.lastModified).getTime() : 0,
-  );
-  return new Date(Math.max(...times));
-}
 
 const xmlEscape = (s: string) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -100,21 +92,6 @@ export function renderUrlset(entries: Entry[]): string {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls}
 </urlset>
-`;
-}
-
-/** The sitemap index body, shared by /sitemapindex.xml and the legacy path. */
-export function renderSitemapIndex(): string {
-  const children = SECTION_NAMES.map((name) => {
-    const loc = `${BASE}/sitemaps/${name}.xml`;
-    const lastmod = sectionLastmod(name).toISOString();
-    return `  <sitemap>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </sitemap>`;
-  }).join("\n");
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${children}
-</sitemapindex>
 `;
 }
 
