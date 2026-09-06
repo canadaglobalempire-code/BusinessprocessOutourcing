@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { ALL_ENTRIES } from "@/lib/sitemap-sections";
 
+export const revalidate = 300;
+
 /*
  * The canonical sitemap: flat, every URL, one document.
  *

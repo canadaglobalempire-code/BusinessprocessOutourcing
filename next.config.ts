@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 const HOST = "businessprocessoutsourcing.info";
 
 const nextConfig: NextConfig = {
+  // Bound stale ISR responses on Hostinger; hashed assets keep Next's long cache.
+  expireTime: 600,
   images: {
     // All imagery is self-hosted under public/assets/img and goes through
     // Next's built-in optimizer; no remote image hosts are used.

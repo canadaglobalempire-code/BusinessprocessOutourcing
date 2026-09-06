@@ -6,6 +6,9 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ModalProvider } from "@/components/modal";
 
+// Refresh prerendered pages without letting the CDN retain an old build for a year.
+export const revalidate = 300;
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
