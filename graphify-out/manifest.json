@@ -90,8 +90,8 @@
     "semantic_hash": ""
   },
   "components/lead-form.tsx": {
-    "mtime": 1784567274.7424326,
-    "ast_hash": "6238e6b2668d4735c4918a6d1a634c66",
+    "mtime": 1788659810.77366,
+    "ast_hash": "13321c61da36328bb19241c455e9477e",
     "semantic_hash": ""
   },
   "components/modal.tsx": {
@@ -725,8 +725,8 @@
     "semantic_hash": ""
   },
   "lib/industries.ts": {
-    "mtime": 1786576709.457388,
-    "ast_hash": "47faf9d325508208606c5cd257f3ccce",
+    "mtime": 1788659810.7181728,
+    "ast_hash": "a58b7b5bedaaeb3bb9ea8195b0c07a0b",
     "semantic_hash": ""
   },
   "lib/solutions.ts": {

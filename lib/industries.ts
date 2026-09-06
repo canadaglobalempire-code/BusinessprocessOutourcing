@@ -279,10 +279,35 @@ export const INDUSTRIES: Industry[] = [
   },
   {
     name: "Energy and Utilities",
+    seoTitle: "Utilities Process Outsourcing | Energy Customer Support",
     summary:
       "Utility support for demand spikes, billing inquiries, payment arrangements, outage updates, connection processing, and collections.",
     metaDescription:
-      "Outsource energy and utility call center support for billing inquiries, payment arrangements, outage updates, collections, and demand spikes.",
+      "Utilities process outsourcing for billing, payment arrangements, outage updates, connection processing, collections, and customer support peaks.",
+    seoIntro:
+      "Utilities process outsourcing helps electricity, gas, water, and energy service providers handle billing questions, payment arrangements, outage contact, new connections, and seasonal demand without carrying peak staffing year-round.",
+    seoBody: {
+      heading: "Utility customer processes built for predictable peaks and sudden events.",
+      paragraphs: [
+        "Utility contact is uneven by design. Billing cycles, rate changes, storms, planned maintenance, and service disruptions can multiply demand in hours. Outsourced overflow and extended-hours coverage absorbs those peaks while your internal specialists stay focused on field operations and complex account decisions.",
+        "Routine work such as balance inquiries, payment-plan intake, connection processing, meter-reading questions, and status updates follows documented rules and can be handled consistently by a trained support team. Safety reports, vulnerable-customer cases, and account exceptions are routed through escalation paths agreed before launch.",
+        "The programme works inside your approved systems and scripts, with reporting on contact reasons, queue pressure, escalations, and unresolved demand. Start with one process or overflow window, then add channels and coverage after the workflow is proven.",
+      ],
+    },
+    serviceDetails: {
+      "Manage spikes in customer demands":
+        "Add overflow capacity for billing cycles, rate changes, weather events, planned maintenance, and other periods when contact rises faster than an internal team can scale.",
+      "Credit management including collections and payment arrangements":
+        "Handle approved payment-plan intake, balance questions, reminders, and early collections activity within the policies and escalation limits you define.",
+      "Customer management including fee reversals, balance inquiries and billing inquiries":
+        "Resolve routine account and billing questions from documented rules, while routing disputes and exceptions to the right internal owner.",
+      "Customer acquisition including connection processing and insurance referrals":
+        "Support new connection requests, account setup, required information capture, and approved referrals without slowing internal operations teams.",
+      "Outage and service update support":
+        "Share approved restoration and service-status information, capture incident details, and escalate safety-related reports through a separate urgent path.",
+      "Meter reading inquiry support":
+        "Answer common meter-reading questions, record customer-submitted information, and route suspected faults or account exceptions for review.",
+    },
     services: [
       "Manage spikes in customer demands",
       "Credit management including collections and payment arrangements",
@@ -290,6 +315,11 @@ export const INDUSTRIES: Industry[] = [
       "Customer acquisition including connection processing and insurance referrals",
       "Outage and service update support",
       "Meter reading inquiry support",
+    ],
+    crossLinks: [
+      { href: "/blog/utility-outage-call-handling", label: "Utility outage call handling guide" },
+      { href: "/services/customer-support", label: "Customer support outsourcing" },
+      { href: "/services/after-hours-answering-service", label: "After-hours answering service" },
     ],
   },
   {

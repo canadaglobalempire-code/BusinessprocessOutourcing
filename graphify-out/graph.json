@@ -1932,7 +1932,7 @@
       "label": "slugify()",
       "file_type": "code",
       "source_file": "lib/industries.ts",
-      "source_location": "L502",
+      "source_location": "L532",
       "_origin": "ast",
       "id": "lib_industries_slugify",
       "community": 8,
@@ -1943,7 +1943,7 @@
       "label": "getIndustry()",
       "file_type": "code",
       "source_file": "lib/industries.ts",
-      "source_location": "L510",
+      "source_location": "L540",
       "_origin": "ast",
       "id": "lib_industries_getindustry",
       "community": 8,
@@ -10374,7 +10374,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "lib/industries.ts",
-      "source_location": "L510",
+      "source_location": "L540",
       "weight": 1.0,
       "source": "lib_industries",
       "target": "lib_industries_getindustry",
@@ -10404,7 +10404,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "lib/industries.ts",
-      "source_location": "L502",
+      "source_location": "L532",
       "weight": 1.0,
       "source": "lib_industries",
       "target": "lib_industries_slugify",
@@ -10438,7 +10438,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "lib/industries.ts",
-      "source_location": "L511",
+      "source_location": "L541",
       "weight": 1.0,
       "source": "lib_industries_getindustry",
       "target": "lib_industries_industries"
@@ -10459,7 +10459,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "lib/industries.ts",
-      "source_location": "L511",
+      "source_location": "L541",
       "weight": 1.0,
       "source": "lib_industries_getindustry",
       "target": "lib_industries_slugify",
@@ -13487,5 +13487,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "14a55e9bdcacd3b2d8555d9f6fa1d4fadbc189d7"
+  "built_at_commit": "f733b74095d6bbd0df2e7b1000b19a595f49a1e9"
 }

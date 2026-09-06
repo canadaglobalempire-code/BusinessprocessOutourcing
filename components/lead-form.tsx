@@ -114,8 +114,8 @@ export function LeadForm({
               <input name="name" autoComplete="name" required />
             </label>
             <label className="field">
-              Company Name*
-              <input name="company" autoComplete="organization" required />
+              Company Name
+              <input name="company" autoComplete="organization" />
             </label>
           </div>
 
@@ -137,8 +137,8 @@ export function LeadForm({
 
           <div className="form-grid">
             <label className="field">
-              What type of call centre services do you need?*
-              <select name="call_centre_service" defaultValue="" required>
+              What type of call centre services do you need?
+              <select name="call_centre_service" defaultValue="">
                 <option value="" disabled>
                   Select an option
                 </option>
@@ -151,8 +151,8 @@ export function LeadForm({
             </label>
 
             <label className="field">
-              What solution are you looking for?*
-              <select name="solution" defaultValue={contactSolution} required>
+              What solution are you looking for?
+              <select name="solution" defaultValue={contactSolution}>
                 <option value="" disabled>
                   Select an option
                 </option>

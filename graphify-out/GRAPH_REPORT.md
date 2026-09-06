@@ -1,7 +1,7 @@
-# Graph Report - Business oursourcing  (2026-09-04)
+# Graph Report - Business oursourcing  (2026-09-05)
 
 ## Corpus Check
-- 82 files · ~1,741,218 words
+- 82 files · ~1,741,574 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `14a55e9b`
+- Built from commit: `f733b740`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
