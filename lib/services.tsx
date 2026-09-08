@@ -300,6 +300,20 @@ export const SERVICES: Service[] = [
     related: ["content-creation", "ecommerce-support", "customer-support"],
   },
   {
+    concerns: [
+      {
+        q: "What should an ecommerce support brief include?",
+        a: "Start with the stores and marketplaces you operate, the questions shoppers ask most often, and your normal and peak contact volumes. Include return windows, refund approval limits, delivery policies and the systems agents will use. Separating customer enquiries from catalogue or order administration makes the scope easier to price and manage.",
+      },
+      {
+        q: "Can I outsource order support while keeping refund decisions in-house?",
+        a: "Define that boundary in the support workflow. Agents can collect order details, explain the published policy and prepare an escalation, while your team retains approval for refunds, exceptions and sensitive account changes. Agree which actions can be completed directly and which require your permission before access is granted.",
+      },
+      {
+        q: "How should I compare ecommerce outsourcing quotes?",
+        a: "Compare the same channels, coverage hours, expected workload and responsibilities. Ask whether store administration, training, peak-season capacity and reporting are included. A low hourly rate is difficult to assess without knowing how much work the team can handle and which tasks remain with your employees.",
+      },
+    ],
     slug: "ecommerce-support",
     name: "E-commerce Support",
     accent: "accent-yellow",
@@ -308,7 +322,7 @@ export const SERVICES: Service[] = [
       "Product, order, marketplace, customer care, and store operations support.",
     metaTitle: "E-commerce Support Outsourcing | Online Store Support",
     metaDescription:
-      "Outsource e-commerce support for product listings, order processing, inventory updates, marketplace management, customer care, and returns.",
+      "Ecommerce support outsourcing for product questions, order tracking, returns and store administration. Plan channels, permissions and seasonal coverage.",
     heroDesc:
       "Outsource e-commerce support for product listings, order processing, inventory updates, marketplace management, customer care, and returns. We keep your storefront accurate, orders moving, and customers looked after.",
     heroImage: "/assets/img/service-ecommerce-support.jpg",
@@ -362,6 +376,20 @@ export const SERVICES: Service[] = [
     related: ["digital-marketing", "ecommerce-support", "virtual-assistance"],
   },
   {
+    concerns: [
+      {
+        q: "Which technical support tasks should I outsource first?",
+        a: "Begin with repeatable issues that have a documented resolution: access questions, setup assistance, common product errors and ticket triage. Keep engineering changes and exceptional decisions with the people authorised to make them. A clear support boundary helps agents resolve familiar problems and hand off unfamiliar ones with useful context.",
+      },
+      {
+        q: "What information should a technical escalation contain?",
+        a: "A useful handoff identifies the affected product, the customer's description, error messages, when the issue began and the troubleshooting already attempted. Agree the required fields, urgency categories and destination team in advance. Collect only the information needed for the task and use your approved process for sensitive account details.",
+      },
+      {
+        q: "What affects the cost and launch time of technical support outsourcing?",
+        a: "Product complexity, support hours, ticket volume, languages and the depth of troubleshooting all affect the scope. Training materials, test accounts and a named escalation contact help define readiness. Share these requirements through the contact form so the proposal reflects the support work you need, rather than an assumed generic helpdesk.",
+      },
+    ],
     slug: "technical-support",
     name: "IT & Technical Support",
     accent: "accent-mint",
@@ -370,7 +398,7 @@ export const SERVICES: Service[] = [
       "Reliable first-line technical help, documentation, onboarding, and troubleshooting.",
     metaTitle: "IT & Technical Support Outsourcing Services",
     metaDescription:
-      "Outsource IT and technical support for first-line help desk, ticket triage, user onboarding, documentation, troubleshooting, and monitoring support.",
+      "Technical support outsourcing for first-line troubleshooting, ticket triage and escalation. Define supported products, access limits and handoff requirements.",
     heroDesc:
       "Outsource IT and technical support for first-line help desk, ticket triage, user onboarding, documentation, troubleshooting, and monitoring support. We keep users unblocked and your knowledge base current.",
     heroImage: "/assets/img/service-technical-support.jpg",
@@ -424,6 +452,20 @@ export const SERVICES: Service[] = [
     related: ["virtual-assistance", "accounting-support", "digital-marketing"],
   },
   {
+    concerns: [
+      {
+        q: "How do I define a qualified lead before outsourcing?",
+        a: "Write down the company or customer profile you want, the need your offer solves and the information your sales team requires before following up. Distinguish a researched contact, a person who expressed interest and an accepted sales opportunity. These are different outcomes and should not be counted as if they were interchangeable.",
+      },
+      {
+        q: "What should I supply for a lead generation campaign?",
+        a: "Prepare your target audience, offer, approved messaging, qualification questions and sales handoff process. Clarify who supplies contact data and who approves outreach channels and suppression rules. Give the team a named sales contact and a way to record rejected leads so feedback can improve the next round of qualification.",
+      },
+      {
+        q: "How should I measure outsourced lead generation?",
+        a: "Review accepted leads and sales follow-up alongside activity totals. Track why leads are accepted or rejected, whether appointments are attended and what happens after the handoff. Set targets after reviewing your audience and campaign scope; a volume of calls or a booked meeting does not by itself guarantee a sale.",
+      },
+    ],
     slug: "lead-generation",
     name: "Lead Generation",
     accent: "accent-purple",
@@ -432,7 +474,7 @@ export const SERVICES: Service[] = [
       "Prospect research, qualification, outreach support, and appointment-ready leads.",
     metaTitle: "Lead Generation Outsourcing Services",
     metaDescription:
-      "Outsource lead generation for prospect research, lead list building, qualification, outbound campaign support, appointment handoff, and CRM updates.",
+      "Lead generation outsourcing for prospect research, qualification and appointment support. Define your audience, handoff criteria and campaign reporting.",
     heroDesc:
       "Outsource lead generation for prospect research, lead list building, qualification, outbound campaign support, appointment handoff, and CRM updates. We help your team spend more time speaking with the right opportunities.",
     heroImage: "/assets/img/service-digital-marketing.jpg",
