@@ -95,15 +95,6 @@ const structuredData = {
         url: "https://businessprocessoutsourcing.info/contact",
         availableLanguage: "English",
       },
-      serviceType: [
-        "Business process outsourcing",
-        "Call center outsourcing",
-        "Customer support outsourcing",
-        "Technical support outsourcing",
-        "Back-office outsourcing",
-        "Data entry outsourcing",
-        "Lead generation outsourcing",
-      ],
     },
     {
       "@type": "WebSite",
