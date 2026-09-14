@@ -114,19 +114,26 @@ export function LeadForm({
               <input name="name" autoComplete="name" required />
             </label>
             <label className="field">
-              Company Name
-              <input name="company" autoComplete="organization" />
+              Company Name*
+              <input name="company" autoComplete="organization" required />
             </label>
           </div>
 
           <div className="form-grid">
             <label className="field">
-              Website / URL
-              <input type="text" name="website" autoComplete="url" />
+              Website / URL*
+              {/* Any text counts, so a business without a site can enter N/A. */}
+              <input
+                type="text"
+                name="website"
+                autoComplete="url"
+                placeholder="yourcompany.com or N/A"
+                required
+              />
             </label>
             <label className="field">
-              Phone Number
-              <input type="tel" name="phone" autoComplete="tel" />
+              Phone Number*
+              <input type="tel" name="phone" autoComplete="tel" required />
             </label>
           </div>
 
@@ -137,8 +144,8 @@ export function LeadForm({
 
           <div className="form-grid">
             <label className="field">
-              What type of call centre services do you need?
-              <select name="call_centre_service" defaultValue="">
+              What type of call centre services do you need?*
+              <select name="call_centre_service" defaultValue="" required>
                 <option value="" disabled>
                   Select an option
                 </option>
@@ -151,8 +158,8 @@ export function LeadForm({
             </label>
 
             <label className="field">
-              What solution are you looking for?
-              <select name="solution" defaultValue={contactSolution}>
+              What solution are you looking for?*
+              <select name="solution" defaultValue={contactSolution} required>
                 <option value="" disabled>
                   Select an option
                 </option>
@@ -167,8 +174,8 @@ export function LeadForm({
 
           <div className="form-grid">
             <label className="field">
-              How many call center agents do you require?
-              <select name="agent_count" defaultValue="">
+              How many call center agents do you require?*
+              <select name="agent_count" defaultValue="" required>
                 <option value="" disabled>
                   Select an option
                 </option>
@@ -180,8 +187,8 @@ export function LeadForm({
               </select>
             </label>
             <label className="field">
-              Call volume (records/month)?
-              <select name="call_volume" defaultValue="">
+              Call volume (records/month)?*
+              <select name="call_volume" defaultValue="" required>
                 <option value="" disabled>
                   Select an option
                 </option>
@@ -215,7 +222,7 @@ export function LeadForm({
 
           <label className="field">
             Company
-            <input name="company" autoComplete="organization" />
+            <input name="company" autoComplete="organization" required />
           </label>
 
           <label className="field">
