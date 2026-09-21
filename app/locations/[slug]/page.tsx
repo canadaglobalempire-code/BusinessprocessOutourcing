@@ -55,9 +55,14 @@ export default async function LocationDetail({ params }: Params) {
   const index = LOCATIONS.indexOf(location);
   const accent = ACCENTS[index % ACCENTS.length];
   const contactUrl = `/contact?service=${encodeURIComponent(location.name)}`;
-  const related = LOCATIONS.filter(
-    (item) => item !== location && item.kind === location.kind,
-  ).slice(0, 3);
+  // The next three locations of the same kind, wrapping around. Taking the
+  // first three made every location page link to the same three pages and left
+  // the rest with no sibling links at all.
+  const sameKind = LOCATIONS.filter((item) => item.kind === location.kind);
+  const position = sameKind.indexOf(location);
+  const related = [1, 2, 3]
+    .map((step) => sameKind[(position + step) % sameKind.length])
+    .filter((item) => item && item !== location);
   const image = LOCATION_IMAGES[location.slug] ?? {
     src: "/assets/img/services-overview.jpg",
     alt: `Outsourced support team working with ${location.name}`,

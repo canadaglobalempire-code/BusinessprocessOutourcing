@@ -2,6 +2,8 @@ import type { FaqItem } from "@/components/faq";
 import type { Solution } from "./solutions";
 import type { Service } from "./services";
 import type { Industry } from "./industries";
+import { slugify } from "./industries";
+import { PAGE_FAQS } from "./page-faqs";
 
 function joinList(items: string[]): string {
   if (items.length <= 1) return items[0] ?? "";
@@ -13,6 +15,9 @@ function joinList(items: string[]): string {
    solution/service/industry page gets unique, direct-answer FAQ content
    (for AEO) instead of duplicate boilerplate text. */
 export function solutionFaq(solution: Solution): FaqItem[] {
+  // Hand-written FAQs win; the formula below is only the fallback.
+  const written = PAGE_FAQS[`solutions/${slugify(solution.title)}`];
+  if (written?.length) return written;
   const lower = solution.title.toLowerCase();
   return [
     {
@@ -35,6 +40,9 @@ export function solutionFaq(solution: Solution): FaqItem[] {
 }
 
 export function serviceFaq(service: Service): FaqItem[] {
+  // Hand-written FAQs win; the formula below is only the fallback.
+  const written = PAGE_FAQS[`services/${service.slug}`];
+  if (written?.length) return written;
   const lower = service.name.toLowerCase();
   const taskNames = service.tasks.slice(0, 4).map((t) => t.title);
   return [
@@ -58,6 +66,9 @@ export function serviceFaq(service: Service): FaqItem[] {
 }
 
 export function industryFaq(industry: Industry): FaqItem[] {
+  // Hand-written FAQs win; the formula below is only the fallback.
+  const written = PAGE_FAQS[`industries/${slugify(industry.name)}`];
+  if (written?.length) return written;
   const lower = industry.name.toLowerCase();
   const needs = industry.services.slice(0, 4);
   return [

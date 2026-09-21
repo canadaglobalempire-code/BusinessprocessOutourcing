@@ -45,6 +45,17 @@ export default async function Article({ params }: Params) {
   const post = getPost(slug);
   if (!post) notFound();
 
+  // Three related posts: same topic first, then the next posts in order,
+  // wrapping around, so every article is linked from other articles.
+  const position = POSTS.indexOf(post);
+  const inOrder = POSTS.map((_, step) => POSTS[(position + 1 + step) % POSTS.length]).filter(
+    (item) => item !== post,
+  );
+  const relatedPosts = [
+    ...inOrder.filter((item) => item.tag === post.tag),
+    ...inOrder.filter((item) => item.tag !== post.tag),
+  ].slice(0, 3);
+
   const published = new Date(post.date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -131,6 +142,12 @@ export default async function Article({ params }: Params) {
             <h2>Keep learning.</h2>
           </div>
           <div className="related-grid">
+            {relatedPosts.map((item) => (
+              <Link key={item.slug} className="related-card" href={`/blog/${item.slug}`}>
+                <strong>{item.title}</strong>
+                <span>→</span>
+              </Link>
+            ))}
             <Link className="related-card" href="/blog">
               <strong>View all articles</strong>
               <span>→</span>
