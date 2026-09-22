@@ -471,6 +471,8 @@ function RankedBpoList({ count = 10 }: { count?: number }) {
 export type Post = {
   slug: string;
   date: string;
+  /** Set when the body was rewritten after publication; drives sitemap lastmod. */
+  updated?: string;
   title: string;
   tag: string;
   read: string;
@@ -491,6 +493,7 @@ export const POSTS: Post[] = [
   {
     slug: "logistics-exception-handling-outsourcing",
     date: "2026-08-12",
+    updated: "2026-09-22",
     title: "Outsourcing logistics exception handling",
     tag: "Logistics",
     read: "7 min read",
@@ -592,6 +595,7 @@ export const POSTS: Post[] = [
   {
     slug: "university-admissions-call-handling",
     date: "2026-08-12",
+    updated: "2026-09-22",
     title: "Handling admissions and enrolment call peaks",
     tag: "Education",
     read: "7 min read",
@@ -687,6 +691,7 @@ export const POSTS: Post[] = [
   {
     slug: "bpo-for-airlines",
     date: "2026-08-11",
+    updated: "2026-09-22",
     title: "How airlines outsource disruption and rebooking calls",
     tag: "Airlines",
     read: "7 min read",
@@ -790,6 +795,7 @@ export const POSTS: Post[] = [
   {
     slug: "hotel-and-hospitality-outsourcing",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "Outsourcing hotel reservations and guest support",
     tag: "Hospitality",
     read: "7 min read",
@@ -895,6 +901,7 @@ export const POSTS: Post[] = [
   {
     slug: "utility-outage-call-handling",
     date: "2026-08-09",
+    updated: "2026-09-22",
     title: "Handling utility outage calls without drowning",
     tag: "Energy & Utilities",
     read: "7 min read",
@@ -1002,6 +1009,7 @@ export const POSTS: Post[] = [
   {
     slug: "telecom-customer-service-outsourcing",
     date: "2026-08-08",
+    updated: "2026-09-22",
     title: "Telecom customer service outsourcing that cuts churn",
     tag: "Telecommunications",
     read: "7 min read",
@@ -1106,6 +1114,7 @@ export const POSTS: Post[] = [
   {
     slug: "insurance-claims-outsourcing",
     date: "2026-08-07",
+    updated: "2026-09-22",
     title: "Outsourcing insurance claims intake and FNOL",
     tag: "Insurance",
     read: "7 min read",
@@ -1210,6 +1219,7 @@ export const POSTS: Post[] = [
   {
     slug: "what-to-outsource",
     date: "2026-07-10",
+    updated: "2026-09-22",
     title: "What should your business outsource first?",
     tag: "Strategy",
     read: "7 min read",
@@ -1331,6 +1341,7 @@ export const POSTS: Post[] = [
   {
     slug: "outsourcing-vs-hiring",
     date: "2026-06-22",
+    updated: "2026-09-22",
     title: "Outsourcing vs. hiring: how to choose",
     tag: "Operations",
     read: "7 min read",
@@ -1437,6 +1448,7 @@ export const POSTS: Post[] = [
   {
     slug: "customer-support",
     date: "2026-06-04",
+    updated: "2026-09-22",
     title: "A better customer support outsourcing playbook",
     tag: "Customer support",
     read: "7 min read",
@@ -1541,6 +1553,7 @@ export const POSTS: Post[] = [
   {
     slug: "remote-onboarding",
     date: "2026-05-17",
+    updated: "2026-09-22",
     title: "How to onboard a remote outsourced team",
     tag: "Team management",
     read: "7 min read",
@@ -1650,6 +1663,7 @@ export const POSTS: Post[] = [
   {
     slug: "data-security",
     date: "2026-04-29",
+    updated: "2026-09-22",
     title: "Data security questions to ask an outsourcing partner",
     tag: "Security",
     read: "7 min read",
@@ -1774,6 +1788,7 @@ export const POSTS: Post[] = [
   {
     slug: "scale-operations",
     date: "2026-04-11",
+    updated: "2026-09-22",
     title: "How outsourcing helps operations scale",
     tag: "Growth",
     read: "7 min read",
@@ -1875,6 +1890,7 @@ export const POSTS: Post[] = [
   {
     slug: "virtual-assistant-tasks",
     date: "2026-03-24",
+    updated: "2026-09-22",
     title: "What to delegate to a virtual assistant first",
     tag: "Virtual Assistance",
     read: "7 min read",
@@ -1988,6 +2004,7 @@ export const POSTS: Post[] = [
   {
     slug: "outsource-bookkeeping",
     date: "2026-03-06",
+    updated: "2026-09-22",
     title: "When to outsource bookkeeping and accounting support",
     tag: "Accounting",
     read: "7 min read",
@@ -2094,6 +2111,7 @@ export const POSTS: Post[] = [
   {
     slug: "outsource-digital-marketing",
     date: "2026-02-16",
+    updated: "2026-09-22",
     title: "How to outsource digital marketing without losing your brand",
     tag: "Marketing",
     read: "7 min read",
@@ -2190,6 +2208,7 @@ export const POSTS: Post[] = [
   {
     slug: "ecommerce-support-outsourcing",
     date: "2026-01-29",
+    updated: "2026-09-22",
     title: "Scaling e-commerce operations with outsourced support",
     tag: "E-commerce",
     read: "7 min read",
@@ -2289,6 +2308,7 @@ export const POSTS: Post[] = [
   {
     slug: "outsource-content-creation",
     date: "2026-01-11",
+    updated: "2026-09-22",
     title: "Outsourcing content creation that stays on brand",
     tag: "Content",
     read: "7 min read",
@@ -2393,6 +2413,7 @@ export const POSTS: Post[] = [
   {
     slug: "outsource-technical-support",
     date: "2025-12-24",
+    updated: "2026-09-22",
     title: "Building an outsourced technical support desk",
     tag: "Technical Support",
     read: "7 min read",
@@ -2493,6 +2514,7 @@ export const POSTS: Post[] = [
   {
     slug: "outsource-data-entry-research",
     date: "2025-12-06",
+    updated: "2026-09-22",
     title: "Outsourcing data entry and research the right way",
     tag: "Data & Research",
     read: "7 min read",
@@ -2594,6 +2616,7 @@ export const POSTS: Post[] = [
   {
     slug: "outsource-lead-generation",
     date: "2025-11-18",
+    updated: "2026-09-22",
     title: "Outsourced lead generation that fills your pipeline",
     tag: "Lead Generation",
     read: "7 min read",
@@ -2836,6 +2859,7 @@ export const POSTS: Post[] = [
   {
     slug: "legal-call-centers-guide",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "Legal call centers: what they do and when a firm needs one",
     tag: "Legal",
     read: "7 min read",
@@ -3310,6 +3334,7 @@ export const POSTS: Post[] = [
   {
     slug: "nearshore-vs-offshore-call-centers",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "Nearshore vs offshore call centers: which fits your volume",
     tag: "Strategy",
     read: "7 min read",
@@ -3414,6 +3439,7 @@ export const POSTS: Post[] = [
   {
     slug: "outsourced-customer-service-cost",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "What outsourced customer service actually costs",
     tag: "Strategy",
     read: "7 min read",
@@ -3652,6 +3678,7 @@ export const POSTS: Post[] = [
   {
     slug: "hipaa-compliance-outsourcing-patient-calls",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "HIPAA compliance when outsourcing patient calls",
     tag: "Healthcare",
     read: "7 min read",
@@ -3981,6 +4008,7 @@ export const POSTS: Post[] = [
   {
     slug: "call-center-kpis-that-matter",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "The call center KPIs that actually matter",
     tag: "Operations",
     read: "7 min read",
@@ -4101,6 +4129,7 @@ export const POSTS: Post[] = [
   {
     slug: "what-is-speech-analytics",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "What speech analytics is, and when it is worth buying",
     tag: "Operations",
     read: "7 min read",
@@ -4205,6 +4234,7 @@ export const POSTS: Post[] = [
   {
     slug: "pci-compliance-phone-payments",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "PCI compliance for phone payments: what you must do",
     tag: "Compliance",
     read: "7 min read",
@@ -4307,6 +4337,7 @@ export const POSTS: Post[] = [
   {
     slug: "inbound-vs-outbound-call-centers",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "Inbound vs outbound call centers: which do you need",
     tag: "Strategy",
     read: "7 min read",
@@ -4423,6 +4454,7 @@ export const POSTS: Post[] = [
   {
     slug: "reduce-customer-support-costs",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "How to reduce support costs without losing quality",
     tag: "Strategy",
     read: "7 min read",
@@ -4537,6 +4569,7 @@ export const POSTS: Post[] = [
   {
     slug: "what-24-7-support-really-takes",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "What 24/7 customer support really takes",
     tag: "Operations",
     read: "7 min read",
@@ -4637,6 +4670,7 @@ export const POSTS: Post[] = [
   {
     slug: "omnichannel-vs-multichannel-support",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "Omnichannel vs multichannel support: the real difference",
     tag: "Strategy",
     read: "7 min read",
@@ -4744,6 +4778,7 @@ export const POSTS: Post[] = [
   {
     slug: "outsourcing-rfp-guide",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "How to write a call center RFP that gets useful answers",
     tag: "Strategy",
     read: "7 min read",
@@ -4844,6 +4879,7 @@ export const POSTS: Post[] = [
   {
     slug: "outsourced-support-first-90-days",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "Launching an outsourced support team: the first 90 days",
     tag: "Operations",
     read: "7 min read",
@@ -4947,6 +4983,7 @@ export const POSTS: Post[] = [
   {
     slug: "gdpr-outsourcing-customer-support",
     date: "2026-08-10",
+    updated: "2026-09-22",
     title: "GDPR and outsourcing customer support in Europe",
     tag: "Compliance",
     read: "7 min read",

@@ -17,6 +17,8 @@ export const BASE = "https://businessprocessoutsourcing.info";
  * change; blog posts carry their own publication date.
  */
 export const CONTENT_UPDATED = new Date("2026-08-12T00:00:00.000Z");
+/* Detail pages gained page-specific FAQs and primary-source links (09-21/22). */
+export const DETAIL_UPDATED = new Date("2026-09-22T00:00:00.000Z");
 
 type Entry = MetadataRoute.Sitemap[number];
 
@@ -49,17 +51,17 @@ export const SECTIONS: Record<string, Entry[]> = {
     entry("/why-choose-us", 0.6),
   ],
 
-  services: SERVICES.map((s) => entry(`/services/${s.slug}`, 0.9)),
+  services: SERVICES.map((s) => entry(`/services/${s.slug}`, 0.9, DETAIL_UPDATED)),
 
-  locations: LOCATIONS.map((l) => entry(`/locations/${l.slug}`, 0.8)),
+  locations: LOCATIONS.map((l) => entry(`/locations/${l.slug}`, 0.8, DETAIL_UPDATED)),
 
-  industries: INDUSTRIES.map((i) => entry(`/industries/${slugify(i.name)}`, 0.8)),
+  industries: INDUSTRIES.map((i) => entry(`/industries/${slugify(i.name)}`, 0.8, DETAIL_UPDATED)),
 
-  solutions: SOLUTIONS.map((s) => entry(`/solutions/${slugify(s.title)}`, 0.7)),
+  solutions: SOLUTIONS.map((s) => entry(`/solutions/${slugify(s.title)}`, 0.7, DETAIL_UPDATED)),
 
   blog: [
-    entry("/blog", 0.8, CONTENT_UPDATED, "weekly"),
-    ...POSTS.map((p) => entry(`/blog/${p.slug}`, 0.6, new Date(p.date))),
+    entry("/blog", 0.8, DETAIL_UPDATED, "weekly"),
+    ...POSTS.map((p) => entry(`/blog/${p.slug}`, 0.6, new Date(p.updated ?? p.date))),
   ],
 };
 
