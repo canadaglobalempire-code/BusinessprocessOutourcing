@@ -12,6 +12,7 @@ import { LeadCta } from "@/components/lead-cta";
 import { CrossLinks } from "@/components/cross-links";
 import { serviceFaq } from "@/lib/faq-content";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { citeSources } from "@/lib/cite-sources";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -31,6 +32,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 }
 
 export default async function ServiceDetail({ params }: Params) {
+  const cited = new Set<string>();
   const { slug } = await params;
   const service = getService(slug);
   if (!service) notFound();
@@ -166,7 +168,7 @@ export default async function ServiceDetail({ params }: Params) {
               <Reveal as="article" key={block.heading} className="deep-dive-block">
                 <h2>{block.heading}</h2>
                 {block.paragraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                  <p key={paragraph}>{citeSources(paragraph, cited)}</p>
                 ))}
               </Reveal>
             ))}
@@ -261,7 +263,7 @@ export default async function ServiceDetail({ params }: Params) {
                   delay={(concernIndex % 3) * 0.04}
                 >
                   <h3>{concern.q}</h3>
-                  <p>{concern.a}</p>
+                  <p>{citeSources(concern.a, cited)}</p>
                 </Reveal>
               ))}
             </div>

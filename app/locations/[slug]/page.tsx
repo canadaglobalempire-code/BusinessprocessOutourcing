@@ -15,6 +15,7 @@ import {
 import { CrossLinks } from "@/components/cross-links";
 import { LOCATION_IMAGES } from "@/lib/page-images";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { citeSources } from "@/lib/cite-sources";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -48,6 +49,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 }
 
 export default async function LocationDetail({ params }: Params) {
+  const cited = new Set<string>();
   const { slug } = await params;
   const location = getLocation(slug);
   if (!location) notFound();
@@ -203,7 +205,7 @@ export default async function LocationDetail({ params }: Params) {
             </p>
             <h2>{location.body.heading}</h2>
             {location.body.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={paragraph}>{citeSources(paragraph, cited)}</p>
             ))}
           </Reveal>
           <Reveal className="soft-panel industry-seo-card">

@@ -600,3 +600,7 @@ h3{font-size:23px;margin-bottom:12px}
   .task-grid>*,.related-grid>*,.blog-grid>*,
   .values-grid>*,.content-grid>*,.pricing-grid>*{flex-basis:100%}
 }
+
+/* Primary-source citation links in body copy and FAQ answers. */
+.cite-link{color:var(--purple);font-weight:600;text-decoration:underline;text-decoration-color:rgba(118,86,214,.35);text-underline-offset:3px}
+.cite-link:hover{text-decoration-color:currentColor}

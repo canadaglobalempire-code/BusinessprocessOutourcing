@@ -12,6 +12,7 @@ import { FaqSection } from "@/components/faq";
 import { LeadCta } from "@/components/lead-cta";
 import { solutionFaq } from "@/lib/faq-content";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { citeSources } from "@/lib/cite-sources";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -42,6 +43,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 }
 
 export default async function SolutionDetail({ params }: Params) {
+  const cited = new Set<string>();
   const { slug } = await params;
   const solution = getSolution(slug);
   if (!solution) notFound();
@@ -171,7 +173,7 @@ export default async function SolutionDetail({ params }: Params) {
             <Reveal as="article" className="deep-dive-block">
               <h2>{solution.body.heading}</h2>
               {solution.body.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+                <p key={paragraph}>{citeSources(paragraph, cited)}</p>
               ))}
             </Reveal>
           </div>

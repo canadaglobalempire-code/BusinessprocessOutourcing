@@ -12,6 +12,7 @@ import { LeadCta } from "@/components/lead-cta";
 import { CrossLinks } from "@/components/cross-links";
 import { industryFaq } from "@/lib/faq-content";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { citeSources } from "@/lib/cite-sources";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -41,6 +42,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 }
 
 export default async function IndustryDetail({ params }: Params) {
+  const cited = new Set<string>();
   const { slug } = await params;
   const industry = getIndustry(slug);
   if (!industry) notFound();
@@ -151,7 +153,7 @@ export default async function IndustryDetail({ params }: Params) {
             </p>
             <h2>{seoBody.heading}</h2>
             {seoBody.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={paragraph}>{citeSources(paragraph, cited)}</p>
             ))}
           </Reveal>
           <Reveal className="soft-panel industry-seo-card">

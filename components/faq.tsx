@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { citeSources } from "@/lib/cite-sources";
 import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { MiniMark } from "@/components/mini-mark";
@@ -23,10 +24,12 @@ function FaqCard({
   item,
   index,
   defaultOpen,
+  cited,
 }: {
   item: FaqItem;
   index: number;
   defaultOpen?: boolean;
+  cited: Set<string>;
 }) {
   const [open, setOpen] = useState(!!defaultOpen);
   return (
@@ -42,7 +45,7 @@ function FaqCard({
       </button>
       <div className="faq-answer">
         <div>
-          <p>{item.a}</p>
+          <p>{citeSources(item.a, cited)}</p>
         </div>
       </div>
     </article>
@@ -52,6 +55,8 @@ function FaqCard({
 /* Renders FAQPage JSON-LD alongside the visible accordion so answers are
    eligible for AI Overviews / answer-engine citations, not just rich results. */
 export function Faq({ items }: { items: FaqItem[] }) {
+  // One set per page so each law is linked once, on first mention.
+  const cited = new Set<string>();
   const half = Math.ceil(items.length / 2);
   const columns = [items.slice(0, half), items.slice(half)];
   const schema = {
@@ -76,7 +81,7 @@ export function Faq({ items }: { items: FaqItem[] }) {
             {col.map((item, i) => {
               const index = ci === 0 ? i : half + i;
               return (
-                <FaqCard key={item.q} item={item} index={index} defaultOpen={index === 0} />
+                <FaqCard cited={cited} key={item.q} item={item} index={index} defaultOpen={index === 0} />
               );
             })}
           </div>
