@@ -18,6 +18,7 @@ import { COUNTRY_LOCATIONS } from "./locations-countries";
 import { CITY_LOCATIONS } from "./locations-cities";
 import { STATE_LOCATIONS } from "./locations-states";
 import { METRO_LOCATIONS } from "./locations-metros";
+import { LOCATION_FAQS } from "./location-faqs";
 
 export type Location = {
   slug: string;
@@ -685,7 +686,9 @@ export const LOCATIONS: Location[] = [
   ...STATE_LOCATIONS,
   ...METRO_LOCATIONS,
   ...CITY_LOCATIONS,
-];
+].map((location) =>
+  location.faq?.length ? location : { ...location, faq: LOCATION_FAQS[location.slug] },
+);
 
 export function getLocation(slug: string) {
   return LOCATIONS.find((location) => location.slug === slug);
