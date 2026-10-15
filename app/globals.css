@@ -605,16 +605,19 @@ h3{font-size:23px;margin-bottom:12px}
 .cite-link{color:var(--purple);font-weight:600;text-decoration:underline;text-decoration-color:rgba(118,86,214,.35);text-underline-offset:3px}
 .cite-link:hover{text-decoration-color:currentColor}
 
-/* Phone field: country code group (flag + editable code + chevron) + number.
-   Matches the neighbouring .field inputs' border, radius and focus ring. */
-.phone-field{display:flex;gap:8px;margin-top:8px}
+/* Phone field: one joined control. Compact country-code box (flag + code
+   input sized to its text + chevron) on the left; the number input takes all
+   the remaining width. Same border, 12px outer radius and focus ring as the
+   neighbouring .field inputs; inner corners squared, no gap between parts. */
+.phone-field{display:flex;gap:0;margin-top:8px}
 .contact-form .phone-field{margin-top:6px}
 .field .phone-field input{margin-top:0}
-.phone-field>input{flex:1 1 auto;min-width:0}
-.phone-cc{position:relative;flex:0 0 auto;display:flex;align-items:center;gap:4px;padding:0 10px 0 12px;border:1px solid #dcdadd;border-radius:12px;background:#fff}
-.phone-cc:focus-within{border-color:var(--purple);box-shadow:0 0 0 4px rgba(118,86,214,.1)}
+.field .phone-field>input{flex:1 1 0%;min-width:0;width:auto;margin-left:-1px;border-radius:0 12px 12px 0}
+.field .phone-field>input:focus{position:relative;z-index:3}
+.phone-cc{position:relative;flex:0 0 auto;display:flex;align-items:center;gap:.25rem;padding:0 .4rem 0 .55rem;border:1px solid #dcdadd;border-radius:12px 0 0 12px;background:#fff}
+.phone-cc:focus-within{z-index:3;border-color:var(--purple);box-shadow:0 0 0 4px rgba(118,86,214,.1)}
 .field .phone-cc select{position:absolute;inset:0;z-index:1;width:100%;height:100%;margin:0;padding:0;border:0;opacity:0;cursor:pointer}
 .phone-cc-flag,.phone-cc-chev{position:relative;z-index:0;pointer-events:none}
 .phone-cc-flag{font-size:1.15em;line-height:1}
-.field .phone-cc input.phone-cc-code{position:relative;z-index:2;width:3.4em;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
-.phone-cc-chev{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.6}
+.field .phone-cc input.phone-cc-code{position:relative;z-index:2;width:3.5ch;min-width:3.5ch;max-width:5ch;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+.phone-cc-chev{width:10px;height:10px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.6}

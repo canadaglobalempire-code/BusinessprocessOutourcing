@@ -4,6 +4,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import { COUNTRIES, DEFAULT_COUNTRY, countryForDial } from "@/lib/countries.mjs";
 import {
   combinePhone,
+  isPartialDialCode,
   isValidDialCode,
   isValidPhone,
   normaliseDialCode,
@@ -25,23 +26,36 @@ export function PhoneField({
   const [iso, setIso] = useState(DEFAULT_COUNTRY.iso2);
   const [dial, setDial] = useState(DEFAULT_COUNTRY.dial);
   const [number, setNumber] = useState("");
+  // Set once the code field is left; a partial code ("+3") only errors after that.
+  const [dialTouched, setDialTouched] = useState(false);
   const dialRef = useRef<HTMLInputElement>(null);
   const numberRef = useRef<HTMLInputElement>(null);
 
   const country = COUNTRIES.find((c) => c.iso2 === iso) || null;
   const combined = combinePhone(dial, number);
+  const dialKnown = isValidDialCode(dial);
+  // Unknown complete codes (+000, +999) error at once; partial ones after blur.
+  const dialError = !dialKnown && (dialTouched || !isPartialDialCode(dial));
 
   // Custom validity so the form's checkValidity()/reportValidity() catch it.
+  // Any unknown code (even a partial one) blocks submit.
   useEffect(() => {
     dialRef.current?.setCustomValidity(
-      isValidDialCode(dial) ? "" : "Enter a country code, e.g. +1.",
+      dialKnown ? "" : "Enter a valid country code, e.g. +1 or +44",
     );
     numberRef.current?.setCustomValidity(
       !number.trim() || isValidPhone(combined)
         ? ""
         : "Enter a valid phone number (digits only).",
     );
-  }, [dial, number, combined]);
+  }, [dialKnown, number, combined]);
+
+  // Show the existing native error bubble as soon as the code is known-bad.
+  useEffect(() => {
+    if (dialError && document.activeElement === dialRef.current) {
+      dialRef.current?.reportValidity();
+    }
+  }, [dialError, dial]);
 
   // Keep state in step with form.reset() after a successful submit.
   useEffect(() => {
@@ -51,6 +65,7 @@ export function PhoneField({
       setIso(DEFAULT_COUNTRY.iso2);
       setDial(DEFAULT_COUNTRY.dial);
       setNumber("");
+      setDialTouched(false);
     };
     form.addEventListener("reset", onReset);
     return () => form.removeEventListener("reset", onReset);
@@ -69,6 +84,7 @@ export function PhoneField({
     if (!picked) return;
     setIso(picked.iso2);
     setDial(picked.dial);
+    setDialTouched(false);
   }
 
   return (
@@ -100,8 +116,12 @@ export function PhoneField({
             inputMode="numeric"
             autoComplete="tel-country-code"
             maxLength={5}
+            // Sized to its text: 3.5ch min ("+1"), 5ch max ("+1234").
+            style={{ width: `${Math.min(5, Math.max(3.5, dial.length + 0.5))}ch` }}
             value={dial}
             onChange={(e) => onDialChange(e.target.value)}
+            onBlur={() => setDialTouched(true)}
+            aria-invalid={dialError || undefined}
             required
           />
           <svg className="phone-cc-chev" viewBox="0 0 12 12" aria-hidden="true">
