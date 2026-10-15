@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { splitformsAccessKey } from "@/lib/splitforms-config.mjs";
+import { isValidPhone } from "@/lib/phone.mjs";
 
 /*
  * Lead intake endpoint. Forwards the enquiry to Splitforms server-side
@@ -30,8 +31,10 @@ export async function POST(req: Request) {
   const name = String(data.name || "").trim();
   const email = String(data.email || "").trim();
   const message = String(data.message || "").trim();
+  const phone = String(data.phone || "").trim();
   const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  if (!name || !emailOk || !message) {
+  // Phone arrives combined as "+<dial code><number>", e.g. "+14035551234".
+  if (!name || !emailOk || !message || !isValidPhone(phone)) {
     return NextResponse.json(
       { ok: false, message: "Please complete the required fields." },
       { status: 422 },
@@ -62,6 +65,7 @@ export async function POST(req: Request) {
         access_key: accessKey,
         subject: "New enquiry — Business Process Outsourcing",
         ...data,
+        phone,
       }),
     });
     const result = (await res.json().catch(() => ({}))) as {

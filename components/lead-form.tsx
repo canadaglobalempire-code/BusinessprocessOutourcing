@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { SERVICE_NAMES } from "@/lib/services";
+import { PhoneField } from "./phone-field";
 
 type Variant = "modal" | "contact";
 
@@ -131,10 +132,7 @@ export function LeadForm({
                 required
               />
             </label>
-            <label className="field">
-              Phone Number*
-              <input type="tel" name="phone" autoComplete="tel" required />
-            </label>
+            <PhoneField label="Phone Number*" name="phone" />
           </div>
 
           <label className="field">
@@ -224,6 +222,8 @@ export function LeadForm({
             Company
             <input name="company" autoComplete="organization" required />
           </label>
+
+          <PhoneField label="Phone" name="phone" />
 
           <label className="field">
             Service
