@@ -41,6 +41,15 @@ export async function POST(req: Request) {
     );
   }
 
+  // sf_sid comes from https://splitforms.com/embed.js and is forwarded with the
+  // enquiry so Splitforms drops the saved partial lead; drop anything malformed.
+  if (
+    "sf_sid" in data &&
+    !(typeof data.sf_sid === "string" && /^[A-Za-z0-9_-]{1,128}$/.test(data.sf_sid))
+  ) {
+    delete data.sf_sid;
+  }
+
   const accessKey = splitformsAccessKey();
   if (!accessKey) {
     console.error("SPLITFORMS_ACCESS_KEY is not configured.");

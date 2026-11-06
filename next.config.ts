@@ -3,6 +3,10 @@ import type { NextConfig } from "next";
 const HOST = "businessprocessoutsourcing.info";
 
 const nextConfig: NextConfig = {
+  // The Splitforms access key is a public form identifier. Expose it to the
+  // lead form as data-sf-key so https://splitforms.com/embed.js can capture
+  // partial leads; when unset at build time the tracker simply stays off.
+  env: { NEXT_PUBLIC_SPLITFORMS_ACCESS_KEY: process.env.SPLITFORMS_ACCESS_KEY?.trim() ?? "" },
   // Bound stale ISR responses on Hostinger; hashed assets keep Next's long cache.
   expireTime: 600,
   images: {

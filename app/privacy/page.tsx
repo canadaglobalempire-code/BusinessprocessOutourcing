@@ -46,6 +46,8 @@ export default function PrivacyPage() {
             website hosting, form delivery, email, customer relationship
             management, analytics, or security. These providers should only use
             information as needed to support the requested business purpose.
+            Our forms use Splitforms to save what you type into an enquiry form,
+            even if you do not submit it, so we can follow up on your request.
           </p>
           <h2 id="cookies">Cookies</h2>
           <p>

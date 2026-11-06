@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Script from "next/script";
 import { SERVICE_NAMES } from "@/lib/services";
 import { PhoneField } from "./phone-field";
 
@@ -66,6 +67,16 @@ export function LeadForm({
       });
       const result = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(result.message || "Unable to send your enquiry.");
+      // Tracking is optional: a blocked script must never undo a sent enquiry.
+      try {
+        (
+          window as Window & {
+            splitforms?: { done?: (form: HTMLFormElement) => void };
+          }
+        ).splitforms?.done?.(form);
+      } catch {
+        /* The enquiry has already been delivered. */
+      }
       setStatus({
         msg:
           result.message ||
@@ -98,7 +109,9 @@ export function LeadForm({
       className={variant === "contact" ? "contact-form" : "lead-form"}
       onSubmit={onSubmit}
       noValidate
+      data-sf-key={process.env.NEXT_PUBLIC_SPLITFORMS_ACCESS_KEY || undefined}
     >
+      <Script src="https://splitforms.com/embed.js" strategy="afterInteractive" />
       <input
         type="checkbox"
         name="botcheck"
