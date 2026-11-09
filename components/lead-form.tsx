@@ -62,11 +62,11 @@ function invalidControls(form: HTMLFormElement): Field[] {
 
 /* Shared consultation / contact lead form.
    Posts to /api/contact, which forwards the enquiry to Splitforms. */
-/* Every select starts on its empty placeholder (no preselect from the page's
-   service) so an untouched select counts as missing. `defaultService` is still
-   accepted from callers but no longer prefills anything. */
+/* Selects start on their empty placeholder so an untouched select counts as
+   missing; on service pages the matching service is preselected (still required). */
 export function LeadForm({
   variant = "modal",
+  defaultService = "",
 }: {
   variant?: Variant;
   defaultService?: string;
@@ -153,6 +153,13 @@ export function LeadForm({
       setSubmitting(false);
     }
   }
+
+  const contactSolution =
+    defaultService === "Technical Support"
+      ? "Tech Support"
+      : SOLUTIONS.includes(defaultService)
+        ? defaultService
+        : "";
 
   return (
     <form
@@ -246,7 +253,7 @@ export function LeadForm({
 
             <label className={fieldClass("solution")}>
               What solution are you looking for?*
-              <select name="solution" defaultValue="" required>
+              <select name="solution" defaultValue={contactSolution} required>
                 <option value="" disabled>
                   Select an option
                 </option>
@@ -316,7 +323,7 @@ export function LeadForm({
 
           <label className={fieldClass("service")}>
             Service*
-            <select name="service" required defaultValue="">
+            <select name="service" required defaultValue={defaultService}>
               <option value="">Choose a service</option>
               {SERVICE_NAMES.map((service) => (
                 <option key={service} value={service}>
