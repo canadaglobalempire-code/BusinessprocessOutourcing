@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 const HOST = "businessprocessoutsourcing.info";
 
 const nextConfig: NextConfig = {
+  // Hostinger build containers cap threads; Next's default (cores-1 = 63 workers) aborts with os error 11.
+  experimental: { cpus: 2, workerThreads: false },
   // The Splitforms access key is a public form identifier. Expose it to the
   // lead form as data-sf-key so https://splitforms.com/embed.js can capture
   // partial leads; when unset at build time the tracker simply stays off.
