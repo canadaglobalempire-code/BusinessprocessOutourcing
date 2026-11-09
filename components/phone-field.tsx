@@ -18,9 +18,11 @@ import {
 export function PhoneField({
   label,
   name = "phone",
+  invalid = false,
 }: {
   label: React.ReactNode;
   name?: string;
+  invalid?: boolean;
 }) {
   const id = useId();
   const [iso, setIso] = useState(DEFAULT_COUNTRY.iso2);
@@ -88,7 +90,7 @@ export function PhoneField({
   }
 
   return (
-    <div className="field">
+    <div className={invalid ? "field is-invalid" : "field"}>
       <label htmlFor={id}>{label}</label>
       <div className="phone-field">
         <div className="phone-cc">
@@ -121,7 +123,8 @@ export function PhoneField({
             value={dial}
             onChange={(e) => onDialChange(e.target.value)}
             onBlur={() => setDialTouched(true)}
-            aria-invalid={dialError || undefined}
+            aria-invalid={dialError || invalid || undefined}
+            data-field={name}
             required
           />
           <svg className="phone-cc-chev" viewBox="0 0 12 12" aria-hidden="true">
@@ -136,6 +139,8 @@ export function PhoneField({
           autoComplete="tel-national"
           value={number}
           onChange={(e) => setNumber(e.target.value)}
+          data-field={name}
+          aria-invalid={invalid || undefined}
           required
         />
       </div>

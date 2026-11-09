@@ -8,6 +8,22 @@ import { isValidPhone } from "@/lib/phone.mjs";
  * form can show an honest success/error message.
  */
 const SPLITFORMS_ENDPOINT = "https://splitforms.com/api/submit";
+// SplitForms reserved field: used verbatim as the notification email subject.
+// Every form on the site sends this same subject, whatever page it is on.
+const LEAD_SUBJECT = "Business Process Outsourcing \u2013 Website Inquiry";
+
+// Every visible field on the lead form is required; the server agrees with the
+// client so a direct POST cannot skip them. The short (modal) variant posts
+// `service`; the full contact variant posts the qualification fields.
+const REQUIRED_ALWAYS = ["name", "company", "email", "phone", "message"];
+const REQUIRED_SHORT = ["service"];
+const REQUIRED_CONTACT = [
+  "website",
+  "call_centre_service",
+  "solution",
+  "agent_count",
+  "call_volume",
+];
 
 export async function POST(req: Request) {
   let data: Record<string, unknown>;
@@ -24,7 +40,7 @@ export async function POST(req: Request) {
   if (String(data.botcheck || "").trim()) {
     return NextResponse.json({
       ok: true,
-      message: "Thanks! Your enquiry has been received.",
+      message: "Thanks! Your inquiry has been received.",
     });
   }
 
@@ -34,7 +50,12 @@ export async function POST(req: Request) {
   const phone = String(data.phone || "").trim();
   const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   // Phone arrives combined as "+<dial code><number>", e.g. "+14035551234".
-  if (!name || !emailOk || !message || !isValidPhone(phone)) {
+  const required = [
+    ...REQUIRED_ALWAYS,
+    ...("service" in data ? REQUIRED_SHORT : REQUIRED_CONTACT),
+  ];
+  const missing = required.filter((field) => !String(data[field] ?? "").trim());
+  if (missing.length || !name || !emailOk || !message || !isValidPhone(phone)) {
     return NextResponse.json(
       { ok: false, message: "Please complete the required fields." },
       { status: 422 },
@@ -71,9 +92,9 @@ export async function POST(req: Request) {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        access_key: accessKey,
-        subject: "New enquiry — Business Process Outsourcing",
         ...data,
+        access_key: accessKey,
+        subject: LEAD_SUBJECT,
         phone,
       }),
     });
@@ -93,7 +114,7 @@ export async function POST(req: Request) {
     }
     return NextResponse.json({
       ok: true,
-      message: `Thanks, ${name}! Your enquiry has been received. One of our representatives will reach out to you.`,
+      message: `Thanks, ${name.split(/\s+/)[0]}! Your inquiry has been received. One of our representatives will reach out to you.`,
     });
   } catch {
     return NextResponse.json(

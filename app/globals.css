@@ -271,6 +271,13 @@ h3{font-size:23px;margin-bottom:12px}
 .contact-form .field input,.contact-form .field select,.contact-form .field textarea{padding:11px 12px;margin-top:6px}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--purple);box-shadow:0 0 0 4px rgba(118,86,214,.1)}
 .form-status{font-weight:700;margin:15px 0 0}
+/* Missing/invalid fields after a submit attempt: red border + soft red ring
+   (site error red #b33a48). Clears per field as soon as it becomes valid. */
+.form-error-banner{margin:0 0 16px;padding:12px 14px;border:1px solid rgba(179,58,72,.3);border-radius:12px;background:rgba(179,58,72,.06);color:#b33a48;font-size:14px;font-weight:700}
+.field.is-invalid>input,.field.is-invalid>select,.field.is-invalid>textarea,.field.is-invalid .phone-cc,.field.is-invalid .phone-field>input{border-color:#b33a48;box-shadow:0 0 0 4px rgba(179,58,72,.14)}
+.form-thanks{text-align:center;padding:28px 8px}
+.form-thanks .form-thanks-title{font-size:22px;font-weight:800;margin:0 0 8px}
+.form-thanks p{margin:0 0 18px}
 .page-position{font-size:14px;color:var(--muted);margin:0 0 18px;font-weight:600}
 .pagination{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:44px}
 .page-step{display:inline-flex;align-items:center;padding:10px 18px;border:1px solid var(--line);border-radius:999px;font-size:15px;font-weight:600;white-space:nowrap;transition:.2s}
