@@ -167,7 +167,7 @@ export const CONTACT_FAQ: FaqItem[] = [
   },
   {
     q: "Can I request a specific service when contacting Business Process Outsourcing?",
-    a: "Yes. The contact form lets you select the type of call centre service and solution you are looking for so your enquiry reaches the right team.",
+    a: "Yes. The contact form lets you select the type of call centre service and solution you are looking for so your inquiry reaches the right team.",
   },
   {
     q: "Is there a cost to get a support plan proposal?",

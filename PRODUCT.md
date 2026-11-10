@@ -10,7 +10,7 @@ Owners and operators of growing businesses who are evaluating flexible outsource
 
 ## Product Purpose
 
-Explain OutsourcePro's capabilities clearly, build trust, and turn qualified visitors into consultation enquiries.
+Explain OutsourcePro's capabilities clearly, build trust, and turn qualified visitors into consultation inquiries.
 
 ## Brand Personality
 

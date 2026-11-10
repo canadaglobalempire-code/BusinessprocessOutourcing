@@ -44,7 +44,7 @@ if (CONTACT_EMAIL === 'your-email@example.com') {
     exit;
 }
 
-$subject = 'New website enquiry: ' . $service;
+$subject = 'New website inquiry: ' . $service;
 $body = "Name: {$name}\nEmail: {$email}\nCompany: {$company}\nService: {$service}\nPage: {$page}\n\nMessage:\n{$message}\n";
 $headers = [
     'From: ' . SITE_NAME . ' Website <' . CONTACT_EMAIL . '>',
@@ -58,4 +58,4 @@ if (!mail(CONTACT_EMAIL, $subject, $body, implode("\r\n", $headers))) {
     exit;
 }
 
-echo json_encode(['message' => "Thanks, {$name}! Your enquiry has been sent."]);
+echo json_encode(['message' => "Thanks, {$name}! Your inquiry has been sent."]);

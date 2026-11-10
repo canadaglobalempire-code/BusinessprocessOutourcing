@@ -29,7 +29,7 @@ export default function TermsPage() {
           <h2>Website use</h2>
           <p>
             Users may access the website for lawful informational and business
-            enquiry purposes. Content may not be misused, copied at scale, or used
+            inquiry purposes. Content may not be misused, copied at scale, or used
             to interfere with website operation, security, or availability.
           </p>
           <h2>Information and availability</h2>

@@ -119,7 +119,7 @@ const CORE_LOCATIONS: Location[] = [
     highlights: [
       "UK business-hours and out-of-hours coverage",
       "Documented data handling and processing terms",
-      "Inbound customer service and enquiry handling",
+      "Inbound customer service and inquiry handling",
       "Outbound sales and appointment setting",
       "Overflow cover for busy periods",
       "Tone and scripting matched to a UK audience",
@@ -129,7 +129,7 @@ const CORE_LOCATIONS: Location[] = [
         "Shifts scheduled against UK time rather than fitted around another market, including evenings and weekends where needed.",
       "Documented data handling and processing terms":
         "Where data is processed, what agents can access, how recordings are handled, and what the processing agreement covers — established before launch.",
-      "Inbound customer service and enquiry handling":
+      "Inbound customer service and inquiry handling":
         "Phone, email, and chat coverage for customer questions, orders, accounts, and service requests.",
       "Outbound sales and appointment setting":
         "Outbound programmes for lead follow-up, renewals, and booked meetings, run against criteria you define.",
@@ -162,7 +162,7 @@ const CORE_LOCATIONS: Location[] = [
       "Arabic and English bilingual agents",
       "Gulf business-hours and weekend coverage",
       "Additional South Asian language coverage",
-      "Inbound customer care and enquiry handling",
+      "Inbound customer care and inquiry handling",
       "Outbound sales and appointment setting",
       "Ramadan and public holiday planning",
     ],
@@ -173,7 +173,7 @@ const CORE_LOCATIONS: Location[] = [
         "Shifts scheduled against the working week your customers keep, not a Western default.",
       "Additional South Asian language coverage":
         "Hindi, Urdu, Tagalog, and Malayalam coverage where your customer base calls for it.",
-      "Inbound customer care and enquiry handling":
+      "Inbound customer care and inquiry handling":
         "Phone, chat, and email coverage for customer questions, bookings, accounts, and service requests.",
       "Outbound sales and appointment setting":
         "Outbound programmes for lead follow-up and booked meetings, run against criteria you define.",

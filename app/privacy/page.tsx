@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
   title: "Privacy Policy",
   description:
-    "Privacy policy for Business Process Outsourcing, including contact form information, service enquiries, cookies, and data use.",
+    "Privacy policy for Business Process Outsourcing, including contact form information, service inquiries, cookies, and data use.",
 };
 
 export default function PrivacyPage() {
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
           <p>
             This policy explains how Business Process Outsourcing handles
             information submitted through this website and related service
-            enquiries.
+            inquiries.
           </p>
         </div>
       </section>
@@ -36,7 +36,7 @@ export default function PrivacyPage() {
           </p>
           <h2>How information is used</h2>
           <p>
-            Information may be used to respond to enquiries, provide requested
+            Information may be used to respond to inquiries, provide requested
             information, plan outsourced support services, improve the website,
             maintain security, and comply with applicable obligations.
           </p>
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
             website hosting, form delivery, email, customer relationship
             management, analytics, or security. These providers should only use
             information as needed to support the requested business purpose.
-            Our forms use Splitforms to save what you type into an enquiry form,
+            Our forms use Splitforms to save what you type into an inquiry form,
             even if you do not submit it, so we can follow up on your request.
           </p>
           <h2 id="cookies">Cookies</h2>

@@ -61,7 +61,7 @@ function invalidControls(form: HTMLFormElement): Field[] {
 }
 
 /* Shared consultation / contact lead form.
-   Posts to /api/contact, which forwards the enquiry to Splitforms. */
+   Posts to /api/contact, which forwards the inquiry to Splitforms. */
 /* Selects start on their empty placeholder so an untouched select counts as
    missing; on service pages the matching service is preselected (still required). */
 export function LeadForm({
@@ -125,8 +125,8 @@ export function LeadForm({
         body: JSON.stringify(data),
       });
       const result = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(result.message || "Unable to send your enquiry.");
-      // Tracking is optional: a blocked script must never undo a sent enquiry.
+      if (!res.ok) throw new Error(result.message || "Unable to send your inquiry.");
+      // Tracking is optional: a blocked script must never undo a sent inquiry.
       try {
         (
           window as Window & {
@@ -134,7 +134,7 @@ export function LeadForm({
           }
         ).splitforms?.done?.(form);
       } catch {
-        /* The enquiry has already been delivered. */
+        /* The inquiry has already been delivered. */
       }
       const firstName = (data.name || "").trim().split(/\s+/)[0] || "";
       form.reset();

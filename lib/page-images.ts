@@ -117,7 +117,7 @@ export const SERVICE_IMAGES: Record<string, PageImage> = {
   },
   "customer-acquisition-outsourcing": {
     src: unsplash("photo-1556761175-b413da4baf72"),
-    alt: "Acquisition team following up on new enquiries",
+    alt: "Acquisition team following up on new inquiries",
   },
   "customer-experience-consulting": {
     src: unsplash("photo-1552664730-d307ca884978"),

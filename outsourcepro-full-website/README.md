@@ -9,7 +9,7 @@ A responsive multi-page static website matching the approved clean black-and-whi
 - Contact page
 - Pricing page
 - Blog index and 6 full article pages
-- FAQ, privacy, terms, modal enquiry form, responsive navigation, animations
+- FAQ, privacy, terms, modal inquiry form, responsive navigation, animations
 - Optimized website images and approved design references
 
 ## Run locally

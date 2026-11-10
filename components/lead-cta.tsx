@@ -4,12 +4,12 @@ import { Reveal } from "./reveal";
 
 /*
  * Inline lead capture for detail templates. Every service, industry, solution,
- * location, and article page ends with this so an enquiry never costs an extra
+ * location, and article page ends with this so an inquiry never costs an extra
  * page load.
  *
  * Uses the full "contact" variant — the same qualification form as /contact —
  * per owner decision. It asks for call volume, agent count, and service type up
- * front, which produces better-qualified enquiries at the cost of a lower raw
+ * front, which produces better-qualified inquiries at the cost of a lower raw
  * submission rate than a short form would give.
  */
 export function LeadCta({

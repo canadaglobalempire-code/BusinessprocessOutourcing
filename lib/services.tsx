@@ -303,7 +303,7 @@ export const SERVICES: Service[] = [
     concerns: [
       {
         q: "What should an ecommerce support brief include?",
-        a: "Start with the stores and marketplaces you operate, the questions shoppers ask most often, and your normal and peak contact volumes. Include return windows, refund approval limits, delivery policies and the systems agents will use. Separating customer enquiries from catalogue or order administration makes the scope easier to price and manage.",
+        a: "Start with the stores and marketplaces you operate, the questions shoppers ask most often, and your normal and peak contact volumes. Include return windows, refund approval limits, delivery policies and the systems agents will use. Separating customer inquiries from catalogue or order administration makes the scope easier to price and manage.",
       },
       {
         q: "Can I outsource order support while keeping refund decisions in-house?",
@@ -603,7 +603,7 @@ SERVICES.push(
       ),
       t(
         "Follow-up on unconverted leads",
-        "Work the inbound enquiries, trial signups, and aged opportunities your sales team never gets back to.",
+        "Work the inbound inquiries, trial signups, and aged opportunities your sales team never gets back to.",
       ),
       t(
         "CRM hygiene and pipeline reporting",

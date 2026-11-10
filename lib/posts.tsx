@@ -868,7 +868,7 @@ export const POSTS: Post[] = [
         </p>
         <h2>Guest support beyond the reservation</h2>
         <p>
-          Reservations are the visible half of the work. The other half is the contact that arrives during and after the stay: the invoice request a week later, the lost-property enquiry, the question about a charge on the card, the group organiser confirming a rooming list, the guest who wants to extend by a night while they are still in the room. Most of this is administrative and most of it currently lands on the front desk, where it competes with the person standing at the counter.
+          Reservations are the visible half of the work. The other half is the contact that arrives during and after the stay: the invoice request a week later, the lost-property inquiry, the question about a charge on the card, the group organiser confirming a rooming list, the guest who wants to extend by a night while they are still in the room. Most of this is administrative and most of it currently lands on the front desk, where it competes with the person standing at the counter.
         </p>
         <p>
           An outsourced team trained on the property management system handles it in the background: it issues the invoice, logs the lost item with housekeeping, explains the charge or raises it with accounts, updates the rooming list and books the extension against live availability. The front desk keeps the contact that needs a face. The guest gets an answer the same day instead of when the desk goes quiet. Agree which of these contact types the team owns outright, which it prepares for a named person on site to finish, and how each is logged, so that nothing lives only in one agent's memory.
@@ -1281,7 +1281,7 @@ export const POSTS: Post[] = [
           Across the businesses we work with, the first workflow tends to come from one of five areas.
         </p>
         <p>
-          Customer support coverage is the most common. Enquiries arrive on a schedule you do not control, the answers are documented or can be, and quality is visible in every conversation. <a href="/services/customer-support">Customer support</a> is where most growing businesses first feel the pain of doing everything in-house, because it is the work that cannot wait until Friday.
+          Customer support coverage is the most common. Inquiries arrive on a schedule you do not control, the answers are documented or can be, and quality is visible in every conversation. <a href="/services/customer-support">Customer support</a> is where most growing businesses first feel the pain of doing everything in-house, because it is the work that cannot wait until Friday.
         </p>
         <p>
           Executive and operational administration is second: inbox, calendar, travel, follow-ups, and the small coordination tasks that fill a founder's day. A <a href="/services/virtual-assistance">virtual assistant</a> takes those off the desk in the first week.
@@ -1578,7 +1578,7 @@ export const POSTS: Post[] = [
           Create the accounts in your systems: the helpdesk, the CRM, the order platform, the shared inbox, the messaging tool. Apply the minimum permissions the role needs, not the permissions the last person had. Confirm multi-factor authentication is set up and that the team knows how to use it. If a system needs an approval from IT, request it now, not on Monday. The <a href="/blog/data-security">data security questions</a> you asked during selection should already have told you how access is managed on the provider's side; this is the moment to mirror that on yours.
         </p>
         <p>
-          Then gather the context documents: who your customers are, what the product does, what the top ten enquiries are and how they are answered, the tone you use, and the things that must never be said. These do not need to be polished. They need to exist.
+          Then gather the context documents: who your customers are, what the product does, what the top ten inquiries are and how they are answered, the tone you use, and the things that must never be said. These do not need to be polished. They need to exist.
         </p>
         <ul>
           <li>System accounts created and tested by someone on your side</li>
@@ -1605,7 +1605,7 @@ export const POSTS: Post[] = [
           Let the team observe real work before owning it. Recorded walkthroughs of the most common tasks, annotated examples of good and bad responses, and a few live sessions where a member of your team handles the work while explaining it. This prevents a dozen small misunderstandings that would otherwise each cost a customer conversation.
         </p>
         <p>
-          Then hand over one workflow at a time. Not the whole queue. One category of enquiry, or one channel, or one report. The team owns that fully, with your reviewer checking every output for the first few days. When that workflow is clean, add the next. By the end of week one, the team should own two or three workflows completely and be shadowing the next.
+          Then hand over one workflow at a time. Not the whole queue. One category of inquiry, or one channel, or one report. The team owns that fully, with your reviewer checking every output for the first few days. When that workflow is clean, add the next. By the end of week one, the team should own two or three workflows completely and be shadowing the next.
         </p>
         <p>
           Our project manager runs this stage from the provider side, mapping the process and training agents on your standards. It works best when someone on your side is equally available. The first week is a shared project, not a test.
@@ -2878,7 +2878,7 @@ export const POSTS: Post[] = [
         </p>
         <h2>What legal call centres handle</h2>
         <p>
-          The work splits into two streams. The first is new business: inbound enquiries from people who need a lawyer, screened and scheduled. The second is existing clients: status calls, appointment changes, document questions and billing enquiries that would otherwise interrupt paralegals and admin staff all day. Most firms start with the first stream, because that is where the revenue is, and add the second once intake is stable.
+          The work splits into two streams. The first is new business: inbound inquiries from people who need a lawyer, screened and scheduled. The second is existing clients: status calls, appointment changes, document questions and billing inquiries that would otherwise interrupt paralegals and admin staff all day. Most firms start with the first stream, because that is where the revenue is, and add the second once intake is stable.
         </p>
         <p>
           Within new business, the work is more structured than it looks from outside. The agent confirms the practice area, collects the facts the firm's script asks for, runs the conflict questions, checks the matter against the firm's accept and decline criteria, records the outcome and, where the matter qualifies, books the consultation directly into the calendar. Where it does not qualify, the agent gives the caller the firm's approved referral language and closes politely. Every call produces a record the firm can see, whether or not it became a consultation.
@@ -4433,14 +4433,14 @@ export const POSTS: Post[] = [
         </p>
         <ul>
           <li>Customers are reaching voicemail, waiting too long, or hanging up: you need inbound.</li>
-          <li>Enquiries and leads sit unworked, and pipeline is the constraint: you need outbound.</li>
+          <li>Inquiries and leads sit unworked, and pipeline is the constraint: you need outbound.</li>
           <li>Leads arrive and nobody calls them back within the hour: that is speed to lead, which is outbound in method but reactive in trigger; see <a href="/services/customer-acquisition-outsourcing">customer acquisition outsourcing</a>.</li>
           <li>Both are true: run two programmes with separate teams, separate scorecards and separate training, even if the same provider supplies both.</li>
           <li>Neither is true and the phones are simply expensive: the problem may be contact volume itself, which is a process question rather than a staffing one.</li>
         </ul>
         <h2>Which you need</h2>
         <p>
-          If customers are reaching voicemail, start with <a href="/services/inbound-call-center-services">inbound call centre services</a>. If enquiries go unworked and pipeline is the constraint, start with <a href="/services/outbound-call-center-services">outbound call centre services</a>. If both are true, run them as two programmes and let each be measured on its own terms.
+          If customers are reaching voicemail, start with <a href="/services/inbound-call-center-services">inbound call centre services</a>. If inquiries go unworked and pipeline is the constraint, start with <a href="/services/outbound-call-center-services">outbound call centre services</a>. If both are true, run them as two programmes and let each be measured on its own terms.
         </p>
         <p>
           The provider you choose should be able to describe, without prompting, how the agents, metrics, staffing, compliance and training differ between the two. If the answer is a single team that does everything, keep looking.

@@ -1617,7 +1617,7 @@ export const STATE_LOCATIONS: Location[] = [
       {
         heading: "Events move the whole curve",
         sections: [
-          { title: "Conventions are scheduled surges", body: "Major conferences multiply booking, change, and enquiry volume in a way that is severe but known months ahead — which is the easiest kind of peak to plan flexed capacity against." },
+          { title: "Conventions are scheduled surges", body: "Major conferences multiply booking, change, and inquiry volume in a way that is severe but known months ahead — which is the easiest kind of peak to plan flexed capacity against." },
           { title: "Cancellations are retention moments", body: "A cancellation call is the highest-leverage contact in hospitality and the one most often handled as pure administration. Deciding what an agent may offer to save the booking changes the outcome." },
           { title: "Tone is reviewed publicly", body: "Hospitality contact is judged on how it felt as much as what it resolved, which makes documented standards and monitoring more valuable than raw handling speed." },
         ],

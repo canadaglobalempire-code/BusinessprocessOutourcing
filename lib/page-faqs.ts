@@ -1440,7 +1440,7 @@ export const PAGE_FAQS: Record<string, FaqItem[]> = {
     },
     {
       q: "Can outsourced appointment setting cover inbound booking calls and outbound calls to leads?",
-      a: "Yes. Inbound, agents answer your booking line live and schedule callers. Outbound, agents call leads who have asked to be contacted, such as web form enquiries or existing customers due for service, and offer times. The contact lists and the basis for calling them come from you. The TCPA covers autodialed and prerecorded calls and texts and the consent they require, so have your counsel confirm your consent wording, especially for text reminders. Agents record any request not to be called again in your system at once. Cold list strategy is a separate conversation from appointment setting.",
+      a: "Yes. Inbound, agents answer your booking line live and schedule callers. Outbound, agents call leads who have asked to be contacted, such as web form inquiries or existing customers due for service, and offer times. The contact lists and the basis for calling them come from you. The TCPA covers autodialed and prerecorded calls and texts and the consent they require, so have your counsel confirm your consent wording, especially for text reminders. Agents record any request not to be called again in your system at once. Cold list strategy is a separate conversation from appointment setting.",
     },
     {
       q: "How do appointment setting agents qualify a lead before putting it on our sales calendar?",
@@ -1686,7 +1686,7 @@ export const PAGE_FAQS: Record<string, FaqItem[]> = {
     },
     {
       q: "Which attendee questions can RSVP agents answer, and which go to the event organizer?",
-      a: "Agents answer everything you put in the event brief: dates and times, venue and directions, parking, dress code, agenda, guest and plus-one rules, dietary options, accessibility arrangements, and how to change a response. They record special requests in the attendee record. Questions that need a decision go to your organizer with the details attached, such as exceptions to the guest policy, VIP arrangements, refunds outside the stated terms, sponsor or speaker matters, and media enquiries. The attendee is told who will reply. New questions are added to the brief as they appear.",
+      a: "Agents answer everything you put in the event brief: dates and times, venue and directions, parking, dress code, agenda, guest and plus-one rules, dietary options, accessibility arrangements, and how to change a response. They record special requests in the attendee record. Questions that need a decision go to your organizer with the details attached, such as exceptions to the guest policy, VIP arrangements, refunds outside the stated terms, sponsor or speaker matters, and media inquiries. The attendee is told who will reply. New questions are added to the brief as they appear.",
     },
     {
       q: "How do we brief a reservation taking team on a venue or event they have never seen?",

@@ -3,7 +3,7 @@ import { splitformsAccessKey } from "@/lib/splitforms-config.mjs";
 import { isValidPhone } from "@/lib/phone.mjs";
 
 /*
- * Lead intake endpoint. Forwards the enquiry to Splitforms server-side
+ * Lead intake endpoint. Forwards the inquiry to Splitforms server-side
  * (no CORS, key stays off the client) and returns the real result so the
  * form can show an honest success/error message.
  */
@@ -63,7 +63,7 @@ export async function POST(req: Request) {
   }
 
   // sf_sid comes from https://splitforms.com/embed.js and is forwarded with the
-  // enquiry so Splitforms drops the saved partial lead; drop anything malformed.
+  // inquiry so Splitforms drops the saved partial lead; drop anything malformed.
   if (
     "sf_sid" in data &&
     !(typeof data.sf_sid === "string" && /^[A-Za-z0-9_-]{1,128}$/.test(data.sf_sid))
@@ -78,7 +78,7 @@ export async function POST(req: Request) {
       {
         ok: false,
         message:
-          "We couldn’t send your enquiry right now. Please try again later.",
+          "We couldn’t send your inquiry right now. Please try again later.",
       },
       { status: 503 },
     );
@@ -107,7 +107,7 @@ export async function POST(req: Request) {
           ok: false,
           message:
             result.message ||
-            "We couldn’t send your enquiry right now. Please try again.",
+            "We couldn’t send your inquiry right now. Please try again.",
         },
         { status: 502 },
       );

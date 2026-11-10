@@ -443,13 +443,13 @@ export const INDUSTRIES: Industry[] = [
       "Dispatch and driver coordination":
         "Coordinate schedule changes, appointment times, and delivery windows between dispatch, drivers, and receivers.",
       "Shipment status and escalation":
-        "Answer status enquiries against live system data and escalate anything outside documented tolerances.",
+        "Answer status inquiries against live system data and escalate anything outside documented tolerances.",
       "Overnight and weekend coverage":
         "Freight moves through the night; coverage matches when exceptions actually arise rather than when offices open.",
       "Customs and documentation intake":
         "Capture and route customs, paperwork, and compliance queries without interpreting them.",
       "Carrier and broker account support":
-        "Rate enquiries, booking requests, and account administration handled against documented workflows.",
+        "Rate inquiries, booking requests, and account administration handled against documented workflows.",
       "Claims intake for loss and damage":
         "Capture the detail a claim requires at first contact so the process downstream does not stall on missing information.",
       "Peak season surge capacity":
@@ -480,7 +480,7 @@ export const INDUSTRIES: Industry[] = [
     summary:
       "Outsourced education support for universities, colleges, and school districts covering admissions, enrolment, and student services contact.",
     metaDescription:
-      "Outsource education call center support for universities and colleges: admissions and enrolment enquiries, student services, and financial aid contact.",
+      "Outsource education call center support for universities and colleges: admissions and enrolment inquiries, student services, and financial aid contact.",
     seoIntro:
       "Business Process Outsourcing supports universities, colleges, and school districts with admissions, enrolment, financial aid, and student services contact — volume that peaks against the academic calendar rather than the commercial one.",
     seoBody: {
@@ -491,11 +491,11 @@ export const INDUSTRIES: Industry[] = [
       ],
     },
     serviceDetails: {
-      "Admissions and prospective student enquiries":
+      "Admissions and prospective student inquiries":
         "Answer programme, deadline, and requirement questions and route genuine applicant interest to the right department.",
       "Enrolment and registration support":
         "Handle registration questions, deadline reminders, and process guidance during the windows when volume concentrates.",
-      "Financial aid and billing enquiries":
+      "Financial aid and billing inquiries":
         "Answer routine aid, invoice, and payment plan questions within documented limits and escalate anything requiring a determination.",
       "Student records verification":
         "Apply documented rules on what may be disclosed and to whom, with every verification decision logged.",
@@ -507,19 +507,19 @@ export const INDUSTRIES: Industry[] = [
         "Keep the institution reachable outside office hours during deadline periods.",
       "Multilingual family support":
         "Serve families whose first language is not English without routing them to a callback.",
-      "Enquiry reporting by programme":
-        "Report enquiry volume and outcome by programme so recruitment effort can follow demand.",
+      "Inquiry reporting by programme":
+        "Report inquiry volume and outcome by programme so recruitment effort can follow demand.",
     },
     services: [
-      "Admissions and prospective student enquiries",
+      "Admissions and prospective student inquiries",
       "Enrolment and registration support",
-      "Financial aid and billing enquiries",
+      "Financial aid and billing inquiries",
       "Student records verification",
       "Parent and guardian contact handling",
       "Peak-cycle surge capacity",
       "After-hours and weekend coverage",
       "Multilingual family support",
-      "Enquiry reporting by programme",
+      "Inquiry reporting by programme",
     ],
     crossLinks: [
       { href: "/services/inbound-call-center-services", label: "Inbound call center services" },

@@ -1325,7 +1325,7 @@ export const METRO_LOCATIONS: Location[] = [
     [
       "Hotels, entertainment, and gaming run continuously, and guests behave accordingly. A booking change or a service issue at three in the morning is routine here, which means an arrangement built around business hours is missing a structural share of contact rather than an occasional call.",
       "The complication is authority. There is nobody to escalate to overnight, so whatever the agent cannot settle themselves becomes a callback the following day — and a callback about a problem that happened last night rarely lands well. What an overnight agent may resolve is the single most consequential scoping decision in this market.",
-      "Convention volume sits on top of all of it. Major events multiply booking, change, and enquiry contact in a way that is severe but scheduled months ahead, which makes it the easiest kind of peak to plan flexed capacity against.",
+      "Convention volume sits on top of all of it. Major events multiply booking, change, and inquiry contact in a way that is severe but scheduled months ahead, which makes it the easiest kind of peak to plan flexed capacity against.",
     ],
     [
       ["Genuine overnight coverage", "Overnight staffed as ordinary volume rather than as after-hours overflow."],
